@@ -24,7 +24,7 @@ Download it [here](http://postgresapp.com/)
 
 Run PostegreSQL.app, you should be in a terminal window.
 
-`CREATE ROLE hubiquity WITH LOGIN PASSWORD 'moulin12345'`
+`CREATE ROLE hubiquity WITH LOGIN PASSWORD 'moulin12345';`
 
 ##### Install dependencies and run the rails server:
 
