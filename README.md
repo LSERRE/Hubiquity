@@ -1,26 +1,26 @@
 # Hubiquity
 
-### Setup the project:
+##### Setup the project:
 
 `git clone git@github.com:LSERRE/Hubiquity.git`
 
-### Install PostgreSQL as Database:
+##### Install PostgreSQL as Database:
 
 Download it [here](http://postgresapp.com/)
 
-### Edit bash_profile to add PostgreSQL in your PATH:
+##### Edit bash_profile to add PostgreSQL in your PATH:
 
 `open ~/.bash_profile`
 
-### Add this line in the file: 
+##### Add this line in the file: 
 
 `export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin`
 
-### Load the bash_profile:
+##### Load the bash_profile:
 
 `source ~/.bash_profile`
 
-### Install dependencies and run the rails server:
+##### Install dependencies and run the rails server:
 
 `bundle install`
 `rails s`
