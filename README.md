@@ -20,6 +20,12 @@ Download it [here](http://postgresapp.com/)
 
 `source ~/.bash_profile`
 
+##### Create postgres role
+
+Run PostegreSQL.app, you should be in a terminal window.
+
+`CREATE ROLE hubiquity WITH LOGIN PASSWORD 'moulin12345'`
+
 ##### Install dependencies and run the rails server:
 
 `bundle install`
