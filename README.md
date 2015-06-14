@@ -23,6 +23,7 @@ Download it [here](http://postgresapp.com/)
 ##### Install dependencies and run the rails server:
 
 `bundle install`
+
 `rails s`
 
 Visit localhost:3000
