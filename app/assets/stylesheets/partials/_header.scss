@@ -1,4 +1,37 @@
+@import 'helpers/_variables.scss';
+
 header {
-	height: 50px;
-	background: red;
+	height: 80px;
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	font: 2.4em "Lato", sans-serif;
+	font-weight: 700;
+	color: $white;
+	padding-top: 50px;
+}
+
+h1 {
+	float: left;
+	text-indent: -9999px;
+	display: block;
+	background: url(logo.png) no-repeat 20px;
+	height: 30px;
+	width: 120px;
+	background-size: 100px auto;
+}
+
+.login-menu {
+	float: right;
+	list-style: none;
+
+	li {
+		float: left;
+		margin-right: 20px;
+
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+	}
 }
