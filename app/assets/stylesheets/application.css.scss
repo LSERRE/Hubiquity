@@ -15,6 +15,10 @@
  */
 
 
-@import 'helpers/*';
-@import 'partials/*';
-@import 'pages/*';
+@import 'helpers/reset';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+@import 'pages/home';
+@import 'pages/dashboard';
