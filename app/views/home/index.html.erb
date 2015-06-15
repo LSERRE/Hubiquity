@@ -1,2 +1,21 @@
+<<<<<<< Updated upstream
 <h1>Hello, Rails!</h1>
 <%= @welcome %>
+=======
+<section class="home">
+	<div class="wrap-home">
+		<h1 class="logo"></h1>
+		<h3>Louer à distance en toute sérénité</h3>
+
+		<form class="search-form" action="/search" role="search">
+			<input type="text" title="adresse" placeholder="L'adresse a visiter" class="search-form search-place" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'adresse a visiter'"><span></span>
+			<input type="text" title="date" placeholder="La date" class="search-form search-date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La date'"><span></span>
+			<input type="text" title="heure" placeholder="L'heure" class="search-form search-hour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'heure'"><span></span>
+			<input type="text" title="superficie" placeholder="La superficie" class="search-form search-size" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La superficie'">
+			<button type="submit">Trouver</button>
+		</form>
+
+		<!-- <%= @welcome %> -->
+	</div>
+</section>
+>>>>>>> Stashed changes
