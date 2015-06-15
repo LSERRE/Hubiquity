@@ -15,6 +15,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     watch = require('gulp-watch'),
     livereload = require('gulp-livereload'),
+    sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer');
 
 
@@ -45,7 +46,9 @@ gulp.task('scripts', function() {
 // Compile Sass
 gulp.task('sass', function() {
     return gulp.src('assets/stylesheets/application.css.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('dist'))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
