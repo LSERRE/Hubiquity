@@ -61,3 +61,15 @@ You can deploy automatically with
 
 `git push heroku master`
 
+##### Workflow
+
+For each feature you create a new branch:$
+
+`git checkout -b feature/feature-name`
+
+Then you set your branch upstream:
+
+`git push -u origin branchname`
+
+After that visit the github online repository and open a pull request of your branch to develop
+
