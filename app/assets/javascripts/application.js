@@ -14,7 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-if ($('input:text').val().length == 0) {
-      $(this).parents('p').addClass('warning');
-}

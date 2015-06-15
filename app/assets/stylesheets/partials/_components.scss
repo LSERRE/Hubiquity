@@ -19,14 +19,27 @@ input {
 
 .alert { display: none; }
 
-.connection {
+.new {
+		header { 
+		ul.login-menu {
+			li {
+				width: inherit;
+				&:last-child { margin-right: 20px;}
+			}
+		}
+	}
+}
+
+.wrapppper {
 	padding: 50px 100px 50px;
-	margin-top: -70px;
+	margin: -310px 0 0 185px;
 	background: #FFF;
+	position: relative;
+	z-index: 5;
 
 	h2 {
 		position: relative;
-		top: -35px;
+		top: -38px;
 		font: 32px "Lato", sans-serif;
 		font-weight: 700;
 		color: #42A5F5;
@@ -117,12 +130,6 @@ input {
 		background-color: transparent;
 		border-bottom: 1px solid #D7D7D7;
 		color: $black;
-		
-		&:focus {
-			box-shadow: 0 0 6px rgba(0, 200, 222, 0.25);
-			background-color: #fafafa; 
-			border-bottom: 2px solid $light-blue;
-		}
 	}
 
 	.label-helper {
@@ -142,6 +149,16 @@ input {
 		z-index: 10;
 	}
 }
+
+.field-complete {
+	input {
+		// box-shadow: 0 0 6px rgba(0, 200, 222, 0.25);
+		background-color: #fafafa; 
+		border-bottom: 2px solid $light-blue;
+	}
+
+	.label-helper { opacity: 1; z-index: 10; }
+}
 /* end form style */
 
 .shared-link {
@@ -152,5 +169,16 @@ input {
 		font-weight: 400;
 		color: $black;
 		line-height: 2em;
+	}
+}
+
+.button_to {
+	margin-top: 10px;
+	input {
+		background: #D0021B;
+		color: $white !important;
+		cursor: pointer;
+
+		&:hover { background: #C40219; }
 	}
 }
