@@ -33,3 +33,43 @@ Run PostegreSQL.app, you should be in a terminal window.
 `rails s`
 
 Visit localhost:3000
+
+##### Assets Pipeline:
+
+We have remove the default Rails assets pipeline to use Gulp.
+First install all gulp dependencies:
+
+`npm install`
+
+Then run gulp with watch task
+
+`gulp watch`
+
+It happens you have to rebuild node-sass lib:
+
+`npm rebuild node-sass`
+
+You must use the LiveReload extension. You can download it [here](https://chrome.google.com/webstore/detail/livereload/)
+
+##### Deploy on Heroku
+
+Once you have installed Heroku Toolbelt and you are logged with your Heroku account with 
+
+`heroku login`
+
+You can deploy automatically with 
+
+`git push heroku master`
+
+##### Workflow
+
+For each feature you create a new branch:$
+
+`git checkout -b feature/feature-name`
+
+Then you set your branch upstream:
+
+`git push -u origin branchname`
+
+After that visit the github online repository and open a pull request of your branch to develop
+
