@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato regular.eot'); /* IE9 Compat Modes */
+  src: url('Lato regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Lato regular.woff') format('woff'), /* Modern Browsers */
+       url('Lato regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Lato regular.svg#48e70b8825d557df57af3e4f7d4c31be') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato 700.eot'); /* IE9 Compat Modes */
+  src: url('Lato 700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Lato 700.woff') format('woff'), /* Modern Browsers */
+       url('Lato 700.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Lato 700.svg#eea591db52cf6ebc8992abb7621b9256') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato 900-webfont.eot');
+    src: url('Lato 900-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Lato 900-webfont.woff') format('woff'),
+         url('Lato 900-webfont.ttf') format('truetype'),
+         url('Lato 900-webfont.svg#latoblack') format('svg');
+    
+    font-style:   normal;
+    font-weight:  900;
+
+}
