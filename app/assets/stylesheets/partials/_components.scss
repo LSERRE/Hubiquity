@@ -1,0 +1,156 @@
+html, body {
+	font-size: 62.5%;
+	height: 100%;
+	background: #EDEDED;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+input {
+	border: 0;
+	outline: none;
+}
+
+.alert { display: none; }
+
+.connection {
+	padding: 50px 100px 50px;
+	margin-top: -70px;
+	background: #FFF;
+
+	h2 {
+		position: relative;
+		top: -35px;
+		font: 32px "Lato", sans-serif;
+		font-weight: 700;
+		color: #42A5F5;
+		left: 45px;
+	}
+
+	form {
+		input, label {
+			font: 3.2em "Lato", sans-serif;
+			font-weight: 400;
+			color: $black;
+		}
+
+		input:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0px 1000px white inset;
+			color: red !important;
+		}
+
+		.remember-me {
+			margin: -30px 0 20px 0;
+			position: relative;
+			z-index: 100;
+
+			label {
+				font-size: 2em;
+				color: #000;
+			}
+		}
+
+		.actions {
+			input {
+				height: 36px;
+				width: 175px;
+				background: $light-blue;
+				color: $white;
+				cursor: pointer;
+
+				&:hover { background: $blue; }
+			}
+		}
+	}
+}
+
+.hexagon {
+  position: relative;
+  width: 33px; 
+  height: 19.05px;
+  background-color: #4A90E2;
+  margin: 9.53px 0;
+}
+
+/* Hexa form */
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 16.5px solid transparent;
+  border-right: 16.5px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 9.53px solid #4A90E2;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 9.53px solid #4A90E2;
+}
+/* end hexa form */
+
+/* form style */
+.text-field {
+	position: relative;
+	height: 90px;
+
+	input{
+		-webkit-appearance: none;
+		outline: none;
+		border: none;
+		width: 100%;
+		margin-bottom: 8px;
+		padding: 8px 4px;
+		position: relative;
+		z-index: 3; 
+		background-color: transparent;
+		border-bottom: 1px solid #D7D7D7;
+		color: $black;
+		
+		&:focus {
+			box-shadow: 0 0 6px rgba(0, 200, 222, 0.25);
+			background-color: #fafafa; 
+			border-bottom: 2px solid $light-blue;
+		}
+	}
+
+	.label-helper {
+		font: 1.8em "Lato", sans-serif;
+		font-weight: 700;
+		color: #4A90E2;
+		position: absolute;
+		opacity: 0;
+		transition: .2s opacity;
+		top: -20px;
+		left: 0;
+		z-index: 1; 
+	}
+
+	input:focus + .label-helper {
+		opacity: 1; 
+		z-index: 10;
+	}
+}
+/* end form style */
+
+.shared-link {
+	margin: 20px 0;
+
+	a {
+		font: 1.8em "Lato", sans-serif;
+		font-weight: 400;
+		color: $black;
+		line-height: 2em;
+	}
+}
