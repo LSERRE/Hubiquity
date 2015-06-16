@@ -36,6 +36,28 @@
       <%= f.label :current_password, :class => 'label-helper' %> <i>(we need your current password to confirm your changes)</i>
     </div>
 
+    <div class="field text-field">
+      <%= f.text_field :firstname, :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Firstname'%>
+      <%= f.label :firstname, :class => 'label-helper' %>
+    </div>
+
+    <div class="field text-field">
+      <%= f.text_field :lastname, :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Lastname' %>
+      <%= f.label :lastname, :class => 'label-helper' %>
+    </div>
+
+    <div class="field text-field">
+      <%= f.text_field :telephone, :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Phone number' %>
+      <%= f.label :telephone, :class => 'label-helper' %>
+    </div>
+
+
+    <div class="field text-field">
+      <%= f.text_area :bio, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+      <%= f.label :bio, :class => 'label-helper' %>
+    </div>
+
+    
     <div class="actions">
       <%= f.submit "Update" %>
     </div>

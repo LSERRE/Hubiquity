@@ -4,6 +4,10 @@ html, body {
 	background: #EDEDED;
 }
 
+p {
+	font-size: 1.8em;
+}
+
 a {
 	text-decoration: none;
 	&:hover { text-decoration: underline; }
