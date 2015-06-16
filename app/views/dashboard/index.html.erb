@@ -1,3 +1,46 @@
 <div class="sub-header">
 	<%= render 'layouts/sidebar' %>
+	<div class="dashboard">
+		<div class="myvisits">
+			<H2>My Visits</H2>
+			<% if @visits.present? %>
+				<% @visits.each do |visit| %>
+				    <article class="single-visit">
+				        <p class="adress">
+				            <%= visit.adress %>
+				            <%= visit.city %>
+				            <%= visit.zipcode %>
+				            <%= visit.country %>
+				        </p>
+				    </article>
+				<% end %>
+			<% else %>
+				<p> You dont have posted any visit yet </p>
+			<% end %>
+		</div>
+
+		<div class="potential-visiters">
+			<H2>Visits offers</H2>
+			<% if @potential_visiters.present? %>
+				<% @potential_visiters.each do |visiter| %>
+					<% if visiter.present? %>
+						<% visiter.each do |visit| %>
+						    <article class="single-user">
+								<%= visit.visiter.firstname %>
+					            <%= visit.visiter.lastname %>
+
+					            <%= link_to "Accept this user" , visiter_accept_path( :visiter_id => visit.id ), :class => "button accept-visit-button" %>
+
+					            <%= link_to "Refuse this user" , visiter_refuse_path( :visiter_id => visit.id ), :class => "button refuse-visit-button" %>
+						    </article>
+					    <% end %>
+					<% else %>
+						<p> You don't have any offer </p>
+					<% end %>
+				<% end %>
+			<% else %>
+				<p> You don't have any visit pending </p>
+			<% end %>
+		</div>
+	</div>
 </div>
