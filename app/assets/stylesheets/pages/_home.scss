@@ -21,18 +21,8 @@
 		height: 65px;
   	line-height: 80px;
 	}
-}
 
-.logo {
-	font-size: 0;
-	display: inline-block;
-	background: url(logo.png) no-repeat 50%;
-	height: 65px;
- 	width: 200px;
-  background-size: 200px auto;
-}
-
-header { 
+	header { 
 	background: transparent;
 	position: absolute;
 
@@ -44,6 +34,16 @@ header {
 	}
 
 	.sub-menu li { width: 80%!important; }
+}
+}
+
+.logo {
+	font-size: 0;
+	display: inline-block;
+	background: url(logo.png) no-repeat 50%;
+	height: 65px;
+ 	width: 200px;
+  background-size: 200px auto;
 }
 
 .search-form { 
