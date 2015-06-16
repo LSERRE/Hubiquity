@@ -1,11 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 @import 'helpers/reset';
 @import 'helpers/grid';
 @import 'helpers/variables';
 
+@import 'partials/components';
 @import 'partials/header';
 @import 'partials/footer';
-@import 'partials/components';
 @import 'partials/sidebar';
 
 @import 'pages/home';
 @import 'pages/dashboard';
+@import 'pages/visit';
