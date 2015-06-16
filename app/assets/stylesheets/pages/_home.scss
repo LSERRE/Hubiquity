@@ -3,6 +3,20 @@
 	background-size: cover;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
+
+	header { 
+	background: transparent;
+	position: absolute;
+
+	ul.login-menu {
+		li {
+			width: inherit;
+			&:last-child { margin-right: 20px;}
+		}
+	}
+
+	.sub-menu li { width: 80%!important; }
+}
 }
 .wrap-home {
 	margin: auto;
@@ -21,20 +35,6 @@
 		height: 65px;
   	line-height: 80px;
 	}
-
-	header { 
-	background: transparent;
-	position: absolute;
-
-	ul.login-menu {
-		li {
-			width: inherit;
-			&:last-child { margin-right: 20px;}
-		}
-	}
-
-	.sub-menu li { width: 80%!important; }
-}
 }
 
 .logo {
@@ -45,6 +45,7 @@
  	width: 200px;
   background-size: 200px auto;
 }
+
 
 .search-form { 
 	// font: 1em "Lato", sans-serif; 
@@ -81,6 +82,7 @@
 		border: none;
 		color: $white;
 		text-transform: uppercase;
+		vertical-align: top;
 	}
 }
 
@@ -91,6 +93,7 @@
 	height: 50px;
 	width: 20%;
 	text-indent: 50px;
+	vertical-align: top;
 	&.search-place { background: url(ico-lieu.png) no-repeat 10% #fff; }
 
 	&.search-date { background: url(ico-date.png) no-repeat 10% #fff; }

@@ -21,10 +21,16 @@
 			<li>Help</li>
 		<% else %>
 			<li>
+				<%= link_to('Sing up', new_user_registration_path)  %>
+			</li>
+			<li>
   				<%= link_to('Login', new_user_session_path)  %>
 			</li>
 			<li>
-				<%= link_to('Register', new_user_registration_path)  %>
+  				<%= link_to('Help', new_user_session_path)  %>
+			</li>
+			<li class="become-visitor">
+				<a href="">Become a visitor</a>
 			</li>
 		<% end %>
 	</ul>
