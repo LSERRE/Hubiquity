@@ -1,13 +1,16 @@
 <div class="sub-header"></div>
+
+<div class="text-wrap">
+  <h1>Log in</h1>
+  <p>Je coupe j’emballe et je bibi, je coupe j’emballe et je bibi. Je coupe j’emballe et je bibi, j’suis un mauvais garçon comme Diddy</p>
+</div>
+
 <section class="login connection">
   <div class="wrapppper">
-    <div class="hexagon"></div>
-    <h2>Log in</h2>
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field text-field">
         <%= f.email_field :email, autocomplete: "off", autofocus: true,  :placeholder => 'Mail', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
-        <%= f.label :email, :class => 'label-helper' %><br />
+        <%= f.label :email, :class => 'label-helper' %>
       </div>
 
       <div class="field text-field">

@@ -21,7 +21,7 @@ header {
 		float: left;
 		text-indent: -9999px;
 		display: block;
-		background: url(logo.png) no-repeat 20px;
+		background: url(logo.svg) no-repeat 20px;
 		height: 30px;
 		width: 120px;
 		background-size: 100px auto;
@@ -62,9 +62,9 @@ header {
 	margin-left: -10px;
 	position: relative;
 	z-index: 10;
-	height: 180px;
+	height: 200px;
 	width: 125px;
-	padding: 10px 0;
+	padding: 10px;
 
 	li { 
 		float: inherit;
@@ -91,7 +91,7 @@ header {
 		color: $black;
 		display: block;
 		margin: 0;
-		width: 80%; }
+		width: 100%; }
 		.sub-menu-deploy:hover > .sub-menu:before {
 			content: '';
 			background: url(dropdown.svg) no-repeat;

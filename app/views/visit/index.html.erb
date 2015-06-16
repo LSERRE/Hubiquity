@@ -1,7 +1,14 @@
-<!-- @TODO: Display only visits wich are not accepted yet -->
-<section class="visit-list">
-    <h2>Latest asked visits</h2>
+<%= link_to('Dashboard', dashboard_path, :class => 'back-to-dash') %>
 
+<div class="sub-header"></div>
+
+<div class="text-wrap">
+<h1>Latest asked visits</h1>
+<p>La came doit servir à remplir la caisse. Et la caisse doit servir à racheter la came</p>
+</div>
+
+<section class="visit-list">
+<div class="wrapppper">
     <% @visits.each do |visit| %>
         <article class="single-visit">
             <p class="author"><%= visit.requester.firstname %> <%= visit.requester.lastname %></p>
@@ -34,4 +41,5 @@
             <% end %>
         </article>
     <% end %>
+    </div>
 </section>
