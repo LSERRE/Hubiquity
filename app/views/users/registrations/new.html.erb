@@ -31,12 +31,12 @@
       </div>
 
       <div class="field text-field">
-        <%= f.text_field :firstname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.text_field :firstname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'First name' %>
         <%= f.label :firstname, :class => 'label-helper' %>
       </div>
 
       <div class="field text-field">
-        <%= f.text_field :lastname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.text_field :lastname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Last name' %>
         <%= f.label :lastname, :class => 'label-helper' %>
       </div>
 

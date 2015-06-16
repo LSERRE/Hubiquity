@@ -1,6 +1,10 @@
 .visit {
-	.form-part {
-		display: block;
-		margin-top: 35px;
+	.visit-list {
+		margin-top: 60px; 
+	}
+
+	article {
+		background: $white;
+		margin: 10px 0;
 	}
 }

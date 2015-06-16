@@ -1,0 +1,38 @@
+.dashboardd {
+	background-color: #fff;
+	z-index: 15;
+	position: relative;
+	margin-left: 235px;
+	margin-top: 70px;
+	padding: 80px;
+	display: flex;
+
+	.dash-block {
+		float: left;
+		background: #F7F7F7;
+		max-width: 360px;
+		width: 100%;
+		font-family: "Lato", sans-serif;
+		padding: 20px;
+
+		h2 {
+			font-size: em(14px);
+			font-weight: 700;
+			color: #3F3F3F;
+			margin-bottom: 5px;
+		}
+
+		p {
+			font-size: em(22px);
+			color: #3F3F3F;
+			margin-bottom: 5px;
+		}
+	}
+
+	.myvisits {
+		margin-right: 40px;
+	}
+
+	.potential-visiters {
+	}
+}

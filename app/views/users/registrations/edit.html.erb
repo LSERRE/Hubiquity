@@ -53,7 +53,7 @@
 
 
     <div class="field text-field">
-      <%= f.text_area :bio, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+      <%= f.text_area :bio, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Bio' %>
       <%= f.label :bio, :class => 'label-helper' %>
     </div>
 

@@ -7,8 +7,10 @@ header {
 	z-index: 15;
 	color: $white;
 	padding-top: 20px;
-	background: $light-blue;
-	position: fixed;
+	// background: $light-blue;
+	background: url(background.png);
+	background-size: cover;
+	position: fixed !important;
 
 	a {
 		display: block;
