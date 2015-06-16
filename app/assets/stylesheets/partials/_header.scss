@@ -1,9 +1,10 @@
 header {
+	font-size: em(14px);
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
 	height: 40px;
 	width: 100%;
 	z-index: 15;
-	font: 2.4em "Lato", sans-serif;
-	font-weight: 700;
 	color: $white;
 	padding-top: 20px;
 	background: $light-blue;

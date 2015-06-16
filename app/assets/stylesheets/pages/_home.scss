@@ -46,22 +46,21 @@ header {
 	.sub-menu li { width: 80%!important; }
 }
 
-.search-form{
-	display: inline-block;
-	height: 80px;
-	width: 80%;
-	background: rgba(255, 255, 255, 0.5);
-	padding-top: 25px;
+.search-form { 
+	// font: 1em "Lato", sans-serif; 
+	
+}
 
-	input {
-		background: #fff;
-		border: none;
-		outline: none;
-		height: 50px;
-		width: 20%;
-		margin-right: -4px;
-		text-indent: 50px;
-	}
+.search-form{
+	font-size: 0;
+	font-family: "Lato", sans-serif;
+	font-weight: 900; 
+	color: #000;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
 
 	span {
 		color: #979797;
@@ -73,60 +72,33 @@ header {
 		top: 15px;
 	}
 
-	::-webkit-input-placeholder {
-		font: 1em "Lato", sans-serif;
-		font-weight: 900;
-		color: #000;
-		text-transform: uppercase;
-	}
-
-	::-moz-placeholder { /* firefox 19+ */
-		font: 1em "Lato", sans-serif;
-		font-weight: 900;
-		color: #000;
-		text-transform: uppercase; 
-	}
-	
-	:-ms-input-placeholder { /* ie */
-		font: 1em "Lato", sans-serif;
-		font-weight: 900;
-		color: #000;
-		text-transform: uppercase;
-	}
-	
-	input:-moz-placeholder {
-		font: 1em "Lato", sans-serif;
-		font-weight: 900;
-		color: #000;
-		text-transform: uppercase;
-	}
-
 	button {
-		width: 15%;
-		height: 50px;
-		background: $orange;
-		border: none;
 		font: 1em "Lato", sans-serif; 
 		font-weight: 900; 
+		height: 50px;
+		width: 15%;
+		background: $orange;
+		border: none;
 		color: $white;
 		text-transform: uppercase;
 	}
 }
 
-.search-form { 
-	font: 1em "Lato", sans-serif; 
-	font-weight: 900; 
-	color: #000;
-	text-transform: uppercase;
-	padding-top: 0;
+.search-input {
+	font-size: 1rem;
+	background: #fff;
+	display: inline-block;
+	height: 50px;
+	width: 20%;
+	text-indent: 50px;
+	&.search-place { background: url(ico-lieu.png) no-repeat 10% #fff; }
+
+	&.search-date { background: url(ico-date.png) no-repeat 10% #fff; }
+
+	&.search-hour { background: url(ico-heure.png) no-repeat 10% #fff; }
+
+	&.search-size { background: url(ico-superficie.png) no-repeat 10% #fff; }
 }
 
-.search-place { background: url(ico-lieu.png) no-repeat 10% #fff; }
-
-.search-date { background: url(ico-date.png) no-repeat 10% #fff; }
-
-.search-hour { background: url(ico-heure.png) no-repeat 10% #fff; }
-
-.search-size { background: url(ico-superficie.png) no-repeat 10% #fff; }
 
 footer { display: none; }
