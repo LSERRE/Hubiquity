@@ -1,58 +1,107 @@
-<h1>Request a visit</h1>
+<%= link_to('Dashboard', dashboard_path, :class => 'back-to-dash') %>
 
-<%= form_for @visit, url: {action: "create"}, html: {class: "visit_form dynamic-form"} do |f| %>
-	<h2><span class="hexagon">1</span>Appartment</h2>
+<div class="sub-header"></div>
 
-	<label for="adress">Appartment adress</label>
-  	<%= f.text_field :adress, :placeholder => "Adress"  %>
-  	<label for="zipcode">Zipcode</label>
-  	<%= f.text_field :zipcode, :placeholder => "Zipcode"  %>
-  	<label for="city">City</label>
-  	<%= f.text_field :city, :placeholder => "City"  %>
-   	<label for="country">Country</label>
-  	<%= f.text_field :country, :placeholder => "Country"  %>
-   	<label for="surface">Appartement surface</label>
-  	<%= f.number_field :surface %>
+  <div class="text-wrap">
+    <h1>Request a visit</h1>
+    <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap. Hashtag typewriter banh mi,.</p>
+  </div>
 
-  	<h2><span class="hexagon">2</span>Visit</h2>
 
-	<label for="agentName">AgentName</label>
-  	<%= f.text_field :agentName, :placeholder => "Agent name"  %>
-	<label for="agencyName">AgencyName</label>
-  	<%= f.text_field :agencyName, :placeholder => "Agency name"  %>
+<div class="wrapppper">
 
-  	<label for="telephone">Phone number/label>
-  	<%= f.text_field :telephone, :placeholder => "Phone number"  %>
+  <%= form_for @visit, url: {action: "create"}, html: {class: "visit_form dynamic-form"} do |f| %>
+    <div class="form-part appartement">
+      <div class="hexagon"><span>1</span></div><h2>Appartment</h2>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="adress">Appartment adress</label>
+        <%= f.text_field :adress, :placeholder => "Adress", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
 
-	<label for="visitDate1">Visit date 1</label>
-  	<%= f.date_field :visitDate1 %>
-  	<%= f.time_field :visitTime1 %>
-  	<label for="visitDate2">Visit date 2</label>
-  	<%= f.date_field :visitDate2 %>
-  	<%= f.time_field :visitTime2 %>
-  	<label for="visitDate3">Visit date 3</label>
-  	<%= f.date_field :visitDate3 %>
-  	<%= f.time_field :visitTime3 %>
+      <div class="field text-field">
+        <label class="label-helper" for="zipcode">Zipcode</label>
+        <%= f.text_field :zipcode, :placeholder => "Zipcode", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="city">City</label>
+        <%= f.text_field :city, :placeholder => "City", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="country">Country</label>
+        <%= f.text_field :country, :placeholder => "Country", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="surface">Appartement surface</label>
+        <%= f.number_field :surface, :placeholder => 'Superficie', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+      </div>
+    </div>
 
-  	<h2><span class="hexagon">3</span>Questions</h2>
-  	
-  	<!-- @TODO: Others questions -->
+    <div class="form-part visit">
+      <div class="hexagon"><span>2</span></div><h2>Visit</h2>
 
-  	<h2><span class="hexagon">4</span>Additional questions</h2>
+      <div class="field text-field">
+        <label class="label-helper" for="agentName">AgentName</label>
+        <%= f.text_field :agentName, :placeholder => "Agent name", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="agencyName">AgencyName</label>
+        <%= f.text_field :agencyName, :placeholder => "Agency name", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
 
-	<label for="question1">Question 1</label>
-  	<%= f.text_field :question1, :placeholder => "Question 1"  %>
-  	<label for="question2">Question 1</label>
-  	<%= f.text_field :question2, :placeholder => "Question 2"  %>
-  	<label for="question3">Question 3</label>
-  	<%= f.text_field :question3, :placeholder => "Question 3"  %>
-  	<label for="question4">Question 4</label>
-  	<%= f.text_field :question4, :placeholder => "Question 4"  %>
+      <div class="field text-field">
+        <label class="label-helper" for="telephone">Phone number/label></label>
+        <%= f.text_field :telephone, :placeholder => "Phone number", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="visitDate1">Visit date 1</label>
+        <%= f.date_field :visitDate1, :class => 'date', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.time_field :visitTime1, :class => 'time' %>
+      </div>
+      
+      <div class="field text-field">
+        <label class="label-helper" for="visitDate2">Visit date 2</label>
+        <%= f.date_field :visitDate2, :class => 'date' %>
+        <%= f.time_field :visitTime2, :class => 'time' %>
+      </div>
+     
+      <div class="field text-field">
+        <label class="label-helper" for="visitDate3">Visit date 3</label>
+        <%= f.date_field :visitDate3, :class => 'date' %>
+        <%= f.time_field :visitTime3, :class => 'time' %>
+      </div>
+    </div>
 
-  	<h2><span class="hexagon">5</span>Confirmation</h2>
-	
-	<p class="button request"><%= f.submit "Submit request" %></p>
+    <div class="form-part questions">
+      <div class="hexagon"><span>3</span></div><h2>Additional questions</h2>
 
-	<!-- @TODO: ADD TEXT -->
+      <div class="field text-field">
+        <label class="label-helper" for="question1">Question 1</label>
+        <%= f.text_field :question1, :placeholder => "Question 1"  %>
+      </div>
+      <div class="field text-field">
+        <label class="label-helper" for="question2">Question 1</label>
+        <%= f.text_field :question2, :placeholder => "Question 2"  %>
+      </div>
+      <div class="field text-field">
+        <label class="label-helper" for="question3">Question 3</label>
+        <%= f.text_field :question3, :placeholder => "Question 3"  %>
+      </div>
+      <div class="field text-field">
+        <label class="label-helper" for="question4">Question 4</label>
+        <%= f.text_field :question4, :placeholder => "Question 4"  %>
+      </div>
+    </div>
+    
+    <div class="hexagon"><span>4</span></div><h2>Confirmation</h2>
+  	<p class="button request"><%= f.submit "Submit request" %></p>
 
-<% end %>
+  	<!-- @TODO: ADD TEXT -->
+
+  <% end %>
+</div>

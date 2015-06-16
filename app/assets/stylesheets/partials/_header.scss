@@ -1,27 +1,28 @@
 header {
-	height: 150px;
+	height: 40px;
 	width: 100%;
-	z-index: 10;
+	z-index: 15;
 	font: 2.4em "Lato", sans-serif;
 	font-weight: 700;
 	color: $white;
-	padding-top: 25px;
+	padding-top: 20px;
 	background: $light-blue;
+	position: fixed;
 
 	a {
 		display: block;
 		height: 25px;
 	}
-}
 
-h1 {
-	float: left;
-	text-indent: -9999px;
-	display: block;
-	background: url(logo.png) no-repeat 20px;
-	height: 30px;
-	width: 120px;
-	background-size: 100px auto;
+	h1 {
+		float: left;
+		text-indent: -9999px;
+		display: block;
+		background: url(logo.png) no-repeat 20px;
+		height: 30px;
+		width: 120px;
+		background-size: 100px auto;
+	}
 }
 
 .login-menu {
@@ -81,7 +82,8 @@ h1 {
 		background: $white;
 		color: $black;
 		display: block;
-		margin: 0; }
+		margin: 0;
+		width: 80%; }
 		.sub-menu-deploy:hover > .sub-menu:before {
 			content: '';
 			background: url(dropdown.svg) no-repeat;
@@ -108,7 +110,7 @@ h1 {
 	color: #fff;
 	-webkit-mask-image: url("polymask.svg");
 	text-align: center;
-	background: url(user.png) 50%;
+	// background: url(user.png) 50%;
 	background-size: 100%;
 	margin-top: -7px;
 	margin-left: -47px;
@@ -118,5 +120,11 @@ h1 {
 		width: 186px;
 		margin: auto;
 		margin-top: 16px;
+	}
+
+	img {
+		height: 100%;
+		display: block;
+		background: red;
 	}
 }
