@@ -23,6 +23,33 @@ a {
 input {
 	border: 0;
 	outline: none;
+	&::-webkit-input-placeholder {
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	&::-moz-placeholder { /* firefox 19+ */
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase; 
+	}
+	
+	&:-ms-input-placeholder { /* ie */
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
+	
+	&:-moz-placeholder {
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
 }
 
 .alert { display: none; }
