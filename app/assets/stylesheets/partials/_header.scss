@@ -35,12 +35,11 @@ header {
 	}
 
 	li {
-		float: left;
 		margin-right: 20px;
 		height: 18px;
-		padding-bottom: 20px;
 		width: 100px;
-
+		display: inline-block;
+		vertical-align: middle;
 		a {
 			color: $white;
 			text-decoration: none;
@@ -48,6 +47,12 @@ header {
 
 		&:last-child { margin-right: 0; }
 	}
+}
+
+.become-visitor {
+	padding: 20px 20px;
+	background: rgba(255,255,255,.4);
+	text-transform: uppercase;
 }
 
 .sub-menu {
