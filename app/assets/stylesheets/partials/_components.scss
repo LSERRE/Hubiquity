@@ -50,7 +50,7 @@ input {
 	z-index: 15;
 	top: 15px;
 	margin-left: -10px;
-	font: 2.8em "Lato", sans-serif;
+	font: em(18px) "Lato", sans-serif;
 	font-weight: 700;
 	color: $white;
 
@@ -88,14 +88,14 @@ input {
 	z-index: 10;
 
 	h1 {
-		font: 4.8em "Lato", sans-serif;
+		font: em(48px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #3F3F3F;
 		text-indent: 90px;
 	}
 
 	p {
-		font: 2.5em "Open Sans", sans-serif;
+		font: em(18px) "Open Sans", sans-serif;
 		color: #3F3F3F;
 		line-height: 2.5em;
 		margin-top: 40px;
@@ -115,7 +115,7 @@ input {
 	h2 {
 		position: relative;
 		top: -38px;
-		font: 32px "Lato", sans-serif;
+		font: em(32px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #42A5F5;
 		left: 45px;
@@ -123,7 +123,7 @@ input {
 
 	form {
 		input, label {
-			font: 3.2em "Lato", sans-serif;
+			font: em(25px) "Lato", sans-serif;
 			font-weight: 400;
 			color: $black;
 		}
@@ -139,7 +139,7 @@ input {
 			z-index: 100;
 
 			label {
-				font-size: 2em;
+				font-size: em(18px);
 				color: #000;
 			}
 		}
@@ -168,12 +168,12 @@ input {
 	margin: 9.53px 0;
 
     span {
-		font: 2em "Lato", sans-serif;
+		font: em(20px) "Lato", sans-serif;
 		font-weight: 700;
 		color: $white;
 		position: absolute;
-		top: 2px;
-		left: 12px;
+		top: -2px;
+		left: 10px;
     }
 }
 
@@ -219,7 +219,7 @@ input {
 	}
 
 	.label-helper {
-		font: 1.8em "Lato", sans-serif;
+		font: em(16px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #4A90E2;
 		position: absolute;
@@ -250,7 +250,7 @@ input {
 	}
 
 	.label-helper {
-		font: 1.8em "Lato", sans-serif;
+		font: em(18px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #4A90E2;
 		position: absolute;
@@ -278,7 +278,7 @@ input {
 // put time on right side
 .time {
 	position: relative;
-	top: -55px;
+	top: -62px;
 	text-align: right;
 }
 /* end form style */
@@ -288,7 +288,7 @@ input {
 	margin: 20px 0;
 
 	a {
-		font: 1.8em "Lato", sans-serif;
+		font: em(18px) "Lato", sans-serif;
 		font-weight: 400;
 		color: $black;
 		line-height: 2em;

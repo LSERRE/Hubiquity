@@ -1,12 +1,12 @@
 .side-menu {
 	width: 175px;
 	position: relative;
-	font: 1.5em "Lato", sans-serif;
+	font: em(13px) "Lato", sans-serif;
 	left: 10%;
 	
 	li {
 		margin-top: 10px;
-		font-size: 1.4em;
+		font-size: em(13px);
 
 		a {
 			color: $white;
@@ -49,7 +49,7 @@
 		display: block;
 		background: $light-blue;
 		padding: 10px 40px;
-		font: 1.2em "Lato", sans-serif;
+		font: em(12px) "Lato", sans-serif;
 		font-weight: 700;
 		width: 175px;
 		height: 35px;
