@@ -6,10 +6,7 @@ html, body {
 
 a {
 	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
+	&:hover { text-decoration: underline; }
 }
 
 input {
@@ -30,15 +27,64 @@ input {
 	}
 }
 
-.new {
-	.wrapppper {
-		margin-top: -100px;
+// add dashboard link in header
+.back-to-dash {
+	position: absolute;
+	top: 15px;
+	margin-left: -10px;
+	font: 2.8em "Lato", sans-serif;
+	font-weight: 700;
+	color: $white;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		height: 30px;
+		width: 20px;
+		background: url(arrow-left.svg) no-repeat;
+		background-position-y: 18px;
 	}
 }
 
+// header with H1 and text (used in form)
+// needed for cleaner header
+.intro {
+	width: 100%;
+	background: $light-blue;
+	position: absolute;
+	left: 0;
+
+	.text-wrap {
+		background-color: #fff;
+		max-width: 1155px;
+		width: 100%;
+		margin: 0 auto;
+		height: 230px;
+		border-bottom: 1px solid #D7D7D7;
+		padding: 50px 0 0 0;
+
+		h1 {
+			font: 4.8em "Lato", sans-serif;
+			font-weight: 700;
+			color: #3F3F3F;
+			text-indent: 90px;
+		}
+
+		p {
+			font: 2.5em "Open Sans", sans-serif;
+			color: #3F3F3F;
+			line-height: 2.5em;
+			margin-top: 40px;
+			max-width: 550px;
+			padding-left: 90px;
+		}
+	}
+}
+
+// contains main content
 .wrapppper {
 	padding: 50px 100px 50px;
-	margin: -310px 0 0 185px;
+	margin: 0;
 	background: #FFF;
 	position: relative;
 	z-index: 5;
@@ -89,15 +135,25 @@ input {
 	}
 }
 
+/* Hexa form */
+// blue shape before form titles
 .hexagon {
-    position: relative;
-    width: 33px; 
-    height: 19.05px;
-    background-color: #4A90E2;
-    margin: 9.53px 0;
+	position: relative;
+	width: 33px; 
+	height: 19.05px;
+	background-color: #4A90E2;
+	margin: 9.53px 0;
+
+    span {
+		font: 2em "Lato", sans-serif;
+		font-weight: 700;
+		color: $white;
+		position: absolute;
+		top: 2px;
+		left: 12px;
+    }
 }
 
-/* Hexa form */
 .hexagon:before,
 .hexagon:after {
     content: "";
@@ -118,6 +174,7 @@ input {
     border-top: 9.53px solid #4A90E2;
 }
 /* end hexa form */
+
 
 /* form style */
 .text-field {
@@ -156,6 +213,7 @@ input {
 	}
 }
 
+// add img
 .avatar-field {
 	position: absolute;
 	z-index: 10;
@@ -183,6 +241,7 @@ input {
 	}
 }
 
+// once field is completed
 .field-complete {
 	input {
 		// box-shadow: 0 0 6px rgba(0, 200, 222, 0.25);
@@ -192,7 +251,15 @@ input {
 
 	.label-helper { opacity: 1; z-index: 10; }
 }
+
+// put time on right side
+.time {
+	position: relative;
+	top: -55px;
+	text-align: right;
+}
 /* end form style */
+
 
 .shared-link {
 	margin: 20px 0;
