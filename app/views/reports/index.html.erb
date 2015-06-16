@@ -2,22 +2,6 @@
 	<%= render 'layouts/sidebar' %>
 </div>
 	<div class="reportss">
-		<div class="myvisits dash-block">
-			<h2>Visit Squeduled :</h2>
-			<% if @visits.present? %>
-				<% @visits.each do |visit| %>
-				    <article class="single-visit">
-				        <p class="adress">
-				            <%= visit.city %>
-				            <%= visit.visitDate1 %>
-				        </p>
-				    </article>
-				<% end %>
-			<% else %>
-				<p> You dont have posted any visit yet </p>
-			<% end %>
-		</div>
-
 		<div class="potential-visiters dash-block">
 			<h2>Waiting for scheduling :</h2>
 			<% if @potential_visiters.present? %>
@@ -39,6 +23,22 @@
 				<% end %>
 			<% else %>
 				<p> You don't have any visit pending </p>
+			<% end %>
+		</div>
+
+		<div class="myvisits dash-block">
+			<h2>Visit Squeduled :</h2>
+			<% if @visits.present? %>
+				<% @visits.each do |visit| %>
+				    <article class="single-visit">
+				        <p class="date-visit">June 17 2015, 8:30 pm</p>
+				        <span class="cancel-visit">Cancel visit</span>
+				        <p class="adress"><%= visit.adress %>, <%= visit.city %>, <%= visit.zipcode %></p>
+				        <p class="whos-going"><span class="polymask"><span class="content"><%= image_tag(current_user.avatar.url(:thumb)) %></span></span><span>With This Guy</span></p>
+				    </article>
+				<% end %>
+			<% else %>
+				<p> You dont have posted any visit yet </p>
 			<% end %>
 		</div>
 	</div>

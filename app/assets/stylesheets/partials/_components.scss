@@ -10,7 +10,7 @@ p {
 
 a {
 	text-decoration: none;
-	&:hover { text-decoration: underline; }
+	// &:hover { text-decoration: underline; }
 }
 
 em {
@@ -173,15 +173,22 @@ input {
 
 		.actions {
 			input {
-				height: 50px;
-				width: 175px;
-				background: $light-blue;
-				color: $white;
 				cursor: pointer;
-				padding: 10px;
-				font-size: em(15px)!important;
+				text-align: center;
+				text-transform: uppercase;
+				display: block;
+				background: #42A5F5;
+				padding: 10px 40px;
+				font: em(12px) "Lato", sans-serif;
+				font-weight: 700;
+				width: 135px;
+				height: 45px;
+				margin-bottom: 10px;
+				color: $white;
+				box-shadow: #3275AA 0px 2px 0px;
+				border-radius: 3px;
 
-				&:hover { background: $blue; }
+				&:hover { background: #3275AA; }
 			}
 		}
 	}
@@ -325,20 +332,55 @@ input {
 }
 
 .request {
-	font-size: em(10px);
-	input { padding: 10px; }
+	input { 
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+		background: #42A5F5;
+		padding: 10px 40px;
+		font-size: em(14px) !important;
+		font-weight: 700;
+		width: 290px;
+		height: 90px;
+		margin-bottom: 10px;
+		color: $white !important;
+		box-shadow: #3275AA 0px 2px 0px;
+		border-radius: 3px;
+
+		&:hover { background: #3275AA; }
+	}
 }
 /* end form style */
 
 
 .shared-link {
-	margin: 20px 0;
+	margin: -55px 0 0px 170px;
 
 	a {
-		font: em(18px) "Lato", sans-serif;
-		font-weight: 400;
-		color: $black;
-		line-height: 2em;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+		background: #28B28D;
+		padding: 15px 40px 10px;
+		font: em(12px) "Lato", sans-serif;
+		font-weight: 700;
+		width: 55px;
+		height: 20px;
+		margin-bottom: 10px;
+		color: #FBFBFB;
+		box-shadow: #24A17F 0px 2px 0px;
+		border-radius: 3px;
+
+		&:hover { background: #24A17F; }
+	}
+
+	.forgot-pass { 
+		background: #B2435B; box-shadow: #96394C 0px 2px 0px;
+		padding-top: 10px;
+		height: 25px;
+		margin: -69px 0 0 170px;
+		&:hover { background: #96394C; }
 	}
 }
 
