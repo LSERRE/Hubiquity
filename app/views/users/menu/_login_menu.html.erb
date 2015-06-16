@@ -3,6 +3,7 @@
 		<% if user_signed_in? %>
 			<li class="sub-menu-deploy">
 				<span class="polymask"><span class="content"></span></span>
+				<%= image_tag(current_user.avatar.url(:thumb)) %>
 		  		Jean Moundir
 				<ul class="sub-menu">
 					<li><%= link_to('Dashboard', dashboard_path) %></li>
