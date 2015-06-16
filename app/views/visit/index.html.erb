@@ -1,0 +1,12 @@
+<h2>Latest asked visits</h2>
+
+<% @visits.each do |visit| %>
+    <article class="visit">
+        <%= visit.requester.firstname %> <%= visit.requester.lastname %>
+        <%= visit.city %>
+
+        <% if visit.requester.id != current_user.id %>
+            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id), :class => "button visit-it-button" %>
+        <% end %>
+    </article>
+<% end %>

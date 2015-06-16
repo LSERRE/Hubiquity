@@ -13,12 +13,12 @@ class ApplicationController < ActionController::Base
     protected
 
     def configure_permitted_parameters
-        devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
-        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :is_female, :date_of_birth, :avatar) }
+        devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :firstname, :lastname) }
+        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :current_password, :firstname, :lastname, :bio, :telephone) }
     end
 
   	def after_sign_in_path_for(resource)
   		dashboard_path
-	end
+    end
 
 end

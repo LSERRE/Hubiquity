@@ -1,14 +1,14 @@
 class VisitController < ApplicationController
 
 	def index
-	    @visits = Visit.all.limit(20).order('created_at DESC')
-	  end
+		@visits = Visit.all.limit(20).order('created_at DESC')
+	end
 
-	  def new
-	    @visit = Visit.new
-	  end
+	def new
+		@visit = Visit.new
+	end
 
-	  def create
+	def create
 		@visit = Visit.new
 		if(Visit.new(post_params).valid?)
 			params = post_params
@@ -27,19 +27,19 @@ class VisitController < ApplicationController
 		end
 	end
 
-	  def show
-	    @visit = Visit.find(params[:id])
-	  end
-
-	  def destroy
+	def show
 		@visit = Visit.find(params[:id])
-	    @visit.delete
-	    redirect_to visits_path
-	  end
+	end
 
-	  private
-	  def post_params
-	    params.require(:visit).permit(:adress, :zipcode, :city, :country, :surface, :agentName, :agencyName, :telephone, :visitDate1, :visitTime1, :visitDate2, :visitTime2, :visitDate3, :visitTime3, :wholesomnessRate, :question1, :question2, :question3, :question4)
-	  end
+	def destroy
+		@visit = Visit.find(params[:id])
+		@visit.delete
+		redirect_to visits_path
+	end
+
+	private
+	def post_params
+		params.require(:visit).permit(:adress, :zipcode, :city, :country, :surface, :agentName, :agencyName, :telephone, :visitDate1, :visitTime1, :visitDate2, :visitTime2, :visitDate3, :visitTime3, :wholesomnessRate, :question1, :question2, :question3, :question4)
+	end
 
 end

@@ -1,5 +1,7 @@
 class Visit < ActiveRecord::Base
-	belongs_to :user
+	belongs_to :requester, :foreign_key => 'user_id', :class_name => "User"
+	has_many :user, :foreign_key => 'user_id', :class_name => "User", through: :visiter
+
 	validates :adress, presence: true
 	validates :zipcode, presence: true
 	validates :city, presence: true

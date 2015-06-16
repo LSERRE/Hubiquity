@@ -29,6 +29,16 @@
         <%= f.label :password_confirmation, :class => 'label-helper' %>
       </div>
 
+      <div class="field text-field">
+        <%= f.text_field :firstname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.label :firstname, :class => 'label-helper' %>
+      </div>
+
+      <div class="field text-field">
+        <%= f.text_field :lastname, autocomplete: "off", :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.label :lastname, :class => 'label-helper' %>
+      </div>
+
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>

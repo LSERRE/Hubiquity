@@ -30,6 +30,10 @@ Run PostegreSQL.app, you should be in a terminal window.
 
 `bundle install`
 
+`npm install`
+
+brew install imagemagick
+
 `rails s`
 
 Visit localhost:3000
@@ -37,11 +41,8 @@ Visit localhost:3000
 ##### Assets Pipeline:
 
 We have remove the default Rails assets pipeline to use Gulp.
-First install all gulp dependencies:
 
-`npm install`
-
-Then run gulp with watch task
+Run gulp with watch task
 
 `gulp watch`
 

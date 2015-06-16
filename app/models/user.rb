@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   has_many :visit
+  has_many :missions, :foreign_key => 'visit_id', :class_name => "User", through: :visiter
 end
