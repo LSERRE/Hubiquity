@@ -30,9 +30,15 @@ input {
 	}
 }
 
+.new {
+	.wrapppper {
+		margin-top: -100px;
+	}
+}
+
 .wrapppper {
 	padding: 50px 100px 50px;
-	margin: -100px 0 0 185px;
+	margin: -310px 0 0 185px;
 	background: #FFF;
 	position: relative;
 	z-index: 5;
@@ -147,6 +153,33 @@ input {
 	input:focus + .label-helper {
 		opacity: 1; 
 		z-index: 10;
+	}
+}
+
+.avatar-field {
+	position: absolute;
+	z-index: 10;
+	top: 80px;
+	right: 50px;
+	font-size: 1em;
+
+	.avatar-upload {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.label-helper {
+		font: 1.8em "Lato", sans-serif;
+		font-weight: 700;
+		color: #4A90E2;
+		position: absolute;
+		top: -20px;
+		left: 0;
+		z-index: 1; 
+	}
+
+	input {
+		font-size: 1em!important;
 	}
 }
 
