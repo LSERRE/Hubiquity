@@ -2,9 +2,7 @@
 	<ul class="login-menu">
 		<% if user_signed_in? %>
 			<li class="sub-menu-deploy">
-				<span class="polymask"><span class="content"><%= image_tag(current_user.avatar.url(:thumb)) %></span></span>
-	
-				<span class="polymask"><%= image_tag(current_user.avatar.url(:thumb), :class => "content") %></span>
+				<span class="polymask"><%= image_tag(current_user.avatar.url(:thumb), :class => "content avatar") %></span>
 
 		  		<%= current_user.firstname %> <%= current_user.lastname %> 
 				<ul class="sub-menu">
