@@ -81,7 +81,8 @@ header {
 		background: $white;
 		color: $black;
 		display: block;
-		margin: 0; }
+		margin: 0;
+		width: 80%; }
 		.sub-menu-deploy:hover > .sub-menu:before {
 			content: '';
 			background: url(dropdown.svg) no-repeat;
