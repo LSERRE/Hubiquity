@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614020830) do
+ActiveRecord::Schema.define(version: 20150615165828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,5 +33,48 @@ ActiveRecord::Schema.define(version: 20150614020830) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "visits", force: :cascade do |t|
+    t.string   "adress"
+    t.integer  "zipcode"
+    t.string   "city"
+    t.string   "country"
+    t.integer  "surface"
+    t.string   "agentName"
+    t.string   "agencyName"
+    t.boolean  "wholesomness"
+    t.integer  "wholesomnessRate"
+    t.boolean  "neighberhood"
+    t.integer  "neighberhoodRate"
+    t.boolean  "broker"
+    t.integer  "brokerRate"
+    t.boolean  "furniture"
+    t.string   "furnitureRate"
+    t.boolean  "light"
+    t.integer  "lightRate"
+    t.boolean  "calm"
+    t.integer  "calmRate"
+    t.boolean  "electricty"
+    t.integer  "electricityRate"
+    t.boolean  "windowGlazing"
+    t.boolean  "pipework"
+    t.integer  "pipeworkRate"
+    t.string   "question1"
+    t.string   "question2"
+    t.string   "question3"
+    t.string   "question4"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "telephone"
+    t.integer  "bathroomsRate"
+    t.integer  "windowGlazingRate"
+    t.date     "visitDate1"
+    t.time     "visitTime1"
+    t.time     "visitTime2"
+    t.date     "visitDate2"
+    t.date     "visitDate3"
+    t.time     "visitTime3"
+    t.integer  "user_id"
+  end
 
 end

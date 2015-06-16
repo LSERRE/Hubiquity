@@ -1,0 +1,73 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adress: MyString
+  zipcode: 
+  city: MyString
+  country: MyString
+  surface: 
+  agentName: MyString
+  agencyName: MyString
+  visitDate1: 2015-06-15 15:05:15
+  visitDate2: 2015-06-15 15:05:15
+  visitDate3: 2015-06-15 15:05:15
+  wholesomness: false
+  wholesomnessRate: 
+  neighberhood: false
+  neighberhoodRate: 
+  broker: false
+  brokerRate: 
+  furniture: false
+  furnitureRate: MyString
+  bathrooms: false
+  bathrooms: 
+  light: false
+  lightRate: 
+  calm: false
+  calmRate: 
+  electricty: false
+  electricityRate: 
+  windowGlazing: false
+  windowGlazingRare: 
+  pipework: false
+  pipeworkRate: 
+  question1: MyString
+  question2: MyString
+  question3: MyString
+  question4: MyString
+
+two:
+  adress: MyString
+  zipcode: 
+  city: MyString
+  country: MyString
+  surface: 
+  agentName: MyString
+  agencyName: MyString
+  visitDate1: 2015-06-15 15:05:15
+  visitDate2: 2015-06-15 15:05:15
+  visitDate3: 2015-06-15 15:05:15
+  wholesomness: false
+  wholesomnessRate: 
+  neighberhood: false
+  neighberhoodRate: 
+  broker: false
+  brokerRate: 
+  furniture: false
+  furnitureRate: MyString
+  bathrooms: false
+  bathrooms: 
+  light: false
+  lightRate: 
+  calm: false
+  calmRate: 
+  electricty: false
+  electricityRate: 
+  windowGlazing: false
+  windowGlazingRare: 
+  pipework: false
+  pipeworkRate: 
+  question1: MyString
+  question2: MyString
+  question3: MyString
+  question4: MyString
