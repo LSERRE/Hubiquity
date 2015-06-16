@@ -3,7 +3,7 @@
 		<% if user_signed_in? %>
 			<li class="sub-menu-deploy">
 				<span class="polymask"><span class="content"><%= image_tag(current_user.avatar.url(:thumb)) %></span></span>
-		  		Jean Moundir
+	
 				<span class="polymask"><%= image_tag(current_user.avatar.url(:thumb), :class => "content") %></span>
 
 		  		<%= current_user.firstname %> <%= current_user.lastname %> 

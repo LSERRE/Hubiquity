@@ -3,126 +3,130 @@
 	background-size: cover;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
+}
+.wrap-home {
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	height: 400px;
+	text-align: center;
 
-	header { 
-		background: transparent;
-		position: absolute;
-
-		ul.login-menu {
-			li {
-				width: inherit;
-				&:last-child { margin-right: 20px;}
-			}
-		}
-
-		.sub-menu li { width: 80%!important; }
-	}
-
-	footer { display: none; }
-
-	.wrap-home {
-		margin: auto;
-		position: absolute;
-		top: 0; left: 0; bottom: 0; right: 0;
-		height: 400px;
-		text-align: center;
-
-		.logo {
-			display: block;
-			background: url(logo.png) no-repeat 50%;
-			height: 100px;
-			width: 100%;
-			background-size: 400px auto;
-		}
-
-		h3 {
-			clear: left;
-			font: 3.6em "Lato", sans-serif;
-			font-weight: 400;
-			color: #fff;
-		}
-
-		.search-form{
-			display: inline-block;
-			height: 80px;
-			width: 80%;
-			background: rgba(255, 255, 255, 0.5);
-			padding-top: 25px;
-
-			input {
-				background: #fff;
-				border: none;
-				outline: none;
-				height: 50px;
-				width: 20%;
-				margin-right: -4px;
-				text-indent: 50px;
-
-				&.search-form { 
-					font: 1em "Lato", sans-serif; 
-					font-weight: 900; 
-					color: #000;
-					text-transform: uppercase;
-					padding-top: 0;
-				}
-
-				&.search-place { background: url(ico-lieu.png) no-repeat 10% #fff; }
-
-				&.search-date { background: url(ico-date.png) no-repeat 10% #fff; }
-
-				&.search-hour { background: url(ico-heure.png) no-repeat 10% #fff; }
-
-				&.search-size { background: url(ico-superficie.png) no-repeat 10% #fff; }
-			}
-
-			span {
-				color: #979797;
-				background: #979797;
-				display: inline-block;
-				height: 36px;
-				width: 1px;
-				position: relative;
-				top: 15px;
-			}
-
-			::-webkit-input-placeholder {
-				font: 1em "Lato", sans-serif;
-				font-weight: 900;
-				color: #000;
-				text-transform: uppercase;
-			}
-
-			::-moz-placeholder { /* firefox 19+ */
-				font: 1em "Lato", sans-serif;
-				font-weight: 900;
-				color: #000;
-				text-transform: uppercase; 
-			}
-			
-			:-ms-input-placeholder { /* ie */
-				font: 1em "Lato", sans-serif;
-				font-weight: 900;
-				color: #000;
-				text-transform: uppercase;
-			}
-			
-			input:-moz-placeholder {
-				font: 1em "Lato", sans-serif;
-				font-weight: 900;
-				color: #000;
-				text-transform: uppercase;
-			}
-
-			button {
-				width: 15%;
-				height: 50px;
-				background: $orange;
-				border: none;
-				font: 1em "Lato", sans-serif; 
-				font-weight: 900; 
-				color: $white;
-				text-transform: uppercase;
-			}
-		}
+	h3 {
+		font-size: 24px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		color: #fff;
+		display: inline-block;
+		vertical-align: bottom;
+		height: 65px;
+  	line-height: 80px;
 	}
 }
+
+.logo {
+	font-size: 0;
+	display: inline-block;
+	background: url(logo.png) no-repeat 50%;
+	height: 65px;
+ 	width: 200px;
+  background-size: 200px auto;
+}
+
+header { 
+	background: transparent;
+	position: absolute;
+
+	ul.login-menu {
+		li {
+			width: inherit;
+			&:last-child { margin-right: 20px;}
+		}
+	}
+
+	.sub-menu li { width: 80%!important; }
+}
+
+.search-form{
+	display: inline-block;
+	height: 80px;
+	width: 80%;
+	background: rgba(255, 255, 255, 0.5);
+	padding-top: 25px;
+
+	input {
+		background: #fff;
+		border: none;
+		outline: none;
+		height: 50px;
+		width: 20%;
+		margin-right: -4px;
+		text-indent: 50px;
+	}
+
+	span {
+		color: #979797;
+		background: #979797;
+		display: inline-block;
+		height: 36px;
+		width: 1px;
+		position: relative;
+		top: 15px;
+	}
+
+	::-webkit-input-placeholder {
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	::-moz-placeholder { /* firefox 19+ */
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase; 
+	}
+	
+	:-ms-input-placeholder { /* ie */
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
+	
+	input:-moz-placeholder {
+		font: 1em "Lato", sans-serif;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	button {
+		width: 15%;
+		height: 50px;
+		background: $orange;
+		border: none;
+		font: 1em "Lato", sans-serif; 
+		font-weight: 900; 
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+
+.search-form { 
+	font: 1em "Lato", sans-serif; 
+	font-weight: 900; 
+	color: #000;
+	text-transform: uppercase;
+	padding-top: 0;
+}
+
+.search-place { background: url(ico-lieu.png) no-repeat 10% #fff; }
+
+.search-date { background: url(ico-date.png) no-repeat 10% #fff; }
+
+.search-hour { background: url(ico-heure.png) no-repeat 10% #fff; }
+
+.search-size { background: url(ico-superficie.png) no-repeat 10% #fff; }
+
+footer { display: none; }

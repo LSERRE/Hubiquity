@@ -1,5 +1,12 @@
+$base-font-size: 14px;
+
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
 html, body {
-	font-size: 62.5%;
+	font-size: $base-font-size;
 	height: 100%;
 	background: #EDEDED;
 }
