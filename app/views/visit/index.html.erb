@@ -1,7 +1,9 @@
+<!-- @TODO: Display only visits wich are not accepted yet -->
+
 <h2>Latest asked visits</h2>
 
 <% @visits.each do |visit| %>
-    <article class="visit">
+    <article class="single-visit">
         <p class="author"><%= visit.requester.firstname %> <%= visit.requester.lastname %></p>
         <p class="adress">
             <%= visit.adress %>
