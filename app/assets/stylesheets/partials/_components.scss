@@ -13,14 +13,26 @@ a {
 	&:hover { text-decoration: underline; }
 }
 
+em {
+	position: absolute;
+	top: 40px;
+	right: 0;
+}
+
 input {
 	border: 0;
 	outline: none;
 	&::-webkit-input-placeholder {
+<<<<<<< HEAD
 		font: 1em "Lato", sans-serif;
 		// font-weight: 900;
 		color: #000;
 		text-transform: uppercase;
+=======
+		font: em(16px) "Lato", sans-serif;
+		font-weight: 400;
+		color: $black;
+>>>>>>> 0a84968fd2e13d1124eb6c7c2d177dfc1f050ff0
 	}
 
 	&::-moz-placeholder { /* firefox 19+ */
@@ -70,7 +82,7 @@ input {
 	z-index: 15;
 	top: 15px;
 	margin-left: -10px;
-	font: 2.8em "Lato", sans-serif;
+	font: em(18px) "Lato", sans-serif;
 	font-weight: 700;
 	color: $white;
 
@@ -89,7 +101,10 @@ input {
 .sub-header {
 	width: 100%;
 	height: 280px;
-	background: $light-blue;
+	// background: $light-blue;
+	background: url(background.png);
+	background-position: 0px -60px;
+	background-size: cover;
 	position: fixed;
 	left: 0;
 	top: 60px;
@@ -108,14 +123,14 @@ input {
 	z-index: 10;
 
 	h1 {
-		font: 4.8em "Lato", sans-serif;
+		font: em(48px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #3F3F3F;
 		text-indent: 90px;
 	}
 
 	p {
-		font: 2.5em "Open Sans", sans-serif;
+		font: em(18px) "Open Sans", sans-serif;
 		color: #3F3F3F;
 		line-height: 2.5em;
 		margin-top: 40px;
@@ -135,7 +150,7 @@ input {
 	h2 {
 		position: relative;
 		top: -38px;
-		font: 32px "Lato", sans-serif;
+		font: em(32px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #42A5F5;
 		left: 45px;
@@ -143,9 +158,10 @@ input {
 
 	form {
 		input, label {
-			font: 3.2em "Lato", sans-serif;
+			font-family:"Lato", sans-serif;
 			font-weight: 400;
 			color: $black;
+			font-size: em(26px);
 		}
 
 		input:-webkit-autofill {
@@ -159,18 +175,20 @@ input {
 			z-index: 100;
 
 			label {
-				font-size: 2em;
+				font-size: em(18px);
 				color: #000;
 			}
 		}
 
 		.actions {
 			input {
-				height: 36px;
+				height: 50px;
 				width: 175px;
 				background: $light-blue;
 				color: $white;
 				cursor: pointer;
+				padding: 10px;
+				font-size: em(15px)!important;
 
 				&:hover { background: $blue; }
 			}
@@ -188,12 +206,12 @@ input {
 	margin: 9.53px 0;
 
     span {
-		font: 2em "Lato", sans-serif;
+		font: em(20px) "Lato", sans-serif;
 		font-weight: 700;
 		color: $white;
 		position: absolute;
-		top: 2px;
-		left: 12px;
+		top: -4px;
+		left: 11px;
     }
 }
 
@@ -202,7 +220,7 @@ input {
     content: "";
     position: absolute;
     width: 0;
-    border-left: 16.5px solid transparent;
+    border-left: 17.5px solid transparent;
     border-right: 16.5px solid transparent;
 }
 
@@ -222,7 +240,9 @@ input {
 /* form style */
 .text-field {
 	position: relative;
-	height: 90px;
+	display: block;
+	height: 100px;
+	margin-bottom: 20px;
 
 	input{
 		-webkit-appearance: none;
@@ -239,7 +259,7 @@ input {
 	}
 
 	.label-helper {
-		font: 1.8em "Lato", sans-serif;
+		font: em(16px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #4A90E2;
 		position: absolute;
@@ -253,6 +273,11 @@ input {
 	input:focus + .label-helper {
 		opacity: 1; 
 		z-index: 10;
+	}
+
+	textarea {
+		width: 100%;
+		height: 80px;
 	}
 }
 
@@ -270,7 +295,7 @@ input {
 	}
 
 	.label-helper {
-		font: 1.8em "Lato", sans-serif;
+		font: em(18px) "Lato", sans-serif;
 		font-weight: 700;
 		color: #4A90E2;
 		position: absolute;
@@ -298,8 +323,19 @@ input {
 // put time on right side
 .time {
 	position: relative;
-	top: -55px;
+	top: -63px;
 	text-align: right;
+}
+
+.date {
+	position: relative !important;
+	width: 70% !important;
+	z-index: 20 !important;
+}
+
+.request {
+	font-size: em(10px);
+	input { padding: 10px; }
 }
 /* end form style */
 
@@ -308,7 +344,7 @@ input {
 	margin: 20px 0;
 
 	a {
-		font: 1.8em "Lato", sans-serif;
+		font: em(18px) "Lato", sans-serif;
 		font-weight: 400;
 		color: $black;
 		line-height: 2em;
@@ -322,6 +358,11 @@ input {
 		background: #D0021B;
 		color: $white !important;
 		cursor: pointer;
+		height: 50px;
+		width: 175px;
+		cursor: pointer;
+		padding: 10px;
+		font-size: em(16px)!important;
 
 		&:hover { background: #C40219; }
 	}

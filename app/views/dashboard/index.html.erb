@@ -1,16 +1,15 @@
 <div class="sub-header">
 	<%= render 'layouts/sidebar' %>
-	<div class="dashboard">
-		<div class="myvisits">
-			<H2>My Visits</H2>
+</div>
+	<div class="dashboardd">
+		<div class="myvisits dash-block">
+			<h2>Visit Squeduled :</h2>
 			<% if @visits.present? %>
 				<% @visits.each do |visit| %>
 				    <article class="single-visit">
 				        <p class="adress">
-				            <%= visit.adress %>
 				            <%= visit.city %>
-				            <%= visit.zipcode %>
-				            <%= visit.country %>
+				            <%= visit.visitDate1 %>
 				        </p>
 				    </article>
 				<% end %>
@@ -19,8 +18,8 @@
 			<% end %>
 		</div>
 
-		<div class="potential-visiters">
-			<H2>Visits offers</H2>
+		<div class="potential-visiters dash-block">
+			<h2>Waiting for scheduling :</h2>
 			<% if @potential_visiters.present? %>
 				<% @potential_visiters.each do |visiter| %>
 					<% if visiter.present? %>
@@ -43,4 +42,3 @@
 			<% end %>
 		</div>
 	</div>
-</div>

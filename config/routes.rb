@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'dashboard' => 'dashboard#index'
+  
+  get 'visit' => 'visit#index'
 
   get 'visiter_accept' => 'visiter#accept'
 
