@@ -1,19 +1,20 @@
 <section class="login connection">
+  <div class="hexagon"></div>
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+    <div class="field text-field">
+      <%= f.email_field :email, autocomplete: "off", autofocus: true,  :placeholder => 'Mail', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+      <%= f.label :email, :class => 'label-helper' %><br />
     </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+    <div class="field text-field">
+      <%= f.password_field :password, autocomplete: "off",  :placeholder => 'Password', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+      <%= f.label :password, :class => 'label-helper'  %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
-      <div class="field">
+      <div class="field remember-me">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
@@ -23,6 +24,5 @@
       <%= f.submit "Log in" %>
     </div>
   <% end %>
-
   <%= render "users/shared/links" %>
 </section>

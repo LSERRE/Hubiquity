@@ -1,12 +1,21 @@
 <nav>
 	<ul class="login-menu">
 		<% if user_signed_in? %>
-			<li>
-		  		<%= link_to('Mon profil', edit_user_registration_path) %>
+			<li class="sub-menu-deploy">
+				<span class="polymask"><span class="content"></span></span>
+		  		Jean Moundir
+				<ul class="sub-menu">
+					<li><%= link_to('Dashboard', dashboard_path) %></li>
+					<li><a href="#">My reviews</a></li>
+					<li><a href="#">My visits</a></li>
+					<li><a href="#">Messages</a></li>
+					<li><%= link_to('Modify Profil', edit_user_registration_path) %></li>
+					<li><a href="#">Account</a></li>
+					<li><a href="#">Argent</a></li>
+					<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
+				</ul>
 		  	</li>
-			<li>
-				<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-			</li>
+			<li>Help</li>
 		<% else %>
 			<li>
   				<%= link_to('Login', new_user_session_path)  %>
@@ -15,5 +24,5 @@
 				<%= link_to('Register', new_user_registration_path)  %>
 			</li>
 		<% end %>
-	</ul>	
+	</ul>
 </nav>

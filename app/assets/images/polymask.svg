@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="33px" height="36px" viewBox="0 0 33 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M13.6428335,1.28319804 L3.48898737,7.06891233 C1.65393316,8.11453575 0.518308933,10.0814974 0.518308933,12.2142857 L0.518308933,23.7857143 C0.518308933,25.9185026 1.65393316,27.8854642 3.48898737,28.9310877 L13.6428335,34.716802 C15.4169084,35.7276791 17.5830916,35.7276791 19.3571665,34.716802 L29.5110126,28.9310877 C31.3460668,27.8854642 32.4816911,25.9185026 32.4816911,23.7857143 L32.4816911,12.2142857 C32.4816911,10.0814974 31.3460668,8.11453575 29.5110126,7.06891233 L19.3571665,1.28319804 C17.5830916,0.272320943 15.4169084,0.272320943 13.6428335,1.28319804 Z"></path>
+    </defs>
+    <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="HeaderMenu" sketch:type="MSArtboardGroup" transform="translate(-1186.000000, -29.000000)">
+            <g sketch:type="MSLayerGroup" transform="translate(22.000000, 27.000000)" id="Notification">
+                <g transform="translate(1164.000000, 2.000000)">
+                    <g id="Profile">
+                        <mask id="mask-2" sketch:name="Polygon 2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Polygon-2" fill="#979797" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
