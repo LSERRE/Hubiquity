@@ -4,11 +4,13 @@
 		<h3>, your local advisor for appartments walk-throughs</h3>
 
 		<form class="search-form" action="/search" role="search">
-			<input type="text" title="adresse" placeholder="L'adresse a visiter" class="search-input search-place" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'adresse a visiter'">
-			<input type="date" title="date" placeholder="La date" class="search-input search-date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La date'">
-			<input type="time" title="heure" placeholder="L'heure" class="search-input search-hour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'heure'">
-			<input type="text" title="superficie" placeholder="La superficie" class="search-input search-size" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La superficie'">
-			<button type="submit">Trouver</button>
+			<fieldset class="search-fieldset">
+				<input type="text" title="adresse" placeholder="The address to visit" class="search-input search-place" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'adresse a visiter'">
+				<input type="date" title="date" placeholder="La date" class="search-input search-date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'The time'">
+				<input type="time" title="heure" placeholder="L'heure" class="search-input search-hour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'heure'">
+				<input type="text" title="superficie" placeholder="The surface area" class="search-input search-size" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La superficie'">
+			</fieldset>
+			<button type="submit" class="search-submit">Trouver</button>
 		</form>
 	</div>
 </section>
