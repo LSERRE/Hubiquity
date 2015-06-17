@@ -4,15 +4,18 @@
 			<h1 class="logo">Hubiquity</h1>
 			<h3>, your local advisor for appartments walk-throughs</h3>
 
-			<form class="search-form" action="/search" role="search">
-				<fieldset class="search-fieldset">
-					<input type="text" title="adresse" placeholder="The address to visit" class="search-input search-place" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'adresse a visiter'">
-					<input type="text" title="date" placeholder="La date" class="search-input search-date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'The time'">
-					<input type="text" title="heure" placeholder="L'heure" class="search-input search-hour" onfocus="this.placeholder = ''" onblur="this.placeholder = 'L\'heure'">
-					<input type="text" title="superficie" placeholder="The surface area" class="search-input search-size" onfocus="this.placeholder = ''" onblur="this.placeholder = 'La superficie'">
-				</fieldset>
-				<button type="submit" class="search-submit">Find a visitor</button>
-			</form>
+			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form"} do |f| %>
+				<%= field_set_tag nil, class: 'search-fieldset' do %>
+				<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
+
+				<%= f.date_field :visitDate1, :placeholder => "Date", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Date'", :class => "search-input search-date"  %>
+
+				<%= f.time_field :visitTime1, :placeholder => "Time", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Time'", :class => "search-input search-time"  %>
+
+				<%= f.text_field :surface, :placeholder => "Surface", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Surface'", :class => "search-input search-size"  %>
+				<% end %>
+				<%= f.submit "Submit request" %>
+  			<% end %>
 		</div>
 	</div>
 
@@ -41,24 +44,29 @@
 
 		<ul class="our-community-list">
 			<li class="our-community-list-item">
-				<img src="" alt="Sydney" class="our-community-city-photo">
+				<%= image_tag("citiy_sydney.png", class: "our-community-city-photo", alt: "Sydney") %>
 				<span>Life tips for</span>
 				<h5>Sydney</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 			<li class="our-community-list-item">
-				<img src="" alt="Berlin" class="our-community-city-photo">
+				<%= image_tag("citiy_berlin.png", class: "our-community-city-photo", alt: "Berlin") %>
 				<span>Life tips for</span>
 				<h5>Berlin</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 			<li class="our-community-list-item">
-				<img src='<%= image_tag "assets/home-background.jpg" %>' alt="London" class="our-community-city-photo">
+				<%= image_tag("citiy_london.png", class: "our-community-city-photo", alt: "London") %>
 				<span>Life tips for</span>
 				<h5>London</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 		</ul>
+
+		<div class="learn-more">
+			<span>Want to discover more about our experts?</span>
+			<a href="">Meet the hubiquity community</a>
+		</div>
 
 		
 	</div>
