@@ -1,47 +1,43 @@
-<%= link_to('Dashboard', dashboard_path, :class => 'back-to-dash') %>
-
-<div class="sub-header"></div>
-
 <div class="text-wrap">
-<h1>Latest asked visits</h1>
-<p>La came doit servir à remplir la caisse. Et la caisse doit servir à racheter la came</p>
+    <h1>Latest asked visits</h1>
+    <p>La came doit servir à remplir la caisse. Et la caisse doit servir à racheter la came</p>
 </div>
 
 <section class="visit-list">
-<div class="wrapppper">
-    <% @visits.each do |visit| %>
-        <article class="single-visit">
-            <p class="author">
-                <%= visit.requester.firstname %> <%= visit.requester.lastname %>
-            </p>
-            <p class="adress">
-                <%= visit.adress %>
-                <%= visit.city %>
-                <%= visit.zipcode %>
-                <%= visit.country %>
-            </p>
+    <div class="wrapppper">
+        <% @visits.each do |visit| %>
+            <article class="single-visit">
+                <p class="author">
+                    <%= visit.requester.firstname %> <%= visit.requester.lastname %>
+                </p>
+                <p class="adress">
+                    <%= visit.adress %>
+                    <%= visit.city %>
+                    <%= visit.zipcode %>
+                    <%= visit.country %>
+                </p>
 
-            <p class="surface"><%= visit.surface %></p>
+                <p class="surface"><%= visit.surface %></p>
 
-            <% if visit.requester.id != current_user.id %>
-                <% if current_user.has_requested_mission(visit.id) %>
-                    <p class="follow-people"> Your request has been send. </p>
-                <% else %>
-                    <%=  parseDatetime( visit.visitDate1, visit.visitTime1 ) %>
-                    <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate =>visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
+                <% if visit.requester.id != current_user.id %>
+                    <% if current_user.has_requested_mission(visit.id) %>
+                        <p class="follow-people"> Your request has been send. </p>
+                    <% else %>
+                        <%=  parseDatetime( visit.visitDate1, visit.visitTime1 ) %>
+                        <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate =>visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
 
-                    <% if visit.visitDate2.present? && visit.visitTime2.present? %>
-                        <%=  parseDatetime( visit.visitDate2, visit.visitTime2 ) %>
-                        <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate2, :visitTime => visit.visitTime2 ), :class => "button visit-it-button" %>
-                    <% end %>
+                        <% if visit.visitDate2.present? && visit.visitTime2.present? %>
+                            <%=  parseDatetime( visit.visitDate2, visit.visitTime2 ) %>
+                            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate2, :visitTime => visit.visitTime2 ), :class => "button visit-it-button" %>
+                        <% end %>
 
-                    <% if visit.visitDate3.present? && visit.visitTime3.present? %>
-                        <%=  parseDatetime( visit.visitDate3, visit.visitTime3 ) %>
-                        <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
+                        <% if visit.visitDate3.present? && visit.visitTime3.present? %>
+                            <%=  parseDatetime( visit.visitDate3, visit.visitTime3 ) %>
+                            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
+                        <% end %>
                     <% end %>
                 <% end %>
-            <% end %>
-        </article>
-    <% end %>
+            </article>
+        <% end %>
     </div>
 </section>

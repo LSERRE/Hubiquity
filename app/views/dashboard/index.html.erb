@@ -1,41 +1,39 @@
-<div class="sub-header">
-	<%= render 'layouts/sidebar' %>
-</div>
-	<div class="dashboardd">
-		<div class="myvisits dash-block">
-			<h2>Visit Squeduled :</h2>
-			<% if @visits.present? %>
-				<% @visits.each do |visit| %>
-				    <article class="single-visit">
-				        <p class="adress">
-				            <%= visit.city %>
-				            <%= visit.visitDate1 %>
-				        </p>
-				    </article>
-				<% end %>
-			<% else %>
-				<p> You dont have posted any visit yet </p>
+<%= render 'layouts/sidebar' %>
+<div class="dashboardd col-sm-10 row wrapppper">
+	<div class="myvisits dash-block">
+		<h2>Visit Squeduled :</h2>
+		<% if @visits.present? %>
+			<% @visits.each do |visit| %>
+			    <article class="single-visit">
+			        <p class="adress">
+			            <%= visit.city %>
+			            <%= visit.visitDate1 %>
+			        </p>
+			    </article>
 			<% end %>
-		</div>
-
-		<div class="potential-visiters dash-block">
-			<h2>Waiting for scheduling :</h2>
-			<% if @potential_visiters.present? %>
-				<% @potential_visiters.each do |visiter| %>
-					<% visiter.each do |visit| %>
-					    <article class="single-user">
-					    	<span class="polymask"><%= image_tag(visit.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-							<%= visit.visiter.firstname %>
-				            <%= visit.visiter.lastname %>
-
-				            <%= link_to "Accept this user" , visiter_accept_path( :visiter_id => visit.id ), :class => "button accept-visit-button" %>
-
-				            <%= link_to "Refuse this user" , visiter_refuse_path( :visiter_id => visit.id ), :class => "button refuse-visit-button" %>
-					    </article>
-				    <% end %>
-				<% end %>
-			<% else %>
-				<p> You don't have any visit pending </p>
-			<% end %>
-		</div>
+		<% else %>
+			<p> You dont have posted any visit yet </p>
+		<% end %>
 	</div>
+
+	<div class="potential-visiters dash-block">
+		<h2>Waiting for scheduling :</h2>
+		<% if @potential_visiters.present? %>
+			<% @potential_visiters.each do |visiter| %>
+				<% visiter.each do |visit| %>
+				    <article class="single-user">
+				    	<span class="polymask"><%= image_tag(visit.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<%= visit.visiter.firstname %>
+			            <%= visit.visiter.lastname %>
+
+			            <%= link_to "Accept this user" , visiter_accept_path( :visiter_id => visit.id ), :class => "button accept-visit-button" %>
+
+			            <%= link_to "Refuse this user" , visiter_refuse_path( :visiter_id => visit.id ), :class => "button refuse-visit-button" %>
+				    </article>
+			    <% end %>
+			<% end %>
+		<% else %>
+			<p> You don't have any visit pending </p>
+		<% end %>
+	</div>
+</div>

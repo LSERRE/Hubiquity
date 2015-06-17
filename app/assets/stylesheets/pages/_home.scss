@@ -6,12 +6,10 @@
 
 	header { 
 	background: transparent;
-	position: absolute;
 
 	ul.login-menu {
 		li {
 			width: inherit;
-			&:last-child { margin-right: 20px;}
 		}
 	}
 
