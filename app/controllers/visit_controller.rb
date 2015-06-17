@@ -5,10 +5,10 @@ class VisitController < ApplicationController
 	end
 
 	def new
-		if params.present?
+		if params.has_key?(:city)
 			@visit = Visit.new(city: params[:visit][:city], visitDate1: params[:visit][:visitDate1], visitTime1: params[:visit][:visitTime1], surface: params[:visit][:surface])
 		else
-			@visit = Visi.new
+			@visit = Visit.new
 		end
 	end
 
