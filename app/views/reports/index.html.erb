@@ -1,58 +1,64 @@
 <%= render 'layouts/sidebar' %>
-<h2 class="pagetitle">My visit reports</h2>
-<div class="reportss wrapppper row">
-
-	<%= debug( @confirmed_visiters ) %>
-	<%= debug( @pending_visiters ) %>
-
-	<div class="potential-visiters dash-block">
+<div class="reportss wrapppper row col-sm-8">
+	<h2 class="page-title">My visit reports</h2>
+	<div class="potential-visiters">
 		<h2>Waiting for scheduling :</h2>
 		<% if @visiters.present? %>
 			<% @visiters.each do |visit| %>
-				<%= visit[0].city %>
-				<% visit[1].each do |visiter| %>
-				    <article class="single-user">
-				    	<span class="polymask"><%= image_tag(visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-				    	<p class="name-visitor">
-							<%= visiter.visiter.firstname %>
-							<%= visiter.visiter.lastname %>
-				    	</p>
+				<div class="visit-pending">
+					<h3><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></h3>
+						<% if visit[1].present? %>
+							<% visit[1].each do |visiter| %>
+							    <article class="single-user">
+							    	<span class="polymask"><%= image_tag(visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+							    	<p class="name-visitor">
+										<%= visiter.visiter.firstname %>
+										<%= visiter.visiter.lastname %>
+							    	</p>
 
-				    	<p class="ratings">13 reviews</p>
+							    	<p class="ratings">13 reviews</p>
 
-				    	<p class="where-to">
-				    		<span class="title">Offered to visit</span><%= visiter.visit.city %>
-				    	</p>
+							    	<p class="where-to">
+							    		<span class="title">Offered to visit</span><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %>
+							    	</p>
 
-				    	<p class="when">
-				    		<span class="title">Date :</span> <%=  parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
-				    	</p>
-						
-						<div class="action">
-			            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.id ), :class => "button accept-visit-button" %>
+							    	<p class="when">
+							    		<span class="title">Date :</span> <%=  parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
+							    	</p>
+									
+									<div class="action">
+						            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.id ), :class => "button accept-visit-button" %>
 
-			            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.id ), :class => "button refuse-visit-button" %>
-			            </div>
-				    </article>
-				<% end %>
+						            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.id ), :class => "button refuse-visit-button" %>
+						            </div>
+							    </article>
+							<% end %>
+						<% else %>
+							<p class="no-offer">There's no offer pending right now.</p>
+						<% end %>
+				</div>
 			<% end %>
 		<% else %>
 			<p> You don't have any visit pending </p>
 		<% end %>
 	</div>
 
-	<div class="myvisits dash-block">
-		<h2>Visits to come :</h2>
+	<div class="myvisits">
+		<h2>Scheduled visits :</h2>
 		<% if @visiters.present? %>
 			<% @visiters.each do |visit| %>
 				<% visit[2].each do |visiter| %>
-				    <article class="confirmed-visit">
+				    <article class="confirmed-visit dash-block">
 						<h3>Visit Scheduled</h3>
-						<%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
+						<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>
+
 						<%= button_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
+
+						<p class="where-to"><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></p>
 						
 						<span class="polymask"><%= image_tag(visiter.visit.requester.avatar.url(:thumb), :class => "content avatar") %></span>
 				    	<p class="name-visitor">
+				    		With :
 							<%= visiter.visit.requester.firstname %>
 							<%= visiter.visit.requester.lastname %>
 				    	</p>
