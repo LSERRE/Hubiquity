@@ -4,7 +4,7 @@
 			<h1 class="logo">Hubiquity</h1>
 			<h3>, your local advisor for appartments walk-throughs</h3>
 
-			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form"} do |f| %>
+			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form search-form"} do |f| %>
 				<%= field_set_tag nil, class: 'search-fieldset' do %>
 				<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
 
@@ -14,7 +14,7 @@
 
 				<%= f.text_field :surface, :placeholder => "Surface", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Surface'", :class => "search-input search-size"  %>
 				<% end %>
-				<%= f.submit "Submit request" %>
+				<%= f.submit "Submit request", :class => "search-submit" %>
   			<% end %>
 		</div>
 	</div>
