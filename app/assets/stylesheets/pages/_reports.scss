@@ -1,0 +1,84 @@
+.reports .side-menu li:nth-child(2) { font-weight: 900; &:before { content: "•"; color: $white; padding-right: 5px; } }
+
+.reportss {
+	.dash-block {
+		float: left;
+		font-family: "Lato", sans-serif;
+		position: relative;
+		background: #F7F7F7;
+		width: calc(50% - 10px);
+		height: 150px;
+		padding: 20px;
+		box-sizing: border-box;
+
+		&:first-child {
+			margin-right: 20px;
+		}
+
+		h2 {
+			font-size: em(18px);
+			font-weight: 400;
+			color: #4A90E2 !important;
+			margin-bottom: 5px;
+			position: inherit;
+			top: 0;
+			left: 0;
+		}
+
+		.date-visit {
+			font-size: em(22px);
+			color: #3F3F3F;
+			margin-bottom: 10px;
+		}
+
+		.cancel-visit {
+			font-size: em(12px);
+			font-weight: 400;
+			color: #D0021B;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				background: url(cross.svg) no-repeat;
+				height: 16px; width: 12px;
+				margin-right: 7px;
+				vertical-align: middle;
+			}
+		}
+		
+		.adress {
+			font-size: em(14px);
+			color: #646464;
+			position: absolute;
+			bottom: 34px;
+		}
+		
+		.whos-going {
+			font-size: em(10px);
+			color: #9C9C9C;
+			position: absolute;
+			bottom: 14px;
+
+			span:nth-child(2) { margin-left: 30px; }
+
+			.polymask {
+				-webkit-mask-image: url("polymask_small.svg");
+				height: 20px;
+				width: 20px;
+				margin: 0;
+				bottom: -5px;
+			}
+		}
+	}
+
+	.potential-visiters {
+	}
+
+	.myvisits {
+		article {
+			&:nth-child(1) {
+				background: red;
+			}
+		}
+	}
+}

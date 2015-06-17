@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'dashboard' => 'dashboard#index'
   
   get 'visit' => 'visit#index'
+  
+  get 'reports' => 'reports#index'
 
   get 'visiter_accept' => 'visiter#accept'
 
