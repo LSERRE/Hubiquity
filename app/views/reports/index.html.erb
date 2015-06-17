@@ -1,38 +1,41 @@
 <%= render 'layouts/sidebar' %>
-<h2 class="pagetitle">My visit reports</h2>
 <div class="reportss wrapppper row col-sm-8">
-
+	<h2 class="page-title">My visit reports</h2>
 	<div class="potential-visiters">
 		<h2>Waiting for scheduling :</h2>
-		<% if @pending_visits.present? %>
-			<% @pending_visits.each do |visit| %>
+		<% if @visiters.present? %>
+			<% @visiters.each do |visit| %>
 				<div class="visit-pending">
 					<h3><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></h3>
-					<% visit[1].each do |visiter| %>
-					    <article class="single-user">
-					    	<span class="polymask"><%= image_tag(visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-					    	<p class="name-visitor">
-								<%= visiter.visiter.firstname %>
-								<%= visiter.visiter.lastname %>
-					    	</p>
+						<% if visit[1].present? %>
+							<% visit[1].each do |visiter| %>
+							    <article class="single-user">
+							    	<span class="polymask"><%= image_tag(visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+							    	<p class="name-visitor">
+										<%= visiter.visiter.firstname %>
+										<%= visiter.visiter.lastname %>
+							    	</p>
 
-					    	<p class="ratings">13 reviews</p>
+							    	<p class="ratings">13 reviews</p>
 
-					    	<p class="where-to">
-					    		<span class="title">Offered to visit</span><%= visiter.visit.city %>
-					    	</p>
+							    	<p class="where-to">
+							    		<span class="title">Offered to visit</span><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %>
+							    	</p>
 
-					    	<p class="when">
-					    		<span class="title">Date :</span> <%=  parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
-					    	</p>
-							
-							<div class="action">
-				            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.visit.id ), :class => "button accept-visit-button" %>
+							    	<p class="when">
+							    		<span class="title">Date :</span> <%=  parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
+							    	</p>
+									
+									<div class="action">
+						            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.id ), :class => "button accept-visit-button" %>
 
-				            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.visit.id ), :class => "button refuse-visit-button" %>
-				            </div>
-					    </article>
-				<% end %>
+						            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.id ), :class => "button refuse-visit-button" %>
+						            </div>
+							    </article>
+							<% end %>
+						<% else %>
+							<p class="no-offer">There's no offer pending right now.</p>
+						<% end %>
 				</div>
 			<% end %>
 		<% else %>
@@ -40,6 +43,30 @@
 		<% end %>
 	</div>
 
+	<div class="myvisits">
+		<h2>Scheduled visits :</h2>
+		<% if @visiters.present? %>
+			<% @visiters.each do |visit| %>
+				<% visit[2].each do |visiter| %>
+				    <article class="confirmed-visit dash-block">
+						<h3>Visit Scheduled</h3>
+						<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>
 
+						<%= button_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
 
+						<p class="where-to"><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></p>
+						
+						<span class="polymask"><%= image_tag(visiter.visit.requester.avatar.url(:thumb), :class => "content avatar") %></span>
+				    	<p class="name-visitor">
+				    		With :
+							<%= visiter.visit.requester.firstname %>
+							<%= visiter.visit.requester.lastname %>
+				    	</p>
+				    </article>
+				<% end %>
+			<% end %>
+		<% else %>
+			<p> You dont have any offer yet </p>
+		<% end %>
+	</div>
 </div>

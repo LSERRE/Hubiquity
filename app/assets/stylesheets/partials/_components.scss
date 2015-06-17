@@ -170,7 +170,7 @@ input {
 
 .dash-block {
 	position: relative;
-	background: #F7F7F7;
+	background: #F7F7F7 ;
 	padding: 10px 40px;
 	box-sizing: border-box;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
@@ -457,6 +457,7 @@ input {
 			font-size: em(16px);
 			font-weight: 700;
 			color: #3F3F3F;
+			opacity: .8;
 		}
 
 		.ratings {
@@ -475,9 +476,10 @@ input {
 		}
 
 		.where-to, .when {
-			font-size: em(12px);
+			font-size: em(14px);
 			color: #3F3F3F;
 			padding: 10px;
+			font-weight: 700;
 		}
 
 		.actions-button {

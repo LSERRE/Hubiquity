@@ -10,16 +10,88 @@
 		position: inherit;
 	}
 
+	h3 {
+		font-size: em(22px);
+		font-weight: 700;
+		color: #3F3F3F;
+		margin-top: 30px;
+	}
+
 	.visit-pending {
-    	min-height: 400px;
     	clear: left;
-    	
-    	h3 {
-			font-size: em(22px);
-			font-weight: 700;
-			color: #3F3F3F;
-			margin-top: 30px;
+
+    	.no-offer {
+			font-size: em(18px);
+			font-weight: 400;
+			color: #FF576C;
+			margin-top: 10px;
     	}
 	}
 
+	.myvisits {
+		clear: left;
+		padding-top: 50px;
+
+		.dash-block {
+			position: relative;
+			background: #F7F7F7;
+			padding: 20px;
+			box-sizing: border-box;
+			box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+			width: 275px;
+			height: 185px;
+			margin-top: 20px;
+			float: left;
+			margin-right: 20px;
+			h3 {
+				color: #3F3F3F;
+				opacity: .8;
+				margin: 0;
+				font-size: em(14px);
+				margin-bottom: 10px;
+			}
+
+			.button_to {
+				.cancel-button {
+					color: #D0021B;
+					background: transparent;
+					font-size: em(12px);
+					margin-top: 9px;
+				}
+
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 12px;
+					width: 12px;
+					background: url(cross.svg);
+					vertical-align: middle;
+				}
+			}
+
+			.where-to {
+				font-size: em(14px);
+				margin-top: 20px;
+				position: absolute;
+			}
+
+			.polymask {
+				-webkit-mask-image: url("polymask_small.svg");
+				height: 20px;
+				width: 20px;
+				margin: 0;
+				position: absolute;
+				bottom: 15px;
+				margin-left: 0px;
+			}
+
+			.name-visitor {
+				color: #9C9C9C;
+				font-size: em(10px);
+				bottom: 20px;
+				position: absolute;
+				margin-left: 25px;
+			}
+		}
+	}
 }
