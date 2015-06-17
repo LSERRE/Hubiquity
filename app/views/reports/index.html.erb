@@ -6,6 +6,7 @@
 		<% if @potential_visiters.present? %>
 			<% @potential_visiters.each do |visiter| %>
 				<% visiter.each do |visit| %>
+				<%= visit.visit.adress %>
 				    <article class="single-user">
 				    	<span class="polymask"><%= image_tag(visit.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
 				    	<p class="name-visitor">

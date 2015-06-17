@@ -6,7 +6,7 @@ footer {
 
 	h1 {
 		float: left;
-		margin-left: -22px;
+		margin-left: 125px;
 		text-indent: -9999px;
 		display: block;
 		background: url(logo.svg) no-repeat 20px;
@@ -48,17 +48,21 @@ footer {
 				margin-right: 15px;
 			}
 
+			li:nth-child(1):before {
+				display: none;
+			}
+
 			li:nth-child(2):before {
-				background: url(fb.svg) no-repeat
+				background: url(fb.svg) no-repeat;
 			}
 			li:nth-child(3):before {
-				background: url(tw.svg) no-repeat
+				background: url(tw.svg) no-repeat;
 			}
 			li:nth-child(4) {
-				background: url(insta.svg) no-repeat
+				background: url(insta.svg) no-repeat;
 			}
 			li:nth-child(5) {
-				background: url(contact.svg) no-repeat
+				background: url(contact.svg) no-repeat;
 			}
 		}
 	}
