@@ -4,19 +4,19 @@
 			<h1 class="logo">Hubiquity</h1>
 			<h3>, your local advisor for appartments walk-throughs</h3>
 
-			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form search-form"} do |f| %>
-				<%= field_set_tag nil, class: 'search-fieldset' do %>
-				<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
+			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form"} do |f| %>
+				<div class="search-fieldset">
+					<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
 
-				<%= f.date_field :visitDate1, :placeholder => "Date", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Date'", :class => "search-input search-date"  %>
+					<%= f.date_field :visitDate1, :placeholder => "Date", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Date'", :class => "search-input search-date"  %>
 
-				<%= f.time_field :visitTime1, :placeholder => "Time", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Time'", :class => "search-input search-time"  %>
+					<%= f.time_field :visitTime1, :placeholder => "Time", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Time'", :class => "search-input search-hour"  %>
 
-				<%= f.text_field :surface, :placeholder => "Surface", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Surface'", :class => "search-input search-size"  %>
-				<% end %>
-				<%= f.submit "Submit request", :class => "search-submit" %>
+					<%= f.text_field :surface, :placeholder => "Surface", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Surface'", :class => "search-input search-size"  %>
+				</div>
+				<%= f.submit "Find a visit agent", class: "search-submit"%>
   			<% end %>
-		</div>
+  		</div>
 	</div>
 
 	<div class="our-values">
@@ -67,7 +67,5 @@
 			<span>Want to discover more about our experts?</span>
 			<a href="">Meet the hubiquity community</a>
 		</div>
-
-		
 	</div>
 </section>
