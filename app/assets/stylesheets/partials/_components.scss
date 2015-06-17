@@ -2,6 +2,7 @@ html, body {
 	font-size: $base-font-size;
 	height: 100%;
 	background: #e9eaed;
+	font-family: "Lato", sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	 -webkit-font-smoothing: antialiased;
 	    -moz-font-smoothing: antialiased;
@@ -66,12 +67,19 @@ input {
 
 .alert { display: none; }
 
+.clearfix {
+	clear: both;
+}
+
 
 // add dashboard link in header
 .back-to-dash {
 	font: em(18px) "Lato", sans-serif;
 	font-weight: 700;
 	color: $white;
+	position: absolute;
+	top: 10px;
+	margin-left: 200px;
 
 	&:before {
 		content: "";
@@ -88,9 +96,9 @@ input {
 	max-width: 1155px;
 	width: 100%;
 	margin: 0 auto;
-	height: 250px;
+	height: 260px;
 	border-bottom: 1px solid #D7D7D7;
-	padding: 50px;
+	padding: 50px 90px;
 	box-sizing: border-box;
 
 	h1 {
@@ -103,18 +111,27 @@ input {
 		font: em(18px) "Open Sans", sans-serif;
 		color: #3F3F3F;
 		line-height: 2.0em;
-		margin-top: 40px;
+		margin-top: 30px;
 		max-width: 550px;
 	}
 }
 
 // contains main content
 .wrapppper {
+	position: relative;
 	min-height: 600px;
-	padding: 50px;
+	padding: 50px 90px;
 	margin: 0 0 0 0;
 	background: #FFF;
 	box-sizing: border-box;
+
+	.page-title {
+		font: em(20px) "Lato", sans-serif;
+		position: absolute;
+		top: -35px;
+		left: 0;
+		color: $white;
+	}
 
 	h2 {
 		position: relative;
@@ -149,6 +166,13 @@ input {
 			}
 		}
 	}
+}
+
+.dash-block {
+	position: relative;
+	background: #F7F7F7;
+	padding: 10px 40px;
+	box-sizing: border-box;
 }
 
 /* Hexa form */
@@ -338,35 +362,154 @@ input {
 	}
 }
 
-.action-button {
-	cursor: pointer;
-	text-align: center;
-	text-transform: uppercase;
-	display: inline-block;
-	background: #42A5F5;
-	padding: 10px 40px;
-	font: em(12px) "Lato", sans-serif !important;
-	font-weight: 700;
-	height: 45px;
-	margin-bottom: 10px;
-	color: $white !important;
-	box-shadow: #3275AA 0px 2px 0px;
-	border-radius: 3px;
-	margin-right: 10px;
+.action {
+	a {
+		height: 10px;
+		width: 20px;
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 10px 40px;
+		font: em(10px) "Lato", sans-serif !important;
+		font-weight: 700;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		margin-right: 10px;
+		color: $white !important;
+		position: absolute;
+		bottom: 0;
+	}
 
-	&.update {
+	a.accept-visit-button {
+		background: #42A5F5;
+		box-shadow: #3275AA 0px 2px 0px;
+		bottom: 5px;
+		text-indent: -10px;
 		&:hover { 
-			background: #3275AA; 
+			background: #3275AA !important;
 		}
 	}
 
-	&.cancel-account {
-		background: #FF190B; 
-		box-shadow: #D80A00 0px 2px 0px;
+	a.refuse-visit-button {
+		bottom: 5px;
+		margin-left: 110px;
+		text-indent: -1px;
+		background: #FF576C; 
+		box-shadow: #D0021B 0px 2px 0px;
 
 		&:hover { 
-			background: #D80A00; 
+			background: #D0021B; 
 		}
 	}
 }
 
+.actions-button {
+		height: 25px;
+		width: 55px;
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 10px 40px;
+		font: em(9px) "Lato", sans-serif !important;
+		font-weight: 700;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		margin-right: 10px;
+		color: $white !important;
+		background: #42A5F5;
+		box-shadow: #3275AA 0px 2px 0px;
+
+		input {
+			background: transparent;
+			color: $white !important;
+		}
+}
+
+.potential-visiters {
+		article {
+			height: 280px;
+			width: 206px;
+			background: #F7F7F7;
+			margin-top: 65px;
+			padding: 0 12px;
+			font-family: "Lato", sans-serif;
+			font-weight: 400;
+			position: relative;
+			float: left;
+			margin-right: 20px;
+
+			.polymask {
+				-webkit-mask-image: url("polymask_big.svg");
+				height: 60px;
+				width: 60px;
+				margin: 0;
+				position: relative;
+				top: -30px;
+				left: 50%;
+				margin-left: -30px;
+			}
+
+			.name-visitor {
+				font-size: em(16px);
+				font-weight: 700;
+				color: #3F3F3F;
+			}
+
+			.ratings {
+				font-size: em(12px);
+				color: #3F3F3F;
+				margin-top: 6px;
+			}
+
+			.title {
+				font-size: em(10px);
+				color: #9C9C9C;
+				margin-top: 15px;
+				display: block;
+				text-indent: -10px;
+				margin-bottom: 5px;
+			}
+
+			.where-to, .when {
+				font-size: em(12px);
+				color: #3F3F3F;
+				padding: 10px;
+			}
+
+			.actions-button {
+				cursor: pointer;
+				text-align: center;
+				text-transform: uppercase;
+				display: inline-block;
+				padding: 10px 40px;
+				font: em(9px) "Lato", sans-serif !important;
+				font-weight: 700;
+				height: 25px;
+				width: 55px;
+				margin-bottom: 10px;
+				border-radius: 3px;
+				margin-right: 10px;
+				text-indent: -5px;
+
+				.accept-visit-button {
+					background: #42A5F5;
+					box-shadow: #3275AA 0px 2px 0px;
+					&:hover { background: #3275AA !important; }
+				}
+
+				.refuse-visit-button {
+					background: #FF576C; 
+					box-shadow: #D0021B 0px 2px 0px;
+					&:hover { background: #D0021B; }
+				}
+			}
+		}
+	}
+
+	.myvisits {
+		margin-top: 50px;
+		float: left;
+		clear: left;
+	}
