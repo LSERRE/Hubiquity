@@ -25,6 +25,7 @@
 			font-weight: 400;
 			color: #FF576C;
 			margin-top: 10px;
+			text-indent: 15px;
     	}
 	}
 
@@ -93,5 +94,10 @@
 				margin-left: 25px;
 			}
 		}
+	}
+
+	.visits-completed {
+		clear: left;
+		padding-top: 50px;
 	}
 }

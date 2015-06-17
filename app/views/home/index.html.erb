@@ -4,7 +4,7 @@
 			<h1 class="logo">Hubiquity</h1>
 			<h3>, your local advisor for appartments walk-throughs</h3>
 
-			<%= form_for @visit, method: "get", url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form"} do |f| %>
+			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form"} do |f| %>
 				<div class="search-fieldset">
 					<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
 
@@ -44,25 +44,28 @@
 
 		<ul class="our-community-list">
 			<li class="our-community-list-item">
-				<img src="" alt="Sydney" class="our-community-city-photo">
+				<%= image_tag("citiy_sydney.png", class: "our-community-city-photo", alt: "Sydney") %>
 				<span>Life tips for</span>
 				<h5>Sydney</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 			<li class="our-community-list-item">
-				<img src="" alt="Berlin" class="our-community-city-photo">
+				<%= image_tag("citiy_berlin.png", class: "our-community-city-photo", alt: "Berlin") %>
 				<span>Life tips for</span>
 				<h5>Berlin</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 			<li class="our-community-list-item">
-				<img src='<%= image_tag "assets/home-background.jpg" %>' alt="London" class="our-community-city-photo">
+				<%= image_tag("citiy_london.png", class: "our-community-city-photo", alt: "London") %>
 				<span>Life tips for</span>
 				<h5>London</h5>
 				<a href="" download>Download the kit</a>
 			</li>
 		</ul>
 
-		
+		<div class="learn-more">
+			<span>Want to discover more about our experts?</span>
+			<a href="">Meet the hubiquity community</a>
+		</div>
 	</div>
 </section>
