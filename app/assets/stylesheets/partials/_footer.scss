@@ -1,1 +1,69 @@
-footer { }
+footer {
+	background: url(background-brown.png) no-repeat;
+	background-size: cover;
+	height: 235px;
+	padding-top: 110px;
+
+	h1 {
+		float: left;
+		margin-left: 125px;
+		text-indent: -9999px;
+		display: block;
+		background: url(logo.svg) no-repeat 20px;
+		height: 30px;
+		width: 120px;
+		background-size: 100px auto;
+		margin-right: 95px;
+	}
+
+	ul {
+		float: left;
+		margin-right: 150px;
+
+		li {
+			margin-bottom: 10px;
+			
+			a {
+				color: #fff;
+				&:hover { text-decoration: underline; }
+			}
+
+			&:first-child {
+				font: em(14px) "Lato", sans-serif;
+				font-weight: 900;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				color: #fff;
+			}
+		}
+
+		&.join-us {
+			li:before {
+				content:'';
+				display: block;
+				height: 23px;
+				width: 20px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 15px;
+			}
+
+			li:nth-child(1):before {
+				display: none;
+			}
+
+			li:nth-child(2):before {
+				background: url(fb.svg) no-repeat;
+			}
+			li:nth-child(3):before {
+				background: url(tw.svg) no-repeat;
+			}
+			li:nth-child(4) {
+				background: url(insta.svg) no-repeat;
+			}
+			li:nth-child(5) {
+				background: url(contact.svg) no-repeat;
+			}
+		}
+	}
+}
