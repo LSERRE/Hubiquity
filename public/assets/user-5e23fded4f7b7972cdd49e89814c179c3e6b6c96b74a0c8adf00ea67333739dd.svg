@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="11px" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>checked_user</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="DashBoard_Visit_Report" sketch:type="MSArtboardGroup" transform="translate(-848.000000, -269.000000)">
+            <g id="Reports" sketch:type="MSLayerGroup" transform="translate(447.000000, 194.000000)">
+                <g id="Image5" transform="translate(375.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <g id="checked_user" transform="translate(26.000000, 75.000000)">
+                        <path d="M15,2.35714286 L11.5648148,6.28571429 L9.75,4.28571429" id="Shape" stroke="#4A90E2" stroke-width="1.35000005"></path>
+                        <ellipse id="Oval" fill="#4A90E2" cx="5.625" cy="2.75" rx="2.625" ry="2.75"></ellipse>
+                        <path d="M5.25,7.07142857 C1.246875,7.07142857 0,9.69047619 0,9.69047619 L0,11 L10.5,11 L10.5,9.69047619 C10.5,9.69047619 9.253125,7.07142857 5.25,7.07142857 L5.25,7.07142857 Z" id="Shape" fill="#4A90E2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

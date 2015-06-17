@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="DashBoard_Visit_Report" sketch:type="MSArtboardGroup" transform="translate(-846.000000, -382.000000)" fill="#4A90E2">
+            <g id="Reports" sketch:type="MSLayerGroup" transform="translate(447.000000, 194.000000)">
+                <g id="Image5" transform="translate(375.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <g id="edit" transform="translate(24.000000, 188.000000)">
+                        <g id="Group">
+                            <path d="M3.74291253,10.6502649 L1.40892967,8.38400921 L7.85881206,2.12128858 L10.1927949,4.38754427 L3.74291253,10.6502649 L3.74291253,10.6502649 Z" id="Rectangle-path"></path>
+                            <path d="M10.3589948,0.59468762 C10.0694443,0.305137076 9.57696089,0.324935404 9.26266244,0.639233857 L8.14405692,1.75783938 L10.4150391,4.11014229 L11.5493693,2.9419294 C11.8636678,2.62763095 11.8389198,2.07461262 11.5493693,1.78506208 L10.3589948,0.59468762 Z" id="Shape"></path>
+                            <path d="M0.619642857,10.4947545 L1.50524554,11.3803571 L3.24564732,10.9285714 L1.07142857,8.75435268 L0.619642857,10.4947545 Z" id="Shape"></path>
+                            <path d="M0.25,11.75 L1.07142857,11.5112723 L0.488727679,10.9285714 L0.25,11.75 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
