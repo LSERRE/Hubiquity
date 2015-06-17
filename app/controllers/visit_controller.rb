@@ -5,7 +5,11 @@ class VisitController < ApplicationController
 	end
 
 	def new
-		@visit = Visit.new
+		if params.present?
+			@visit = Visit.new(city: params[:visit][:city], visitDate1: params[:visit][:visitDate1], visitTime1: params[:visit][:visitTime1], surface: params[:visit][:surface])
+		else
+			@visit = Visi.new
+		end
 	end
 
 	def create
