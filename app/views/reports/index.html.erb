@@ -1,4 +1,5 @@
 <%= render 'layouts/sidebar' %>
+<h2 class="pagetitle">My visit reports</h2>
 <div class="reportss wrapppper row">
 	<div class="potential-visiters dash-block">
 		<h2>Waiting for scheduling :</h2>
@@ -15,11 +16,11 @@
 				    	<p class="ratings">13 reviews</p>
 
 				    	<p class="where-to">
-				    		<span class="title">Offered to visit</span>428 Knickerbocker Ave, Brooklyn, NY 11237
+				    		<span class="title">Offered to visit</span><%= visit.visit.city %>
 				    	</p>
 
 				    	<p class="when">
-				    		<span class="title">Date :</span>June 17 2015, 8:30 pm
+				    		<span class="title">Date :</span> <%=  parseDatetime( visit.visit.visitDate1, visit.visit.visitTime1 ) %>
 				    	</p>
 						
 						<div class="action">
