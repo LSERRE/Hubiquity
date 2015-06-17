@@ -36,13 +36,12 @@
 
 @font-face {
     font-family: 'Lato';
-    src: url('Lato 900-webfont.eot');
-    src: url('Lato 900-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Lato 900-webfont.woff') format('woff'),
-         url('Lato 900-webfont.ttf') format('truetype'),
-         url('Lato 900-webfont.svg#latoblack') format('svg');
+    src: url('Lato 900.eot');
+    src: url('Lato 900.eot?#iefix') format('embedded-opentype'),
+         url('Lato 900.woff') format('woff'),
+         url('Lato 900.ttf') format('truetype'),
+         url('Lato 900.svg#latoblack') format('svg');
     
     font-style:   normal;
     font-weight:  900;
-
 }

@@ -1,7 +1,7 @@
 <%= render 'layouts/sidebar' %>
-<h2 class="pagetitle">My visit reports</h2>
-<div class="reportss wrapppper row">
-	<div class="potential-visiters dash-block">
+<div class="reportss wrapppper row col-sm-10">
+	<h2 class="page-title">My visit reports</h2>
+	<div class="potential-visiters">
 		<h2>Waiting for scheduling :</h2>
 		<% if @potential_visiters.present? %>
 			<% @potential_visiters.each do |visiter| %>
@@ -36,8 +36,8 @@
 		<% end %>
 	</div>
 
-	<div class="myvisits dash-block">
-		<h2>Scheduled visits :</h2>
+	<div class="myvisits-all">
+		<h2>Visits to come :</h2>
 		<% if @visits.present? %>
 			<% @visits.each do |visit| %>
 			    <article class="single-visit">
