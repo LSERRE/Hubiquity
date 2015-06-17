@@ -7,8 +7,8 @@
 
 	<div class="potential-visiters dash-block">
 		<h2>Waiting for scheduling :</h2>
-		<% if @pending_visits.present? %>
-			<% @pending_visits.each do |visit| %>
+		<% if @visiters.present? %>
+			<% @visiters.each do |visit| %>
 				<%= visit[0].city %>
 				<% visit[1].each do |visiter| %>
 				    <article class="single-user">
@@ -29,9 +29,9 @@
 				    	</p>
 						
 						<div class="action">
-			            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.visit.id ), :class => "button accept-visit-button" %>
+			            	<%= link_to "Confirm" , visiter_accept_path( :visiter_id => visiter.id ), :class => "button accept-visit-button" %>
 
-			            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.visit.id ), :class => "button refuse-visit-button" %>
+			            	<%= link_to "Deny" , visiter_refuse_path( :visiter_id => visiter.id ), :class => "button refuse-visit-button" %>
 			            </div>
 				    </article>
 				<% end %>
@@ -43,19 +43,21 @@
 
 	<div class="myvisits dash-block">
 		<h2>Visits to come :</h2>
-		<% if @confirmed_visiters.present? %>
-			<% @confirmed_visiters.each do |visiter| %>
-			    <article class="confirmed-visit">
-					<h3>Visit Scheduled</h3>
-					<%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
-					<%= button_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
-					
-					<span class="polymask"><%= image_tag(visiter.visit.requester.avatar.url(:thumb), :class => "content avatar") %></span>
-			    	<p class="name-visitor">
-						<%= visiter.visit.requester.firstname %>
-						<%= visiter.visit.requester.lastname %>
-			    	</p>
-			    </article>
+		<% if @visiters.present? %>
+			<% @visiters.each do |visit| %>
+				<% visit[2].each do |visiter| %>
+				    <article class="confirmed-visit">
+						<h3>Visit Scheduled</h3>
+						<%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %>
+						<%= button_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
+						
+						<span class="polymask"><%= image_tag(visiter.visit.requester.avatar.url(:thumb), :class => "content avatar") %></span>
+				    	<p class="name-visitor">
+							<%= visiter.visit.requester.firstname %>
+							<%= visiter.visit.requester.lastname %>
+				    	</p>
+				    </article>
+				<% end %>
 			<% end %>
 		<% else %>
 			<p> You dont have any offer yet </p>
