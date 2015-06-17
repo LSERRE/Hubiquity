@@ -1,84 +1,100 @@
 .reports .side-menu li:nth-child(2) { font-weight: 900; &:before { content: "•"; color: $white; padding-right: 5px; } }
 
+
 .reportss {
-	.dash-block {
-		float: left;
-		font-family: "Lato", sans-serif;
-		position: relative;
-		background: #F7F7F7;
-		width: calc(50% - 10px);
-		height: 150px;
-		padding: 20px;
-		box-sizing: border-box;
+	&.wrapppper { margin-left: 185px; }
 
-		&:first-child {
-			margin-right: 20px;
-		}
-
-		h2 {
-			font-size: em(18px);
-			font-weight: 400;
-			color: #4A90E2 !important;
-			margin-bottom: 5px;
-			position: inherit;
-			top: 0;
-			left: 0;
-		}
-
-		.date-visit {
-			font-size: em(22px);
-			color: #3F3F3F;
-			margin-bottom: 10px;
-		}
-
-		.cancel-visit {
-			font-size: em(12px);
-			font-weight: 400;
-			color: #D0021B;
-
-			&:before {
-				content: '';
-				display: inline-block;
-				background: url(cross.svg) no-repeat;
-				height: 16px; width: 12px;
-				margin-right: 7px;
-				vertical-align: middle;
-			}
-		}
-		
-		.adress {
-			font-size: em(14px);
-			color: #646464;
-			position: absolute;
-			bottom: 34px;
-		}
-		
-		.whos-going {
-			font-size: em(10px);
-			color: #9C9C9C;
-			position: absolute;
-			bottom: 14px;
-
-			span:nth-child(2) { margin-left: 30px; }
-
-			.polymask {
-				-webkit-mask-image: url("polymask_small.svg");
-				height: 20px;
-				width: 20px;
-				margin: 0;
-				bottom: -5px;
-			}
-		}
+	h2 {
+		font: em(18px) "Lato", sans-serif;
+		color: #4A90E2;
+		position: inherit;
 	}
 
 	.potential-visiters {
-	}
-
-	.myvisits {
 		article {
-			&:nth-child(1) {
-				background: red;
+			height: 280px;
+			width: 206px;
+			background: #F7F7F7;
+			margin-top: 65px;
+			padding: 0 12px;
+			font-family: "Lato", sans-serif;
+			font-weight: 400;
+			position: relative;
+			float: left;
+			margin-right: 20px;
+
+			.polymask {
+				-webkit-mask-image: url("polymask_big.svg");
+				height: 60px;
+				width: 60px;
+				margin: 0;
+				position: relative;
+				top: -30px;
+				left: 50%;
+				margin-left: -30px;
+			}
+
+			.name-visitor {
+				font-size: em(16px);
+				font-weight: 700;
+				color: #3F3F3F;
+			}
+
+			.ratings {
+				font-size: em(12px);
+				color: #3F3F3F;
+				margin-top: 6px;
+			}
+
+			.title {
+				font-size: em(10px);
+				color: #9C9C9C;
+				margin-top: 15px;
+				display: block;
+				text-indent: -10px;
+				margin-bottom: 5px;
+			}
+
+			.where-to, .when {
+				font-size: em(12px);
+				color: #3F3F3F;
+				padding: 10px;
+			}
+
+			.actions-button {
+				cursor: pointer;
+				text-align: center;
+				text-transform: uppercase;
+				display: inline-block;
+				padding: 10px 40px;
+				font: em(9px) "Lato", sans-serif !important;
+				font-weight: 700;
+				height: 25px;
+				width: 55px;
+				margin-bottom: 10px;
+				border-radius: 3px;
+				margin-right: 10px;
+				text-indent: -5px;
+
+				.accept-visit-button {
+					background: #42A5F5;
+					box-shadow: #3275AA 0px 2px 0px;
+					&:hover { background: #3275AA !important; }
+				}
+
+				.refuse-visit-button {
+					background: #FF576C; 
+					box-shadow: #D0021B 0px 2px 0px;
+					&:hover { background: #D0021B; }
+				}
 			}
 		}
 	}
+
+	.myvisits {
+		margin-top: 50px;
+		float: left;
+		clear: left;
+	}
+
 }
