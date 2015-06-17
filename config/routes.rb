@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'visit' => 'visit#index'
   
   get 'reports' => 'reports#index'
+  
+  get 'locations' => 'locations#index'
 
   get 'visiter_accept' => 'visiter#accept'
 
