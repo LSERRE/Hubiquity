@@ -1,32 +1,56 @@
-.home {
+body.home {
+	.container, .main {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0;
+	}
+	.main {
+		margin-top: -100px;
+	}
+	header { 
+		height: 80px;
+		background: transparent;
+		position: relative;
+		z-index: 99;
+		padding-left: 20px;
+		padding-right: 20px;
+		box-sizing: border-box;
+		h1 {
+			display: none;
+		}
+		ul.login-menu {
+			li {
+				width: inherit;
+			}
+		}
+		.sub-menu li { width: 80%!important; }
+	}
+}
+
+
+.home-section {
+	position: relative;
+	width: 100%;
+}
+
+.home-container {
+	height: 580px;
+	width: 100%;
 	background: url(home-background.jpg);
 	background-size: cover;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-
-	header { 
-	background: transparent;
-
-	ul.login-menu {
-		li {
-			width: inherit;
-		}
-	}
-
-	.sub-menu li { width: 80%!important; }
-}
 }
 .wrap-home {
 	margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	height: 400px;
+	width: 100%;
 	text-align: center;
 
 	h3 {
-		font-size: 24px;
+		font-size: em(36px);
 		font-family: 'Lato', sans-serif;
-		font-weight: 400;
+		font-weight: 300;
 		color: #fff;
 		display: inline-block;
 		vertical-align: bottom;
@@ -60,7 +84,7 @@
   display: inline-block;
 	background: rgba(255,255,255,.95);
   margin-right: 1%;
-  padding: 20px 10px;
+  padding: 20px 25px;
   box-sizing: border-box;
   border-radius: 3px;
   vertical-align: top;
@@ -73,13 +97,21 @@
 	color: #161616;
 	display: inline-block;
 	height: 40px;
-	width: 25%;
-	text-align: center;
+	// width: 25%;
+	padding-left: 40px;
+	margin-right: 30px;
+	border-right: 1px solid #DCDCDC;
 	text-transform: uppercase;
 	box-sizing: border-box;
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: 0 50%;
+	background-size: 20px auto;
+	&:last-child {
+		border-right: none;
+		margin-right: 0;
+	}
+	
 	&.search-place { 
 		background-image: url(ico-lieu.png); 
 	}
@@ -135,7 +167,19 @@
 	text-transform: uppercase;
 	vertical-align: top;
 	border-radius: 3px;
+	transition: all .2s ;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.03);
+		background: rgba(77, 152, 241, 1);
+	}
 }
 
+.our-values-list {
+	font-size: 0;
+}
 
-footer { display: none; }
+.our-values-list-item {
+	font-size: 1rem;
+	display: inline-block;
+}
