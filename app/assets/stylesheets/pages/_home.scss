@@ -25,6 +25,10 @@ body.home {
 		}
 		.sub-menu li { width: 80%!important; }
 	}
+
+	footer {
+		margin-top: 0;
+	}
 }
 
 
@@ -121,7 +125,7 @@ body.home {
 	&.search-date { 
 		background-image: url(ico-date.png);
 	}
-	&.search-hour { 
+	&.search-time { 
 		background-image: url(ico-heure.png);
 	}
 	&.search-size { 
