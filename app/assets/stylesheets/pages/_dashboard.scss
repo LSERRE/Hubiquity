@@ -1,0 +1,180 @@
+.dashboardd {
+	padding: 20px;
+
+	.dash-block {
+		margin-top: 20px;
+		min-height: 200px;
+	}
+
+	h2 {
+		position: inherit;
+		margin-top: 10px;
+		top: 0;
+		left: 0;
+		color: #3F3F3F;
+		font-size: em( 16px );
+	}
+
+	.level {
+		margin-top: 0;
+		height: 140px;
+		min-height: 0;
+
+		.level-progress {
+			margin-top: 30px;
+			position: relative;
+			background: #42A5F5;
+			height: 6px;
+			border-radius: 3px;
+			z-index: 1;
+		}
+
+		ul {
+			position: relative;
+			width: 100%;
+			background: #dadada;
+			height: 6px;
+			border-radius: 3px;
+			margin-top: -6px;
+
+			li {
+				position: absolute;
+
+				.circle {
+					position: absolute;
+					display: block;
+					top: 50%;
+					margin-top: -6px;
+					background: #dadada;
+					width: 18px;
+					height: 18px;
+					border-radius: 50%;
+					margin-left: -9px;
+				}
+
+				.text {
+					position: absolute;
+					display: block;
+					margin-top: 25px;
+					top: 70%;
+					white-space: nowrap;
+					transform: translate( -25% );
+					text-align: center;
+					font-size: em( 12px );
+					color: #3F3F3F;
+					margin-left: -9px;
+				}
+
+				&:first-child {
+					left: 11%;
+				}
+
+				&:nth-child(2) {
+					left: 37%;
+				}
+
+				&:nth-child(3) {
+					left: 63%;
+				}
+
+				&:last-child {
+					left: 89%;
+				}
+
+			}
+		}
+
+		&.level-1 {
+			.level-progress {
+				width: 11%;
+			}
+
+			ul {
+				li:first-child {
+					.circle {
+						background: #42A5F5;
+					}
+				}
+
+				li:first-child {
+					.text {
+						color: #42A5F5;
+					}
+				}
+			}
+		}
+
+		&.level-2 {
+			.level-progress {
+				width: 37%;
+			}
+
+			ul {
+				li:first-child, li:nth-child(2) {
+					.circle {
+						background: #42A5F5;
+					}
+				}
+
+				li:nth-child(2) {
+					.text {
+						color: #42A5F5;
+					}
+				}
+			}
+		}
+
+		&.level-3 {
+			.level-progress {
+				width: 63%;
+			}
+
+			ul {
+				li:first-child, li:nth-child(2), li:nth-child(3) {
+					.circle {
+						background: #42A5F5;
+					}
+				}
+
+				li:nth-child(3) {
+					.text {
+						color: #42A5F5;
+					}
+				}
+			}
+		}
+
+		&.level-4 {
+			.level-progress {
+				width: 100%;
+			}
+
+			ul {
+				li:first-child, li:nth-child(2), li:nth-child(3), li:last-child {
+					.circle {
+						background: #42A5F5;
+					}
+				}
+
+				li:last-child(3) {
+					.text {
+						color: #42A5F5;
+					}
+				}
+			}
+		}
+	}
+
+	.account {
+		float: left;
+		width: calc( 33.33% - 10px );
+		height: 335px;
+		margin-right: 20px;
+	}
+
+	.notifications {
+		float: left;
+		width: calc( 66.66% - 10px );
+		height: 335px;
+	}
+}

@@ -2,6 +2,7 @@ html, body {
 	font-size: $base-font-size;
 	height: 100%;
 	background: #e9eaed;
+	font-family: "Lato", sans-serif;
 }
 
 p {
@@ -61,6 +62,10 @@ input {
 
 .alert { display: none; }
 
+.clearfix {
+	clear: both;
+}
+
 
 // add dashboard link in header
 .back-to-dash {
@@ -83,9 +88,9 @@ input {
 	max-width: 1155px;
 	width: 100%;
 	margin: 0 auto;
-	height: 250px;
+	height: 260px;
 	border-bottom: 1px solid #D7D7D7;
-	padding: 50px;
+	padding: 50px 90px;
 	box-sizing: border-box;
 
 	h1 {
@@ -98,18 +103,27 @@ input {
 		font: em(18px) "Open Sans", sans-serif;
 		color: #3F3F3F;
 		line-height: 2.0em;
-		margin-top: 40px;
+		margin-top: 30px;
 		max-width: 550px;
 	}
 }
 
 // contains main content
 .wrapppper {
+	position: relative;
 	min-height: 600px;
-	padding: 50px;
+	padding: 50px 90px;
 	margin: 0 0 0 0;
 	background: #FFF;
 	box-sizing: border-box;
+
+	.page-title {
+		font: em(20px) "Lato", sans-serif;
+		position: absolute;
+		top: -35px;
+		left: 0;
+		color: $white;
+	}
 
 	h2 {
 		position: relative;
@@ -144,6 +158,13 @@ input {
 			}
 		}
 	}
+}
+
+.dash-block {
+	position: relative;
+	background: #F7F7F7;
+	padding: 10px 40px;
+	box-sizing: border-box;
 }
 
 /* Hexa form */

@@ -1,39 +1,36 @@
 <%= render 'layouts/sidebar' %>
 <div class="dashboardd col-sm-10 row wrapppper">
-	<div class="myvisits dash-block">
-		<h2>Visit Squeduled :</h2>
-		<% if @visits.present? %>
-			<% @visits.each do |visit| %>
-			    <article class="single-visit">
-			        <p class="adress">
-			            <%= visit.city %>
-			            <%= visit.visitDate1 %>
-			        </p>
-			    </article>
-			<% end %>
-		<% else %>
-			<p> You dont have posted any visit yet </p>
-		<% end %>
+	<h1 class="page-title">Welcome back, <%= current_user.firstname %></h1>
+
+	<div class="level dash-block level-<%= current_user.level %>">
+		<h2>Experience level</h2>
+		<div class="level-progress"></div>
+		<ul>
+			<li><span class="circle"></span><span class="text">Noobie</span></li>
+			<li><span class="circle"></span><span class="text">User</span></li>
+			<li><span class="circle"></span><span class="text">Power-User</span></li>
+			<li><span class="circle"></span><span class="text">Expert</span></li>
+		</ul>
 	</div>
 
-	<div class="potential-visiters dash-block">
-		<h2>Waiting for scheduling :</h2>
-		<% if @potential_visiters.present? %>
-			<% @potential_visiters.each do |visiter| %>
-				<% visiter.each do |visit| %>
-				    <article class="single-user">
-				    	<span class="polymask"><%= image_tag(visit.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-						<%= visit.visiter.firstname %>
-			            <%= visit.visiter.lastname %>
+	<div class="account dash-block">
+		<h2>Account: </h2>
+	</div>
 
-			            <%= link_to "Accept this user" , visiter_accept_path( :visiter_id => visit.id ), :class => "button accept-visit-button" %>
+	<div class="notifications dash-block">
+		<h2>Notifications: </h2>
 
-			            <%= link_to "Refuse this user" , visiter_refuse_path( :visiter_id => visit.id ), :class => "button refuse-visit-button" %>
-				    </article>
-			    <% end %>
-			<% end %>
-		<% else %>
-			<p> You don't have any visit pending </p>
-		<% end %>
+	</div>
+
+	<div class="visit-offers dash-block col-sm-12">
+		<h2>Visit offers: </h2>
+	</div>
+
+	<div class="reports dash-block col-sm-12">
+		<h2>Your last reports: </h2>
+	</div>
+
+	<div class="reviews dash-block col-sm-12">
+		<h2>Your last reviews: </h2>
 	</div>
 </div>
