@@ -1,14 +1,14 @@
 class DashboardController < ApplicationController
 	def index
 		@visits = Visit.where(user_id: current_user.id)
-		@potential_visiters = []
-		@confirmed_visits = []
-		@visits.each do |visit|
-			visiter = Visiter.where( visit_id: visit.id, confirmed: "pending" )
-			@potential_visiters.push( visiter )
-
-			confirmed = Visiter.where( visit_id: visit.id, confirmed: "confirmed" )
-			@confirmed_visits.push( confirmed )
+		@visiters = []
+		@visits.each_with_index do |visit, index|
+			@visiters[index] = []
+			@visiters[index][0] = visit
+			pending_visiters = Visiter.where( visit_id: visit.id, confirmed: "pending" )
+			confirmed_visiters = Visiter.where( confirmed: "accepted" )
+			@visiters[index][1] = pending_visiters
+			@visiters[index][2] = confirmed_visiters
 		end
 	end
 end
