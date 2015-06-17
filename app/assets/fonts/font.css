@@ -1,5 +1,17 @@
 @font-face {
   font-family: 'Lato';
+  src: url('Lato 300.eot'); /* IE9 Compat Modes */
+  src: url('Lato 300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Lato 300.woff') format('woff'), /* Modern Browsers */
+       url('Lato 300.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Lato 300.svg#48e70b8825d557df57af3e4f7d4c31be') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  300;
+}
+
+@font-face {
+  font-family: 'Lato';
   src: url('Lato regular.eot'); /* IE9 Compat Modes */
   src: url('Lato regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('Lato regular.woff') format('woff'), /* Modern Browsers */
