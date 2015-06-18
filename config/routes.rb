@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   
   get 'reports' => 'reports#index'
 
+  get 'reviews' => 'review#index'
+
   get 'visiter_accept' => 'visiter#accept'
 
   get 'visiter_refuse' => 'visiter#refuse'
@@ -73,6 +75,5 @@ Rails.application.routes.draw do
 
   resources :visit
   resources :visiter
-  resources :review
 
 end
