@@ -20,7 +20,7 @@ class VisitController < ApplicationController
 			@visit[:user_id] = current_user.id
 			if @visit.save
 				flash[:success] = "Visit Created"
-				redirect_to @visit
+				redirect_to dashboard_path
 			else
 				flash[:error] = "Error in the database"
 				render :new

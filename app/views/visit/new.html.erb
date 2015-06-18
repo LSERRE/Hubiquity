@@ -31,7 +31,7 @@
       
       <div class="field text-field">
         <label class="label-helper" for="surface">Appartement surface</label>
-        <%= f.number_field :surface, :placeholder => 'Superficie', :onKeyDown => '$(this).parent().addClass("field-complete")' %>
+        <%= f.number_field :surface, :placeholder => 'Superficie', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0' %>
       </div>
     </div>
 

@@ -5,40 +5,44 @@
 
 <section class="visit-list">
     <div class="wrapppper">
-        <% @visits.each do |visit| %>
-            <% if visit.requester.id != current_user.id %>
-                <article class="single-visit">
-                    <div class="mapbox"></div>
-                    
-                    <p class="adress">
-                        <%= visit.adress %>,
-                        <%= visit.zipcode %>
-                        <%= visit.city %>
-                    </p>
+        <% if @visits.present? %>
+            <% @visits.each do |visit| %>
+                <% if visit.requester.id != current_user.id %>
+                    <article class="single-visit">
+                        <div class="mapbox"></div>
+                        
+                        <p class="adress">
+                            <%= visit.adress %>,
+                            <%= visit.zipcode %>
+                            <%= visit.city %>
+                        </p>
 
-                    <p class="surface infos"><%= visit.surface %>sq ft</p>
-                    <p class="location infos">2 km away</p>
-                    <p class="price infos">32€</p>
+                        <p class="surface infos"><%= visit.surface %>sq ft</p>
+                        <p class="location infos">2 km away</p>
+                        <p class="price infos">32€</p>
 
-                    <% if current_user.has_requested_mission(visit.id) %>
-                        <p class="follow-people"> Your request has been send. </p>
-                    <% else %>
+                        <% if current_user.has_requested_mission(visit.id) %>
+                            <p class="follow-people"> Your request has been send. </p>
+                        <% else %>
 
-                        <p class="when"><%=  parseDatetime( visit.visitDate1, visit.visitTime1 ) %></p>
-                        <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate =>visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
+                            <p class="when"><%=  parseDatetime( visit.visitDate1, visit.visitTime1 ) %></p>
+                            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate =>visit.visitDate1, :visitTime => visit.visitTime1), :class => "button visit-it-button" %>
 
-                        <% if visit.visitDate2.present? && visit.visitTime2.present? %>
-                            <p class="when"><%=  parseDatetime( visit.visitDate2, visit.visitTime2 ) %></p>
-                            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate2, :visitTime => visit.visitTime2 ), :class => "button visit-it-button" %>
-                        <% end %>
+                            <% if visit.visitDate2.present? && visit.visitTime2.present? %>
+                                <p class="when"><%=  parseDatetime( visit.visitDate2, visit.visitTime2 ) %></p>
+                                <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate2, :visitTime => visit.visitTime2 ), :class => "button visit-it-button" %>
+                            <% end %>
 
-                        <% if visit.visitDate3.present? && visit.visitTime3.present? %>
-                            <p class="when"><%=  parseDatetime( visit.visitDate3, visit.visitTime3 ) %></p>
-                            <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate3, :visitTime => visit.visitTime3), :class => "button visit-it-button" %>
+                            <% if visit.visitDate3.present? && visit.visitTime3.present? %>
+                                <p class="when"><%=  parseDatetime( visit.visitDate3, visit.visitTime3 ) %></p>
+                                <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate3, :visitTime => visit.visitTime3), :class => "button visit-it-button" %>
+                            <% end %>
                         <% end %>
                     <% end %>
-                <% end %>
-            </article>
+                </article>
+            <% end %>
+        <% else %>
+            <p>There are no visit available</p>
         <% end %>
     </div>
 </section>
