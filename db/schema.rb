@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618151441) do
+ActiveRecord::Schema.define(version: 20150618190654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,11 +33,6 @@ ActiveRecord::Schema.define(version: 20150618151441) do
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type", using: :btree
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
 
-  create_table "locations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "notifications", force: :cascade do |t|
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
@@ -45,6 +40,64 @@ ActiveRecord::Schema.define(version: 20150618151441) do
     t.integer  "receiver_id"
     t.string   "notification_type"
     t.boolean  "read"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "visiter_id"
+    t.string   "picture1_name"
+    t.string   "picture2_name"
+    t.string   "picture3_name"
+    t.string   "picture4_name"
+    t.string   "picture5_name"
+    t.string   "picture6_name"
+    t.integer  "wholesomness_rating"
+    t.string   "wholesomness_comment"
+    t.integer  "neighberhood_rating"
+    t.string   "neighberhood_comment"
+    t.integer  "brooker_rating"
+    t.string   "brooker_comment"
+    t.integer  "furniture_rating"
+    t.string   "furniture_comment"
+    t.integer  "bathrooms_rating"
+    t.string   "bathrooms_comment"
+    t.integer  "light_rating"
+    t.string   "light_comment"
+    t.integer  "noise_pollution_rating"
+    t.string   "noise_pollution_comment"
+    t.integer  "electricity_rating"
+    t.string   "electicity_comment"
+    t.string   "pipework_comment"
+    t.integer  "pipework_rating"
+    t.string   "issue1_title"
+    t.string   "issue1_comment"
+    t.string   "issue2_title"
+    t.string   "issue2_comment"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
+    t.string   "conclusion"
+    t.integer  "final_rating"
+    t.integer  "review_rating"
+    t.string   "review_comment"
+    t.string   "picture1_file_name"
+    t.string   "picture1_content_type"
+    t.string   "picture2_file_name"
+    t.string   "picture2_content_type"
+    t.string   "picture3_file_name"
+    t.string   "picture3_content_type"
+    t.string   "picture4_file_name"
+    t.string   "picture4_content_type"
+    t.string   "picture5_file_name"
+    t.string   "picture5_content_type"
+    t.string   "picture6_file_name"
+    t.string   "picture6_content_type"
+    t.string   "issue1_picture_file_name"
+    t.string   "issue1_picture_content_type"
+    t.string   "issue2_picture_file_name"
+    t.string   "issue2_picture_content_type"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'review/index'
+
+  get 'review/new'
+
   get 'visiter/add'
 
   devise_for :users
@@ -69,5 +73,6 @@ Rails.application.routes.draw do
 
   resources :visit
   resources :visiter
+  resources :review
 
 end
