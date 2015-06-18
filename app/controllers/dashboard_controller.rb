@@ -11,5 +11,7 @@ class DashboardController < ApplicationController
 			@visiters[index][1] = pending_visiters
 		end
 
+		@notifications = Notification.where( receiver_id: current_user.id )
+		
 	end
 end

@@ -43,7 +43,17 @@
 
 	<div class="notifications dash-block">
 		<h2>Notifications: </h2>
-
+		<% @notifications.each do |notification| %>
+			<article class="notification">
+				<% if notification.notification_type == "offer" %>
+					<%= notification.sender.name %> has offered to visit for you !
+				<% elsif notification.notification_type == "accepted" %>
+					<%= notification.sender.name %> has accepted you to visit for him !
+				<% elsif notification.notification_type == "refused" %>
+					<%= notification.sender.name %> has denied you to visit for him
+				<% end %> 
+			</article>
+		<% end %>
 	</div>
 
 	<div class="visit-offers dash-block col-sm-12 reportss dashboard-reports">
