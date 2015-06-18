@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="29px" height="28px" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>StarFull</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Review-3" sketch:type="MSArtboardGroup" transform="translate(-464.000000, -2395.000000)" fill="#FFC107">
+            <g id="Ratings" sketch:type="MSLayerGroup" transform="translate(354.000000, 2270.000000)">
+                <g id="Wholesomeness" transform="translate(1.000000, 89.000000)" sketch:type="MSShapeGroup">
+                    <path d="M137.988142,46.7349143 L127.895064,45.7999742 L123.783481,36 L119.671897,45.7999742 L109.578819,46.7349143 L117.125046,53.5836319 L114.905567,63.5976285 L123.783481,58.8102848 L132.661394,63.5976285 L130.441916,53.5836319 L137.988142,46.7349143 Z" id="StarFull"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -14,31 +14,40 @@
 	</div>
 
 	<div class="account dash-block">
-		<h2>Account: </h2>
+		<h2>Account</h2>
+		<%= link_to('Modify', edit_user_registration_path, :class => 'quick-access') %>
 
 		<h3>Ratings</h3>
 
-		<ul class="starts rating-<%= current_user.rating %>">
-			<li>.</li>
-			<li>.</li>
-			<li>.</li>
-			<li>.</li>
-			<li>.</li>
+		<ul class="stars rating-<%= current_user.rating %>">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
 
-		<h3>Number of visits</h3>
-		<p class="value"><%= @visits.length %></p>
+		<div class="num-visit account-infos">
+			<h3>Number of visits</h3>
+			<p class="value"><%= @visits.length %></p>
+		</div>
 
-		<h3>Account balance</h3>
-		<p class="value"><%= current_user.account_balance %>$</p>
+		<div class="account-balance account-infos">
+			<h3>Account balance</h3>
+			<p class="value"><%= current_user.account_balance %>$</p>
+		</div>
 
-		<% if current_user.default_city.present? %>
-			<h3>Default city</h3>
-			<p class="value"><%= current_user.default_city %></p>
-		<% end %>
+		<div class="def-city account-infos">
+			<% if current_user.default_city.present? %>
+				<h3>Default city</h3>
+				<p class="value"><%= current_user.default_city %></p>
+			<% end %>
+		</div>
 
-		<h3>Alert zone</h3>
-		<p class="value"><%= current_user.alert_zone %>km</p>
+		<div class="alert-zone account-infos">
+			<h3>Alert zone</h3>
+			<p class="value"><%= current_user.alert_zone %>km</p>
+		</div>
 	</div>
 
 	<div class="notifications dash-block">
