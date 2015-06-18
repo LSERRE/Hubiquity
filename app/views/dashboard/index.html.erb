@@ -118,6 +118,7 @@
 		<h2>Your last visit reports :</h2>
 		<% if @confirmed_visiters.present? %>
 			<% @confirmed_visiters.each do |visiter| %>
+				<%= visiter.id %>
 			    <article class="confirmed-visit dash-block">
 					<h3>Visit Scheduled</h3>
 					<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>

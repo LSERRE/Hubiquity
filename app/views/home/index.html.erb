@@ -108,3 +108,18 @@
     </div>
   </div>
 </section>
+
+<script>
+
+$(document).ready(function() {
+  var howItWorks = $('.how-it-works');
+
+  $('.discover-button').click(function(){
+    TweenMax.to(howItWorks, 0.4, {y: '0%'});
+  }); 
+  $('.got-it-button').click(function(){
+    TweenMax.to(howItWorks, 0.4, {y: '-100%'});
+  });
+});
+
+</script>

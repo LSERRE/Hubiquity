@@ -86,6 +86,78 @@
 				<%= f.text_field :wholesomness_comment, :placeholder => "Wholesomness comment"  %>
 			</div>
 
+			<div class="field text-field">
+		        <label class="label-helper" for="">Neighberhood rating</label>
+		        <%= f.number_field :neighberhood_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Neighberhood comment</label>
+				<%= f.text_field :neighberhood_comment, :placeholder => "Neighberhood comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Broker rating</label>
+		        <%= f.number_field :brooker_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Broker comment</label>
+				<%= f.text_field :brooker_comment, :placeholder => "Broker comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Furniture rating</label>
+		        <%= f.number_field :furniture_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Furniture comment</label>
+				<%= f.text_field :furniture_comment, :placeholder => "Furniture comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Bathrooms rating</label>
+		        <%= f.number_field :bathrooms_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Bathrooms comment</label>
+				<%= f.text_field :bathrooms_comment, :placeholder => "Bathrooms comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Lights rating</label>
+		        <%= f.number_field :light_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Lights comment</label>
+				<%= f.text_field :light_comment, :placeholder => "Lights comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Noise rating</label>
+		        <%= f.number_field :noise_pollution_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Noise comment</label>
+				<%= f.text_field :noise_pollution_comment, :placeholder => "Noise comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Electricity rating</label>
+		        <%= f.number_field :electricity_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Electricity comment</label>
+				<%= f.text_field :electicity_comment, :placeholder => "Electricity comment"  %>
+			</div>
+
+
+
 			<!-- TODO: others ratings -->
 		</div>
 

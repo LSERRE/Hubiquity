@@ -13,16 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require 'greensock/TweenMax'
+//= require 'greensock/easing/EasePack'
 //= require_tree .
-$( document ).ready(function() {
-  
-  $('.discover-button').click(function(){
-    $('.how-it-works').removeClass('closed');
-  }); 
-
-  $('.got-it-button').click(function(){
-    $('.how-it-works').addClass('closed');
-  }); 
-
-
-});

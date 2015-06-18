@@ -228,10 +228,8 @@ body.home {
 	background: url(drawing_steps_guide.png), linear-gradient(to bottom, rgba(74,144,226,1) 0%,rgba(26,79,136,1) 100%); /* W3C */
 	background-position: center center;
 	background-repeat: no-repeat;
-	transition: transform .4s $transition;
-	&.closed {
-		transform: translateY(-100%);
-	}
+	transition: all .4s $transition;
+  transform: translateY(-100%);
 }
 
 .how-it-works-title {
