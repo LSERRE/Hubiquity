@@ -24,7 +24,10 @@
 
 	<div class="visit-offers dash-block col-sm-12">
 		<h2>Visit offers: </h2>
-<h3><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></h3>
+			<% if @visiters.present? %>
+				<% @visiters.each do |visit| %>
+					<div class="visit-pending">
+						<h3><%= visit[0].adress  %>, <%= visit[0].city  %>, <%= visit[0].zipcode  %></h3>
 						<% if visit[1].present? %>
 							<% visit[1].each do |visiter| %>
 							    <article class="single-user">
@@ -51,9 +54,14 @@
 						            </div>
 							    </article>
 							<% end %>
-						<% else %>
-							<p class="no-offer">There's no offer pending right now.</p>
-						<% end %>
+					<% else %>
+						<p class="no-offer">There's no offer pending right now.</p>
+					<% end %>
+				</div>
+			<% end %>
+		<% else %>
+			<p> You don't have any visit pending </p>
+		<% end %>
 	</div>
 
 	<div class="reports dash-block col-sm-12">
