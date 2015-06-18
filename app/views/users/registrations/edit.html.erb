@@ -47,6 +47,10 @@
       <%= f.label :telephone, :class => 'label-helper' %>
     </div>
 
+    <div class="field text-field">
+      <%= f.text_field :default_city, :onKeyDown => '$(this).parent().addClass("field-complete")', :placeholder => 'Default city' %>
+      <%= f.label :default_city, :class => 'label-helper' %>
+    </div>
 
     <div class="field text-field">
       <%= f.label :bio, :class => 'label-helper visible' %> </br>
