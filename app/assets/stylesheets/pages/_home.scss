@@ -85,7 +85,9 @@ body.home {
 
 	.visit_form {
 		display: flex;
+		display: -webkit-box; 
 		justify-content: center;
+		 -webkit-justify-content: center; /* Safari 6.1+ */
 		position: relative;
 		max-width: 90%;
 		margin: 40px auto 0 auto;
@@ -93,6 +95,7 @@ body.home {
 
 		.search-fieldset {
 			display: flex;
+			display: -webkit-box;
 			width: calc( 80% - 10px );
 			background: rgba(255,255,255,.95);
 			margin-right: 10px;
@@ -100,6 +103,7 @@ body.home {
 			box-sizing: border-box;
 			border-radius: 3px;
 			justify-content: space-around;
+			 -webkit-justify-content: space-around; /* Safari 6.1+ */
 
 			.search-input {
 				font-size: em(12px 14px);
@@ -173,7 +177,7 @@ body.home {
 			font-weight: 900;
 			height: 80px;
 			width: 20%;
-			display: inline-block;
+			display: block;
 			background: rgba(73,143,225,.95);
 			border: none;
 			color: $white;
