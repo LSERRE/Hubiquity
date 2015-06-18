@@ -6,7 +6,7 @@ class VisiterController < ApplicationController
 		@relation = Visiter.create(user_id: user_id, requester_id: requester_id, visit_id: params[:visit_id], visitDate: params[:visitDate], visitTime: params[:visitTime], confirmed: "pending")
 		@relation.save
 
-		notification = Notification.new(sender_id: user_id, receiver_id: requester_id, notification_type: "offer")
+		notification = Notification.new(sender_id: user_id, receiver_id: requester_id, notification_type: "offer", read: false)
 		notification.save
 
 		redirect_to visit_index_path
@@ -19,7 +19,7 @@ class VisiterController < ApplicationController
 		visiter.confirmed = 'accepted'
 		visiter.save
 
-		notification = Notification.new(sender_id: sender_id, receiver_id: receiver_id, notification_type: "accepted")
+		notification = Notification.new(sender_id: sender_id, receiver_id: receiver_id, notification_type: "accepted", read: false)
 		notification.save
 
 		redirect_to dashboard_path
@@ -32,7 +32,7 @@ class VisiterController < ApplicationController
 		visiter.confirmed = 'refused'
 		visiter.save
 
-		notification = Notification.new(sender_id: sender_id, receiver_id: receiver_id, notification_type: "refused")
+		notification = Notification.new(sender_id: sender_id, receiver_id: receiver_id, notification_type: "refused", read: false)
 		notification.save
 
 		redirect_to dashboard_path

@@ -11,7 +11,15 @@ class DashboardController < ApplicationController
 			@visiters[index][1] = pending_visiters
 		end
 
-		@notifications = Notification.where( receiver_id: current_user.id )
+		@notifications = Notification.where( receiver_id: current_user.id ).order(created_at: :desc)
+		@notifications_unread = Notification.where( receiver_id: current_user.id , read: false)
+
+		render "dashboard/index"
+
+		@notifications_unread.each do |notification|
+			notification.read = true
+			notification.save
+		end
 		
 	end
 end

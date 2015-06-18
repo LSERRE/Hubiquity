@@ -51,9 +51,14 @@
 	</div>
 
 	<div class="notifications dash-block">
-		<h2>Notifications: </h2>
+		<h2>Notifications( <%= @notifications_unread.length %> ): </h2>
 		<% @notifications.each do |notification| %>
-			<article class="notification">
+			<article class="notification 
+				<% if notification.read == false %>
+					new
+				<% end %>
+				">
+
 				<% if notification.notification_type == "offer" %>
 					<%= notification.sender.name %> has offered to visit for you !
 				<% elsif notification.notification_type == "accepted" %>
