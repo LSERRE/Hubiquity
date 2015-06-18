@@ -431,6 +431,11 @@ button {
 		input {
 			background: transparent;
 			color: $white !important;
+			cursor: pointer;
+		}
+
+		&:hover {
+			background: #3275AA;
 		}
 }
 
