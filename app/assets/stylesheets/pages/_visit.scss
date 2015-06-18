@@ -9,6 +9,14 @@
 		display: inline-block;
 		vertical-align: top;
 
+		&:nth-child(3n) {
+			margin-left: 0;
+		}
+
+		&:nth-child(3n+2) {
+			margin-right: 0;
+		}
+
 		.mapbox {
 			background: url(mapbox.png);
 			position: relative;
