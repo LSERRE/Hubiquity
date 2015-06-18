@@ -18,11 +18,6 @@ body.home {
     h1 {
       display: none;
     }
-    // ul.login-menu {
-    //   li {
-    //     width: inherit;
-    //   }
-    // }
   }
 
   footer {
@@ -44,13 +39,13 @@ body.home {
   position: relative;
 }
 .gradient-home {
-  height: 200px;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(41,137,216,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.35)), color-stop(100%,rgba(41,137,216,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* W3C */
+  height: 400px;
+  background: -moz-linear-gradient(top, rgba(2,0,0,0.5) 30%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(2,0,0,0.5)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(2,0,0,0.5) 30%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(2,0,0,0.5) 30%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(2,0,0,0.5) 30%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(2,0,0,0.5) 30%,rgba(0,0,0,0) 100%); /* W3C */
 
 }
 .wrap-home {
@@ -81,6 +76,25 @@ body.home {
   background-size: 200px auto;
 }
 
+.how-it-works {
+	font-weight: 900;
+	font-size: em(14px);
+	color: #fff;
+	padding: 20px 15px;
+	margin: 40px 0 60px;
+	background: rgba(255,255,255,.4);
+	text-transform: uppercase;
+	text-shadow: 0px 1px 1px rgba(63,63,63,1);
+	letter-spacing: 2px;
+	// border: 1px solid #fff;
+	border-radius: 2px;
+	transition: all .2s;
+	&:hover {
+		transform: scale(1.03);
+		background: rgba(255,255,255,.5);
+	}
+}
+
 .search-form {
   display: -webkit-box; 
   display: flex;
@@ -88,7 +102,7 @@ body.home {
    -webkit-justify-content: center; /* Safari 6.1+ */
   position: relative;
   max-width: 1150px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
   align-items: center;
   color: #000;
   text-transform: uppercase;
@@ -188,7 +202,7 @@ body.home {
   letter-spacing: 2px;
   vertical-align: top;
   border-radius: 2px;
-  transition: all .2s ;
+  transition: all .2s;
   cursor: pointer;
   &:hover {
     transform: scale(1.03);
@@ -236,6 +250,7 @@ body.home {
     color: #4A4A4A;
     margin-bottom: 25px;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
   span {
     font-size: 25px;
@@ -256,7 +271,7 @@ body.home {
 
 // HOME - OUR COMMUNITY
 .our-community {
-  padding: 60px 0 100px;
+  padding: 60px 0 0;
   background: $light-blue;
   text-align: center;
 }
@@ -272,6 +287,7 @@ body.home {
 .our-community-sous-title {
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 2px;
 
 }
 
@@ -296,30 +312,47 @@ body.home {
     width: 100%;
   }
 
+
+  h5 {
+    font-size: em(70px);
+    font-weight: 700;
+    margin-top: -230px;
+    margin-bottom: 190px;
+    text-shadow: 0px 1px 1px rgba(63,63,63,1);
+  }
+
   span {
     font-size: em(20px);
     font-weight: 900;
     display: block;
     text-transform: uppercase;
-  }
-
-  h5 {
-    font-size: em(70px);
-    font-weight: 700;
-    margin-top: -220px;
-    margin-bottom: 190px;
-    text-shadow: 0px 1px 1px rgba(63,63,63,1);
+    letter-spacing: 2px;
   }
 
   a {
+  	font-size: em(12px);
     font-weight: 900;
     color: #fff;
+    padding: 15px 60px 15px 30px;
+    display: inline-block;
+    margin-top: 15px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 2px;
+    background: url(icon_download.svg) no-repeat rgba(255,255,255,.1);
+    background-position: 90% 40%;
+    transition: all .2s;
+    &:hover {
+    	transform: scale(1.03);
+  	}
   }
 }
 
 .learn-more {
   margin-top: 100px;
+  padding: 70px 0;
+  background: rgba(255,255,255,.1);
   span {
     font-size: em(36px);
     font-weight: 300;
@@ -328,11 +361,12 @@ body.home {
   }
 
   a {
-    font-weight: 700;
+    font-weight: 900;
     color: #fff;
     padding: 20px;
     margin-left: 30px;
     text-transform: uppercase;
+    letter-spacing: 2px;
     border: 1px solid rgba(255,255,255,.5);
     border-radius: 2px;
     transition: all .2s;
