@@ -13,12 +13,12 @@ class Visit < ActiveRecord::Base
 	validates :visitTime1, presence: true
 	validates :telephone, presence:true
 
-	before_create :level_up
+	# before_create :level_up
 
-	def level_up
-		if self.requester.level == 1
-			self.requester.level = 2
-			self.requester.save
-		end
-	end
+	# def level_up
+	# 	if self.requester.level == 1
+	# 		self.requester.level = 2
+	# 		self.requester.save
+	# 	end
+	# end
 end

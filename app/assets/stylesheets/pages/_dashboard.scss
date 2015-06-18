@@ -331,6 +331,25 @@
 		float: left;
 		width: calc( 66.66% - 10px );
 		height: 335px;
+
+		h2 { margin-bottom: 12px; }
+
+		article {
+			border-top: 1px solid rgba(99, 99, 99, .14);
+			border-bottom: 1px solid rgba(99, 99, 99, .14);
+			padding: 10px 20px;
+			margin-top: -1px;
+			width: 80%;
+
+			span {
+				font-weight: 700;
+				color: #3F3F3F;
+
+				&.offered { color: #4A90E2; font-weight: 400; }
+				&.accepted { color: #28B28D; font-weight: 400; }
+				&.denied { color: #FF576C; font-weight: 400; }
+			}
+		}
 	}
 
 	.dashboard-reports{

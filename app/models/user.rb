@@ -24,5 +24,9 @@ class User < ActiveRecord::Base
 		self.alert_zone = 10
 	end
 
+	def name
+		name = self.firstname + " " + self.lastname
+	end 
+
 
 end
