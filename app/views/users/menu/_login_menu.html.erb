@@ -7,17 +7,17 @@
 		  		<%= current_user.firstname %> <%= current_user.lastname %> 
 				<ul class="sub-menu">
 					<li><%= link_to('Dashboard', dashboard_path) %></li>
-					<li><a href="#">My visits reports</a></li>
-					<li><a href="#">My reviews</a></li>
-					<li><a href="#">Notifications</a></li>
+					<li><a href="/reports">My visits reports</a></li>
+					<!-- <li><a href="#">My reviews</a></li> -->
+					<!-- <li><a href="#">Notifications</a></li> -->
 					<li><%= link_to('Modify profile', edit_user_registration_path) %></li>
-					<li><a href="#">View profile</a></li>
-					<li><a href="#">Account</a></li>
-					<li><a href="#">Money balance</a></li>
+					<!-- <li><a href="#">View profile</a></li> -->
+					<!-- <li><a href="#">Account</a></li> -->
+					<!-- <li><a href="#">Money balance</a></li> -->
 					<li><%= link_to('Disconnect', destroy_user_session_path, :method => :delete) %> </li>
 				</ul>
 		  	</li>
-			<li>Help</li>
+			<!-- <li>Help</li> -->
 		<% else %>
 			<li>
 				<%= link_to('Sign up', new_user_registration_path)  %>
