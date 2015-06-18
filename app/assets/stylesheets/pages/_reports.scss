@@ -1,4 +1,5 @@
 .reports .side-menu li:nth-child(2) { font-weight: 900; &:before { content: "•"; color: $white; padding-right: 5px; } }
+.dashboard .side-menu li:first-child { font-weight: 900; &:before { content: "•"; color: $white; padding-right: 5px; } }
 
 .reports{
 	h2 {
