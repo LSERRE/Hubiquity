@@ -1,18 +1,19 @@
 <section class="home-section">
 	<div class="home-container">
+		<div class="gradient-home"></div>
 		<div class="wrap-home">
 			<h1 class="logo">Hubiquity</h1>
 			<h3>, your local advisor for appartments walk-throughs</h3>
 
 			<%= form_for @visit, url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form search-form"} do |f| %>
 				<%= field_set_tag nil, class: 'search-fieldset' do %>
-				<%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
+				<%= f.text_field :city, :placeholder => "The address to visit", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'The address to visit'", :class => "search-input search-place"  %>
 
-				<%= f.date_field :visitDate1, :placeholder => "Date", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Date'", :class => "search-input search-date"  %>
+				<%= f.date_field :visitDate1, :placeholder => "The date", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'The date'", :class => "search-input search-date"  %>
 
-				<%= f.time_field :visitTime1, :placeholder => "Time", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Time'", :class => "search-input search-time"  %>
+				<%= f.time_field :visitTime1, :placeholder => "The time", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'The time'", :class => "search-input search-time"  %>
 
-				<%= f.text_field :surface, :placeholder => "Surface", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'Surface'", :class => "search-input search-size"  %>
+				<%= f.text_field :surface, :placeholder => "The surface area", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'The surface area'", :class => "search-input search-size"  %>
 				<% end %>
 				<%= f.submit "Submit request", :class => "search-submit" %>
   			<% end %>

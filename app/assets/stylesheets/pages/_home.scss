@@ -44,6 +44,16 @@ body.home {
 	background-size: cover;
 	position: relative;
 }
+.gradient-home {
+	height: 200px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(41,137,216,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.35)), color-stop(100%,rgba(41,137,216,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(41,137,216,0) 100%); /* W3C */
+
+}
 .wrap-home {
 	margin: auto;
 	position: absolute;
@@ -98,7 +108,7 @@ body.home {
 }
 
 .search-input {
-	font-size: em(12px 14px);
+	font-size: 12px;
 	font-family: "Lato", sans-serif;
 	font-weight: 900; 
 	color: #161616;
@@ -258,6 +268,7 @@ body.home {
 
 .our-community-sous-title {
 	font-weight: 900;
+	text-transform: uppercase;
 
 }
 
