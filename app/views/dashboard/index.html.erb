@@ -24,7 +24,7 @@
 
 	<div class="visit-offers dash-block col-sm-12 reportss dashboard-reports">
 		<div class="potential-visiters">
-			<h2>Waiting for scheduling :</h2>
+			<h2>Visit offers :</h2>
 			<% if @visiters.present? %>
 				<% @visiters.each do |visit| %>
 					<div class="visit-pending">
@@ -67,7 +67,7 @@
 	</div>
 
 	<div class="myvisits reportss">
-		<h2>Scheduled visits :</h2>
+		<h2>Your last visit reports :</h2>
 		<% if @confirmed_visiters.present? %>
 			<% @confirmed_visiters.each do |visiter| %>
 			    <article class="confirmed-visit dash-block">
@@ -91,12 +91,8 @@
 		<% end %>
 	</div>
 
-	<div class="reports dash-block col-sm-12">
-		<h2>Your last reports: </h2>
-	</div>
-
 	<div class="reviews dash-block col-sm-12">
-		<h2>Your last reviews: </h2>
+		<h2>Your last reviews : </h2>
 	</div>
 	<div class="clearfix"></div>
 </div>
