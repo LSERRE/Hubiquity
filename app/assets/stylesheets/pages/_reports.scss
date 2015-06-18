@@ -15,23 +15,6 @@
 		color: #3F3F3F;
 		padding-top: 30px;
 	}
-
-	.visit-pending {
-    	clear: left;
-
-    	.no-offer {
-			font-size: em(18px);
-			font-weight: 400;
-			color: #FF576C;
-			margin-top: 10px;
-			text-indent: 15px;
-    	}
-	}
-
-	.visits-completed {
-		clear: left;
-		padding-top: 50px;
-	}
 }
 
 .myvisits {
@@ -99,4 +82,21 @@
 			margin-left: 25px;
 		}
 	}
+}
+
+.visit-pending {
+	clear: left;
+}
+
+.no-offer {
+	font-size: em(18px);
+	font-weight: 400;
+	color: #FF576C;
+	margin-top: 10px;
+	text-indent: 15px;
+}
+
+.visits-completed {
+	clear: left;
+	padding-top: 50px;
 }
