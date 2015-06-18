@@ -15,6 +15,30 @@
 
 	<div class="account dash-block">
 		<h2>Account: </h2>
+
+		<h3>Ratings</h3>
+
+		<ul class="starts rating-<%= current_user.rating %>">
+			<li>.</li>
+			<li>.</li>
+			<li>.</li>
+			<li>.</li>
+			<li>.</li>
+		</ul>
+
+		<h3>Number of visits</h3>
+		<p class="value"><%= @visits.length %></p>
+
+		<h3>Account balance</h3>
+		<p class="value"><%= current_user.account_balance %>$</p>
+
+		<% if current_user.default_city.present? %>
+			<h3>Default city</h3>
+			<p class="value"><%= current_user.default_city %></p>
+		<% end %>
+
+		<h3>Alert zone</h3>
+		<p class="value"><%= current_user.alert_zone %>km</p>
 	</div>
 
 	<div class="notifications dash-block">
