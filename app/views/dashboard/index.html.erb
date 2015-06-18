@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="notifications dash-block">
-		<h2>Notifications( <%= @notifications_unread.length %> ): </h2>
+		<h2>Notifications ( <%= @notifications_unread.length %> ) </h2>
 		<% @notifications.each do |notification| %>
 			<article class="notification 
 				<% if notification.read == false %>
@@ -60,11 +60,11 @@
 				">
 
 				<% if notification.notification_type == "offer" %>
-					<%= notification.sender.name %> has offered to visit for you !
+					<span><%= notification.sender.name %></span> <span class="offered">has offered to visit for you !</span>
 				<% elsif notification.notification_type == "accepted" %>
-					<%= notification.sender.name %> has accepted you to visit for him !
+					<span><%= notification.sender.name %></span> <span class="accepted">has accepted you to visit for him !</span>
 				<% elsif notification.notification_type == "refused" %>
-					<%= notification.sender.name %> has denied you to visit for him
+					<span><%= notification.sender.name %></span> <span class="denied">has denied you to visit for him</span>
 				<% end %> 
 			</article>
 		<% end %>
@@ -109,7 +109,7 @@
 					</div>
 				<% end %>
 			<% else %>
-				<p> You don't have any visit pending </p>
+				<p class="no-offer"> You don't have any visit pending </p>
 			<% end %>
 		</div>
 	</div>
