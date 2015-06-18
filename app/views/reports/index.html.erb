@@ -1,8 +1,8 @@
 <%= render 'layouts/sidebar' %>
 <div class="reportss wrapppper row col-sm-10">
-	<h2 class="page-title">My visit reports</h2>
+	<h2 class="page-title">My visits</h2>
 	<div class="potential-visiters">
-		<h2>Waiting for scheduling :</h2>
+		<h2>Upcoming visit:</h2>
 		<% if @visiters.present? %>
 			<% @visiters.each do |visit| %>
 				<div class="visit-pending">
@@ -44,11 +44,11 @@
 	</div>
 
 	<div class="myvisits reportss">
-		<h2>Scheduled visits :</h2>
+		<h2>Scheduled visit:</h2>
 		<% if @confirmed_visiters.present? %>
 			<% @confirmed_visiters.each do |visiter| %>
 			    <article class="confirmed-visit dash-block">
-					<h3>Visit Scheduled</h3>
+					<h3>Scheduled visit:</h3>
 					<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>
 
 					<%= link_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
@@ -57,7 +57,7 @@
 					
 					<span class="polymask"><%= image_tag(visiter.visit.requester.avatar.url(:thumb), :class => "content avatar") %></span>
 			    	<p class="name-visitor">
-			    		With :
+			    		Visitor:
 						<%= visiter.visit.requester.firstname %>
 						<%= visiter.visit.requester.lastname %>
 			    	</p>
@@ -70,5 +70,6 @@
 
 	<div class="visits-completed">
 		<h2>Visits completed :</h2>
+		<p> You didn't complet any visit yet </p>
 	</div>
 </div>
