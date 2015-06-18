@@ -32,21 +32,25 @@
 		margin-top: 20px;
 		float: left;
 		margin-right: 20px;
+
 		h3 {
 			color: #3F3F3F;
 			opacity: .8;
 			margin: 0;
 			font-size: em(14px);
 			margin-bottom: 10px;
+			padding: 0;
 		}
 
-		.button_to {
-			.cancel-button {
-				color: #D0021B;
-				background: transparent;
-				font-size: em(12px);
-				margin-top: 9px;
-			}
+		.when {
+			margin-bottom: 10px;
+		}
+
+		.cancel-button {
+			color: #D0021B;
+			background: transparent;
+			font-size: em(12px);
+			margin-top: 9px;
 
 			&:before {
 				content: '';
@@ -55,12 +59,13 @@
 				width: 12px;
 				background: url(cross.svg);
 				vertical-align: middle;
+				margin-right: 5px;
 			}
 		}
 
 		.where-to {
 			font-size: em(14px);
-			margin-top: 5px;
+			margin-top: 20px;
 			position: absolute;
 		}
 
@@ -71,7 +76,7 @@
 			margin: 0;
 			position: absolute;
 			bottom: 15px;
-			margin-left: 0px;
+			margin-left: -60px;
 		}
 
 		.name-visitor {
