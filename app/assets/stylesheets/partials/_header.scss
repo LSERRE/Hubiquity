@@ -59,9 +59,15 @@ header {
 }
 
 .become-visitor {
-	padding: 20px 20px;
-	background: rgba(255,255,255,.4);
 	text-transform: uppercase;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	border: 1px solid $light-blue;
+	transition: all .2s $transition;
+	cursor: pointer;
+	&:hover {
+		background: rgba(74,144,226,.3);
+	}
 }
 
 .sub-menu-deploy {

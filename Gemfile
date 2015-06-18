@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise for users sessions
 gem 'devise'
 
+# Use TweenMax for animations
+gem 'greensock-rails'
+
 # Paperclip for avatars
 gem 'paperclip', '~> 4.1'
 

@@ -447,6 +447,9 @@ button {
 		&.cancel-account {
 			background: #B2435B;
 			box-shadow: #96394C 0px 2px 0px;
+			&:hover {
+				background: #96394C;
+			}
 		}
 }
 
