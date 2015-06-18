@@ -1,0 +1,236 @@
+<div class="text-wrap">
+	<h1>Request a review</h1>
+	<p>J'suis au départ de la fusée Ariane, Ça t'é-t'étonne grosse bouffonne. J'crame le gros cul de Marianne, C'est pour ça qu'ça sent le bacon</p>
+</div>
+
+<div class="wrapppper">
+
+	<%= form_for @review, url: {action: "create"}, html: {class: "review_form dynamic-form"} do |f| %>
+		<%= f.hidden_field :visiter_id %>
+		<div class="form-part">
+
+			<div class="hexagon"><span>1</span></div><h2>Pictures</h2>
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 1 title</label>
+				<%= f.text_field :picture1_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture1, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture1 %>
+			</div>
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 2 title</label>
+				<%= f.text_field :picture2_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture2, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture2 %>
+			</div>
+
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 3 title</label>
+				<%= f.text_field :picture3_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture3, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture3 %>
+			</div>
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 4 title</label>
+				<%= f.text_field :picture4_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture4, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture4 %>
+			</div>
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 5 title</label>
+				<%= f.text_field :picture5_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture5, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture5 %>
+			</div>
+
+			<div class="field text-field">
+			<label class="label-helper" for="">Picture 6 title</label>
+				<%= f.text_field :picture6_name, :placeholder => "Titre", :onKeyDown => '$(this).parent().addClass("field-complete")'  %>
+			</div>
+
+			<div class="field picture-field">
+				<%= f.label :picture6, class: 'picture-upload label-helper'  %>
+				<%= f.file_field :picture6 %>
+			</div>
+		</div>
+
+		<div class="form-part">
+			<div class="hexagon"><span>2</span></div><h2>Ratings</h2>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Whomeless rating</label>
+		        <%= f.number_field :wholesomness_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Wholesomness comment</label>
+				<%= f.text_field :wholesomness_comment, :placeholder => "Wholesomness comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Neighberhood rating</label>
+		        <%= f.number_field :neighberhood_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Neighberhood comment</label>
+				<%= f.text_field :neighberhood_comment, :placeholder => "Neighberhood comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Broker rating</label>
+		        <%= f.number_field :brooker_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Broker comment</label>
+				<%= f.text_field :brooker_comment, :placeholder => "Broker comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Furniture rating</label>
+		        <%= f.number_field :furniture_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Furniture comment</label>
+				<%= f.text_field :furniture_comment, :placeholder => "Furniture comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Bathrooms rating</label>
+		        <%= f.number_field :bathrooms_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Bathrooms comment</label>
+				<%= f.text_field :bathrooms_comment, :placeholder => "Bathrooms comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Lights rating</label>
+		        <%= f.number_field :light_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Lights comment</label>
+				<%= f.text_field :light_comment, :placeholder => "Lights comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Noise rating</label>
+		        <%= f.number_field :noise_pollution_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Noise comment</label>
+				<%= f.text_field :noise_pollution_comment, :placeholder => "Noise comment"  %>
+			</div>
+
+			<div class="field text-field">
+		        <label class="label-helper" for="">Electricity rating</label>
+		        <%= f.number_field :electricity_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Electricity comment</label>
+				<%= f.text_field :electicity_comment, :placeholder => "Electricity comment"  %>
+			</div>
+
+
+
+			<!-- TODO: others ratings -->
+		</div>
+
+		<div class="form-part">
+			<div class="hexagon"><span>3</span></div><h2>Possible issues</h2>
+
+			<div class="field text-field">
+				<label class="label-helper">Issue title 1</label>
+				<%= f.text_field :issue1_title, :placeholder => "Issue title 1"  %>
+			</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Issue comment 1</label>
+				<%= f.text_field :issue1_comment, :placeholder => "Issue comment 1"  %>
+			</div>
+
+			<div class="field picture-field">
+				<label class="label-helper">Issue picture 1</label>
+				<%= f.file_field :issue1_picture %>
+			</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Issue title 2</label>
+				<%= f.text_field :issue2_title, :placeholder => "Issue title 2"  %>
+			</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Issue comment 2</label>
+				<%= f.text_field :issue2_comment, :placeholder => "Issue comment 2"  %>
+			</div>
+
+			<div class="field picture-field">
+				<label class="label-helper">Issue picture 2</label>
+				<%= f.file_field :issue2_picture %>
+			</div>
+
+		</div>
+
+		<div class="form-part">
+			<div class="hexagon"><span>4</span></div><h2>Questions</h2>
+			<div class="field text-field">
+				<label class="label-helper">Answer 1</label>
+				<%= f.text_field :answer1, :placeholder => "Answer 1"  %>
+			</div>
+			<div class="field text-field">
+				<label class="label-helper">Answer 2</label>
+				<%= f.text_field :answer2, :placeholder => "Answer 2"  %>
+			</div>
+			<div class="field text-field">
+				<label class="label-helper">Answer 3</label>
+				<%= f.text_field :answer3, :placeholder => "Answer 3"  %>
+			</div>
+			<div class="field text-field">
+				<label class="label-helper">Answer 1</label>
+				<%= f.text_field :answer3, :placeholder => "Answer 3"  %>
+			</div>
+		</div>
+
+		<div class="form-part">
+			<div class="hexagon"><span>5</span></div><h2>Conclusion</h2>
+			<div class="field text-field">
+				<label class="label-helper">Conclusion</label>
+				<%= f.text_field :conclusion, :placeholder => "Conclusion"  %>
+			</div>
+			<div class="field text-field">
+			    <label class="label-helper" for="">Final rating :</label>
+		        <%= f.number_field :wholesomness_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+		    </div>
+		</div>
+
+		<p class="button request"><%= f.submit "Submit request" %></p>
+
+		<!-- @TODO: ADD TEXT -->
+
+	<% end %>
+</div>
