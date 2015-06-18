@@ -14,12 +14,23 @@ class DashboardController < ApplicationController
 		@notifications = Notification.where( receiver_id: current_user.id ).order(created_at: :desc)
 		@notifications_unread = Notification.where( receiver_id: current_user.id , read: false)
 
-		render "dashboard/index"
-
 		@notifications_unread.each do |notification|
 			notification.read = true
 			notification.save
 		end
 		
+		@user_reviews = []
+		@reviews = Review.all
+		@reviews.each_with_index do |review, index|
+			puts review.visiter.requester_id
+			puts current_user.id
+			puts review
+			if review.visiter.requester_id == current_user.id
+				@user_reviews[index] = review
+			end
+		end
+
+		render "dashboard/index"
+
 	end
 end
