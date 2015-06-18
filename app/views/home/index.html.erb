@@ -11,6 +11,12 @@
       </h1>
       <h3>, your local advisor for appartments walk-throughs</h3>
 
+      <div class="discover">
+      	<button class="how-it-works">
+      		Discover how it works
+      	</button>
+      </div>
+
       <%= form_for @visit, method: "get", url: {controller: "visit", action: "new"}, html: {class: "visit_form dynamic-form search-form"} do |f| %>
         <div class="search-fieldset">
           <%= f.text_field :city, :placeholder => "City", :onfocus => "this.placeholder = ''", :onblur => "this.placeholder = 'City'", :class => "search-input search-place"  %>
@@ -31,7 +37,7 @@
 
     <ul class="our-values-list">
       <li class="our-values-list-item">
-        <h4>Guarantee of results</h4>
+        <h4>Results guaranteed</h4>
         <span>Only high-quality pictures &amp; reports accepted</span>
       </li>
       <li class="our-values-list-item">
@@ -39,8 +45,8 @@
         <span>Find your home led by the expertise of locals</span>
       </li>
       <li class="our-values-list-item">
-        <h4>Getting rewarded</h4>
-        <span>Earning money for knowing your neighborhood</span>
+        <h4>get rewarded</h4>
+        <span>Earn money by sharing your local knowledge</span>
       </li>
     </ul>
   </div>
@@ -53,19 +59,19 @@
       <li class="our-community-list-item">
         <%= image_tag("citiy_sydney.png", class: "our-community-city-photo", alt: "Sydney") %>
         <h5>Sydney</h5>
-        <span>Life tips for</span>
+        <span>Life tips for Sydney</span>
         <a href="" download>Download the kit</a>
       </li>
       <li class="our-community-list-item">
         <%= image_tag("citiy_berlin.png", class: "our-community-city-photo", alt: "Berlin") %>
         <h5>Berlin</h5>
-        <span>Life tips for</span>
+        <span>Life tips for Berlin</span>
         <a href="" download>Download the kit</a>
       </li>
       <li class="our-community-list-item">
         <%= image_tag("citiy_london.png", class: "our-community-city-photo", alt: "London") %>
         <h5>London</h5>
-        <span>Life tips for</span>
+        <span>Life tips for London</span>
         <a href="" download>Download the kit</a>
       </li>
     </ul>
