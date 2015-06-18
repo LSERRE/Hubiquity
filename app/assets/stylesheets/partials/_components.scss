@@ -84,8 +84,8 @@ button {
 	font-weight: 700;
 	color: $white;
 	position: absolute;
-	top: 10px;
-	margin-left: 200px;
+	top: -40px;
+  margin-left: 0;
 
 	&:before {
 		content: "";
@@ -127,7 +127,7 @@ button {
 	position: relative;
 	min-height: 600px;
 	padding: 50px 90px;
-	margin: 0 0 0 0;
+	// margin: 0 0 0 0;
 	background: #FFF;
 	box-sizing: border-box;
 
