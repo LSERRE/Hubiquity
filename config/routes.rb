@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :visit
+  resources :visits
+  resources :visiters
 
 end

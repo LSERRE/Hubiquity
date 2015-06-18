@@ -1,6 +1,4 @@
 .visit {
-	.wrapppper { padding-left: 120px; }
-
 	article {
 		background: #EEEEEE;
 		box-shadow: 0 1px 0 rgba(0, 0, 0, .25);
@@ -10,6 +8,14 @@
 		width: 220px;
 		display: inline-block;
 		vertical-align: top;
+
+		&:nth-child(3n) {
+			margin-left: 0;
+		}
+
+		&:nth-child(3n+2) {
+			margin-right: 0;
+		}
 
 		.mapbox {
 			background: url(mapbox.png);

@@ -20,7 +20,7 @@ class VisitController < ApplicationController
 			@visit[:user_id] = current_user.id
 			if @visit.save
 				flash[:success] = "Visit Created"
-				redirect_to @visit
+				redirect_to dashboard_path
 			else
 				flash[:error] = "Error in the database"
 				render :new
@@ -33,12 +33,6 @@ class VisitController < ApplicationController
 
 	def show
 		@visit = Visit.find(params[:id])
-	end
-
-	def destroy
-		@visit = Visit.find(params[:id])
-		@visit.delete
-		redirect_to visits_path
 	end
 
 	private
