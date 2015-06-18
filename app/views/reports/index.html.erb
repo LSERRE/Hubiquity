@@ -51,7 +51,7 @@
 					<h3>Visit Scheduled</h3>
 					<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>
 
-					<%= button_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
+					<%= link_to "Cancel visit", visit_path(:id => visiter.visit.id), :method => :delete, class: "cancel-button" %>
 
 					<p class="where-to"><%= visiter.visit.adress  %>, <%= visiter.visit.city  %>, <%= visiter.visit.zipcode  %></p>
 					

@@ -35,12 +35,6 @@ class VisitController < ApplicationController
 		@visit = Visit.find(params[:id])
 	end
 
-	def destroy
-		@visit = Visit.find(params[:id])
-		@visit.delete
-		redirect_to visits_path
-	end
-
 	private
 	def post_params
 		params.require(:visit).permit(:adress, :zipcode, :city, :country, :surface, :agentName, :agencyName, :telephone, :visitDate1, :visitTime1, :visitDate2, :visitTime2, :visitDate3, :visitTime3, :wholesomnessRate, :question1, :question2, :question3, :question4)
