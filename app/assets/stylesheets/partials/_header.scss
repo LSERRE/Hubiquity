@@ -9,7 +9,14 @@ header {
 	// background: $light-blue;
 	background: url(background.png);
 	background-size: cover;
-
+	.header-container {
+		display: -webkit-box;
+		display: flex;
+  	-webkit-justify-content: space-between;
+		justify-content: space-between;
+		width: 90%;
+		margin: 0 auto;
+	}
 	a {
 		display: block;
 	}
