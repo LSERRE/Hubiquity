@@ -104,7 +104,7 @@
 							    </article>
 							<% end %>
 						<% else %>
-							<p class="no-offer">There's no offer pending right now.</p>
+							<p class="no-offer">There's no offer pending for this offer right now.</p>
 						<% end %>
 					</div>
 				<% end %>
@@ -118,7 +118,6 @@
 		<h2>Your last visit reports :</h2>
 		<% if @confirmed_visiters.present? %>
 			<% @confirmed_visiters.each do |visiter| %>
-				<%= visiter.id %>
 			    <article class="confirmed-visit dash-block">
 					<h3>Visit Scheduled</h3>
 					<p class="when"> <%= parseDatetime( visiter.visit.visitDate1, visiter.visit.visitTime1 ) %> </p>
@@ -141,12 +140,19 @@
 	</div>
 
 	<div class="reviews dash-block col-sm-12">
-		<h2>Completed visits : </h2>
-		<%= @user_reviews.each do |review| %>
-			<%= review.visiter.visit.adress %> <%= review.visiter.visit.city %> <%= review.visiter.visit.zipcode %>
-			By <%= review.visiter.visiter.name %>
-			<%= image_tag(review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %>
-			<%= image_tag(review.picture1, :class => "LACLASSEQUETUVEUX") %>
+		<h2>Your last reviews</h2>
+		<% if @confirmed_visiters.present? %>
+			<% @user_reviews.each do |review| %>
+				<article>
+					<%= image_tag(review.picture1, :class => "review-back") %>
+					<p class="earnings">You earned : <span>35$</span></p>
+					<p class="adress"><%= review.visiter.visit.adress %>, <%= review.visiter.visit.zipcode %>, <%= review.visiter.visit.city %></p>
+					
+					<div class="who"><span class="polymask"><%= image_tag(review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span> By <%= review.visiter.visiter.name %></div>
+				</article>
+			<% end %>
+		<% else %>
+			<p class="no-offer"> You dont have any review yet </p>
 		<% end %>
 	</div>
 	<div class="clearfix"></div>
