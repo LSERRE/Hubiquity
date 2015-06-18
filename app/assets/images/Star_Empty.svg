@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="33px" viewBox="0 0 34 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Star_Empty</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Review-3" sketch:type="MSArtboardGroup" transform="translate(-498.000000, -2392.000000)" stroke="#D6D6D6" stroke-width="2">
+            <g id="Ratings" sketch:type="MSLayerGroup" transform="translate(354.000000, 2270.000000)">
+                <g id="Wholesomeness" transform="translate(1.000000, 89.000000)" sketch:type="MSShapeGroup">
+                    <path d="M174.514415,46.7349143 L164.421337,45.7999742 L160.309754,36 L156.19817,45.7999742 L146.105092,46.7349143 L153.651319,53.5836319 L151.43184,63.5976285 L160.309754,58.8102848 L169.187667,63.5976285 L166.968189,53.5836319 L174.514415,46.7349143 Z" id="Star_Empty"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

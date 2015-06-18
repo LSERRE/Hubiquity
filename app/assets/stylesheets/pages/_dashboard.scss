@@ -16,6 +16,24 @@
 		font-size: em( 16px );
 	}
 
+	.quick-access {
+		position: absolute;
+		right: 20px;
+		top: 27px;
+		font-size: em(12px);
+		color: #4A90E2;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			background: url(ChevronBleuDroite.svg) no-repeat;
+			height: 12px;
+			width: 20px;
+			vertical-align: middle;
+			margin-left: 8px;
+		}
+	}
+
 	.potential-visiters {
 
 		article {
@@ -203,6 +221,110 @@
 		width: calc( 33.33% - 10px );
 		height: 335px;
 		margin-right: 20px;
+
+		h3 {
+			color: #535353;
+			font-size: em(12px);
+			margin-top: 25px;
+		}
+
+		.stars {
+			margin: 10px 0 80px;
+
+			li {
+				float: left;
+				background: url(Star_Empty.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				margin-right: 7px;
+			}
+
+			&.rating-1 {
+				li:nth-child(1) {
+				float: left;
+				background: url(Star_Full.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				}
+			}
+
+			&.rating-2 {
+				li:nth-child(1), li:nth-child(2) {
+				float: left;
+				background: url(Star_Full.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				}
+			}
+
+			&.rating-3 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+				float: left;
+				background: url(Star_Full.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				}
+			}
+
+			&.rating-4 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+				float: left;
+				background: url(Star_Full.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				}
+			}
+
+			&.rating-5 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5) {
+				float: left;
+				background: url(Star_Full.svg) no-repeat;
+				display: block;
+				height: 30px;
+				width: 30px;
+				background-size: 30px;
+				}
+			}
+		}
+
+		.account-infos {
+			float: left;
+			margin-right: 40px;
+			width: 88px;
+
+			p {
+				font-size: em(24px);
+				color: #4A90E2;
+				font-weight: 700;
+				margin-top: 7px;
+			}
+		}
+		.num-visit {
+
+		}
+
+		.account-balance {
+			margin-right: 0;
+		}
+
+		.def-city {
+			clear: left;
+
+		}
+
+		.alert-zone {
+			margin-right: 0;
+		}
 	}
 
 	.notifications {
