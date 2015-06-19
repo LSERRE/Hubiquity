@@ -3,8 +3,8 @@
 	<h2 class="page-title">My reviews</h2>
 	<div class="single-review">
 		<div class="pictures single-block">
-			<h3><%= @visit.adress %> <%= @visit.city %> <%= @visit.zipcode %>  <%= @visit.country %></h3>
-			<div class="who">
+			<h3 class='title-review'><%= @visit.adress %> <%= @visit.city %> <%= @visit.zipcode %>  <%= @visit.country %></h3>
+			<div class="who who-review">
 				<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
 				<p>By <%= @review.visiter.visiter.name %></p>
 			</div>
