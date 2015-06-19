@@ -156,6 +156,16 @@
 				<%= f.text_field :electicity_comment, :placeholder => "Electricity comment"  %>
 			</div>
 
+			<div class="field text-field">
+		        <label class="label-helper" for="">Pipework rating</label>
+		        <%= f.number_field :pipework_rating, :placeholder => '0', :onKeyDown => '$(this).parent().addClass("field-complete")', :min => '0', :max => '5' %>
+	      	</div>
+
+			<div class="field text-field">
+				<label class="label-helper">Pipework comment</label>
+				<%= f.text_field :pipework_comment, :placeholder => "Electricity comment"  %>
+			</div>
+
 
 
 			<!-- TODO: others ratings -->
