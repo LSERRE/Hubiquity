@@ -40,5 +40,124 @@
 			</div>
 		<% end %>
 		<div class="hexagon"><span>2</span></div><h2>Ratings</h2>
+			<ul class="ratings">
+				<li class="block-rating">
+					<h3>Wholesomness</h3>
+					<ul class="stars rating-<%= @review.wholesomness_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.wholesomness_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Neighberhood</h3>
+					<ul class="stars rating-<%= @review.neighberhood_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @neighberhood_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Brooker</h3>
+					<ul class="stars rating-<%= @review.brooker_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.brooker_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Furniture</h3>
+					<ul class="stars rating-<%= @review.furniture_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.furniture_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Bathrooms</h3>
+					<ul class="stars rating-<%= @review.bathrooms_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.bathrooms_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Light</h3>
+					<ul class="stars rating-<%= @review.light_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.light_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Noise pollution</h3>
+					<ul class="stars rating-<%= @review.noise_pollution_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.noise_pollution_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Electricity</h3>
+					<ul class="stars rating-<%= @review.electricity_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.electicity_comment %> "</p>
+				</li>
+				<li class="block-rating">
+					<h3>Pipework</h3>
+					<ul class="stars rating-<%= @review.pipework_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<p>"<%= @review.pipework_comment %> "</p>
+				</li>
+			</ul>
 	</div>
 </div>
