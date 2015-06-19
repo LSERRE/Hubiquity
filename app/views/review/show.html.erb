@@ -6,36 +6,37 @@
 		<% if @review.picture1.present? %>
 			<div class="image-container">
 				<%= image_tag(@review.picture1, :class => "") %>
+				<h4><%= @review.picture1.name %></h4>
 			</div>
 		<% end %>
 		<% if @review.picture1.present? %>
 			<div class="image-container">
-				<%= image_tag(@review.picture1, :class => "") %>
+				<%= image_tag(@review.picture2, :class => "") %>
+				<h4><%= @review.picture2.name %></h4>
 			</div>
 		<% end %>
 		<% if @review.picture2.present? %>
 			<div class="image-container">
-				<%= image_tag(@review.picture2, :class => "") %>
+				<%= image_tag(@review.picture3, :class => "") %>
+				<h4><%= @review.picture3.name %></h4>
 			</div>
 		<% end %>
 		<% if @review.picture3.present? %>
 			<div class="image-container">
-				<%= image_tag(@review.picture3, :class => "") %>
+				<%= image_tag(@review.picture4, :class => "") %>
+				<h4><%= @review.picture4.name %></h4>
 			</div>
 		<% end %>
 		<% if @review.picture4.present? %>
 			<div class="image-container">
-				<%= image_tag(@review.picture4, :class => "") %>
+				<%= image_tag(@review.picture5, :class => "") %>
+				<h4><%= @review.picture5.name %></h4>
 			</div>
 		<% end %>
 		<% if @review.picture5.present? %>
 			<div class="image-container">
-				<%= image_tag(@review.picture5, :class => "") %>
-			</div>
-		<% end %>
-		<% if @review.picture6.present? %>
-			<div class="image-container">
 				<%= image_tag(@review.picture6, :class => "") %>
+				<h4><%= @review.picture6.name %></h4>
 			</div>
 		<% end %>
 		<div class="hexagon"><span>2</span></div><h2>Ratings</h2>
