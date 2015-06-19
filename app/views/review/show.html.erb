@@ -184,8 +184,9 @@
 						<%= image_tag(@review.issue1_picture, :class => "") %>
 						<h4><%= @review.issue1_title %></h4>
 					</div>
-					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-					<p><%= @review.issue1_comment %></p>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p><%= @review.issue1_comment %></p>
 					</div>
 				</div>
 				<div class="issue">
@@ -193,8 +194,9 @@
 						<%= image_tag(@review.issue2_picture, :class => "") %>
 						<h4><%= @review.issue2_title %></h4>
 					</div>
-					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
-					<p><%= @review.issue2_comment %></p>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p><%= @review.issue2_comment %></p>
 					</div>
 				</div>
 			</div>
