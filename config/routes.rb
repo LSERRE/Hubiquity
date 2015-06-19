@@ -75,5 +75,6 @@ Rails.application.routes.draw do
 
   resources :visit
   resources :visiter
+  resources :review
 
 end

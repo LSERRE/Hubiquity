@@ -1,4 +1,43 @@
-<h1>Show</h1>
-
-<%= debug ( @review ) %>
-<%= debug ( @visit ) %>
+<%= render 'layouts/sidebar' %>
+<div class="reportss wrapppper row col-sm-10">
+	<h2 class="page-title">My reviews</h2>
+	<div class="single-review">
+		<div class="hexagon"><span>1</span></div><h2>Pictures</h2>
+		<% if @review.picture1.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture1, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture1.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture1, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture2.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture2, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture3.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture3, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture4.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture4, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture5.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture5, :class => "") %>
+			</div>
+		<% end %>
+		<% if @review.picture6.present? %>
+			<div class="image-container">
+				<%= image_tag(@review.picture6, :class => "") %>
+			</div>
+		<% end %>
+		<div class="hexagon"><span>2</span></div><h2>Ratings</h2>
+	</div>
+</div>
