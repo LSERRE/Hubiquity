@@ -21,7 +21,7 @@ a {
 
 em {
 	position: absolute;
-	top: 40px;
+	top: 50px;
 	right: 0;
 }
 
@@ -230,10 +230,11 @@ button {
 	margin-bottom: 60px;
 
 	input{
+		width: 100%;
+		line-height: 1;
 		-webkit-appearance: none;
 		outline: none;
 		border: none;
-		width: 100%;
 		margin-bottom: 8px;
 		padding: 8px 4px;
 		position: relative;
@@ -241,6 +242,26 @@ button {
 		background-color: transparent;
 		border-bottom: 1px solid #D7D7D7;
 		color: $black;
+
+		&::-webkit-input-placeholder {
+			color: #CECECE !important;
+		}
+
+		&::-moz-placeholder { /* firefox 19+ */
+			color: #CECECE !important;
+		}
+		
+		&:-ms-input-placeholder { /* ie */
+			color: #CECECE !important;
+		}
+		
+		&:-moz-placeholder {
+			color: #CECECE !important;
+		}
+
+		&:placeholder {
+			color: #CECECE !important;
+		}
 	}
 
 	.label-helper {
@@ -317,56 +338,56 @@ button {
 }
 
 .request {
+	font-size: 14px;
 	input { 
-		cursor: pointer;
+		font-size: em(14px) !important;
+		font-weight: 900 !important;
+		color: $white !important;
 		text-align: center;
 		text-transform: uppercase;
 		display: block;
 		background: #42A5F5;
 		padding: 10px 40px;
-		font-size: em(14px) !important;
-		font-weight: 700;
-		width: 290px;
-		height: 90px;
 		margin-bottom: 10px;
-		color: $white !important;
 		box-shadow: #3275AA 0px 2px 0px;
 		border-radius: 3px;
+		cursor: pointer;
 
 		&:hover { background: #3275AA; }
+
 	}
 }
 /* end form style */
 
 
 .shared-link {
-	margin: -55px 0 0px 170px;
+	margin: -40px 0 0px 170px;
 
 	a {
 		text-align: center;
 		text-transform: uppercase;
-		display: block;
-		background: #28B28D;
-		padding: 15px 40px 10px;
+		display: inline-block;
+		// background: #28B28D;
+		// padding: 15px 40px 10px;
 		font: em(12px) "Lato", sans-serif;
 		font-weight: 700;
-		width: 55px;
-		height: 20px;
+		// width: 55px;
+		// height: 20px;
 		margin-bottom: 10px;
-		color: #FBFBFB;
-		box-shadow: #24A17F 0px 2px 0px;
-		border-radius: 3px;
+		color: #000;
+		// box-shadow: #24A17F 0px 2px 0px;
+		// border-radius: 3px;
 
-		&:hover { background: #24A17F; }
+		&:hover { text-decoration: underline; }
 	}
 
-	.forgot-pass { 
-		background: #B2435B; box-shadow: #96394C 0px 2px 0px;
-		padding-top: 10px;
-		height: 25px;
-		margin: -69px 0 0 170px;
-		&:hover { background: #96394C; }
-	}
+	// .forgot-pass { 
+	// 	background: #B2435B; box-shadow: #96394C 0px 2px 0px;
+	// 	padding-top: 10px;
+	// 	height: 25px;
+	// 	margin: -69px 0 0 170px;
+	// 	&:hover { background: #96394C; }
+	// }
 }
 
 .action {
@@ -413,7 +434,7 @@ button {
 
 .actions-button {
 		height: 25px;
-		width: 55px;
+		// width: 55px;
 		cursor: pointer;
 		text-align: center;
 		text-transform: uppercase;
