@@ -1,0 +1,46 @@
+.review {
+article {
+		height: 175px;
+		width: 315px;
+		position: relative;
+		overflow: hidden;
+		color: #fff;
+		padding: 20px;
+		margin: 10px;
+		display: inline-block;
+
+		.review-back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+			width: 100%;
+		}
+
+		.earnings {
+			position: absolute;
+			z-index: 15;
+			font-size: em(14px);
+
+			span {
+				font-size: em(48px);
+				display: block;
+				margin-top: 5px;
+			}
+		}
+
+		.adress {
+			position: absolute;
+			z-index: 15;
+			font-size: em(14px);
+			bottom: 75px;
+		}
+
+		.who {
+			position: absolute;
+			z-index: 15;
+			bottom: 22px;
+			left: 65px;
+		}
+	}
+}
