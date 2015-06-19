@@ -152,7 +152,6 @@ article {
 						margin-top: 10px;
 					}
 				}
-
 			}
 
 			.who {
@@ -165,6 +164,7 @@ article {
 	}
 
 	.issuess {
+		margin-bottom: 50px;
 		.issue {
 			width: 48%;
 			float: left;
@@ -189,10 +189,114 @@ article {
 	.questions {
 		width: 100%;
 
+		.polymask {
+			-webkit-mask-image: url("polymask_small.svg");
+			height: 20px;
+			width: 20px;
+			margin: 0;
+			margin-left: 0px;
+			margin-top: -4px;
+		}
+
 		.item {
 			height: 200px;
 			width: 48%;
 			float: left;
+			position: relative;
+			&:nth-child(odd) { margin-right: 4%; }
+
+			.question {
+				span { font-weight: 900; }
+				font-weight: 700;
+				font-size: em(18px);
+				color: #404040;
+				margin-bottom: 15px;
+			}
+
+			.answer {
+				margin-left: 30px;
+				margin-top: 3px;
+				font-size: em(12px);
+			}
+		}
+	}
+
+	.conclusion {
+		padding: 0;
+		color: #404040;
+
+		p {
+			font-size: em(26px);
+		}
+
+		h6 {
+			font-size: em(24px);
+			float: left;
+			margin-top: 20px;
+			margin-right: 10px;
+		}
+
+		.stars {
+			margin-top: 10px;
+			&.rating-1 {
+				li:nth-child(1) {
+					float: left;
+					background: url(Star_Full.svg) no-repeat;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-size: 30px;
+					margin-top: 10px;
+				}
+			}
+
+			&.rating-2 {
+				li:nth-child(1), li:nth-child(2) {
+					float: left;
+					background: url(Star_Full.svg) no-repeat;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-size: 30px;
+					margin-top: 10px;
+				}
+			}
+
+			&.rating-5 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+					float: left;
+					background: url(Star_Full.svg) no-repeat;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-size: 30px;
+					margin-top: 10px;
+				}
+			}
+
+			&.rating-5 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+					float: left;
+					background: url(Star_Full.svg) no-repeat;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-size: 30px;
+					margin-top: 10px;
+				}
+			}
+
+			&.rating-5 {
+				li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5) {
+					float: left;
+					background: url(Star_Full.svg) no-repeat;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-size: 30px;
+					margin-top: 10px;
+				}
+			}
 		}
 	}
 
