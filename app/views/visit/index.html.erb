@@ -20,32 +20,6 @@
                             <%= visit.city %>
                         </p>
 
-
-
-<script>
-    var getAdress = $('.adress-<%= index %>').html();
-    var address = [getAdress];
-    var longitude, latitude;
-
-    jQuery.each(address, function(index, item) {
-        var geocoder = new google.maps.Geocoder();  
-        geocoder.geocode( { 'address': item}, function(results, status) {
-        
-        if (status == google.maps.GeocoderStatus.OK) {
-            latitude = results[0].geometry.location.lat();
-            longitude = results[0].geometry.location.lng();
-            console.log(latitude, longitude);
-            var mapbox = '<img src="http://api.tiles.mapbox.com/v4/mapbox.streets/pin-s(' + longitude + ','+ latitude +')/' + longitude + ','+ latitude +', 15/260x230.png?access_token=pk.eyJ1IjoibWFydGluZGVicmF5IiwiYSI6IjBhMTNkZTZhOWE0YTliMWEzMGJhNjIwZTQwYWViMzllIn0.9XC69itUBiCRub7iFaPM2A" alt="">'
-
-            $('.mapbox').append(mapbox);
-        }
-      });
-    });
-
-</script>
-
-
-
                         <p class="surface infos"><%= visit.surface %>sq ft</p>
                         <p class="location infos">2 km away</p>
                         <p class="price infos">32€</p>
@@ -67,12 +41,40 @@
                                 <%= link_to "I can visit it for you" , visiter_add_path(:visit_id => visit.id, :visitDate => visit.visitDate3, :visitTime => visit.visitTime3), :class => "button visit-it-button" %>
                             <% end %>
                         <% end %>
-                    <% end %>
-                </article>
+                    </article>
+                <% end %>
             <% end %>
         <% else %>
             <p class="no-offer">There are no visit available</p>
         <% end %>
+
+        <script>
+            $(document).ready(function(){
+
+                $( '.single-visit' ).each( function(){
+                    console.log( this );
+                });
+                var getAdress = $('.adress').html();
+                var address = [getAdress];
+                var longitude, latitude;
+
+                jQuery.each(address, function(index, item) {
+                    var geocoder = new google.maps.Geocoder();  
+                    geocoder.geocode( { 'address': item}, function(results, status) {
+                    
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        latitude = results[0].geometry.location.lat();
+                        longitude = results[0].geometry.location.lng();
+                        console.log(latitude, longitude);
+                        var mapbox = '<img src="http://api.tiles.mapbox.com/v4/mapbox.streets/pin-s(' + longitude + ','+ latitude +')/' + longitude + ','+ latitude +', 15/242x210.png?access_token=pk.eyJ1IjoibWFydGluZGVicmF5IiwiYSI6IjBhMTNkZTZhOWE0YTliMWEzMGJhNjIwZTQwYWViMzllIn0.9XC69itUBiCRub7iFaPM2A" alt="">'
+
+                        $('.mapbox').append(mapbox);
+                    }
+                  });
+                });
+            });
+        </script>
+
     </div>
 </section>
 </div>
