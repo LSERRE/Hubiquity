@@ -3,26 +3,28 @@
 }
 
 .visit {
-	// .wrapppper { padding-left: 110px; }
-	
 	article {
-		background: #EEEEEE;
-		box-shadow: 0 1px 0 rgba(0, 0, 0, .25);
-		margin: 10px 20px;
-		padding: 20px;
-		height: auto;
-		width: 220px;
-		display: inline-block;
-		vertical-align: top;
+	  	background: #EEEEEE;
+	  	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	  	margin: 10px 10px 10px 0;
+	  	padding: 15px;
+	  	min-height: 440px;
+	  	width: 212px;
+	  	display: inline-block;
+	  	vertical-align: top;
+
+	  	&:nth-child(3n) {
+			margin-right: 0;
+	  	}
 
 		.mapbox {
 			background: url(mapbox.png);
 			position: relative;
-			top: -20px;
-			left: -20px;
+			top: -15px;
+			left: -15px;
 			background-size: cover;
-			width: 260px;
-			height: 230px;
+			width: 212px;
+			height: 212px;
 		}
 
 		.adress {
