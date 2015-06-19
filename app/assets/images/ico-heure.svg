@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>icon heure</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="HOME" sketch:type="MSArtboardGroup" transform="translate(-612.000000, -315.000000)" fill="#4163A9">
+            <g id="INTRO" sketch:type="MSLayerGroup">
+                <g id="SEARCH-2rows-2" transform="translate(171.000000, 293.000000)" sketch:type="MSShapeGroup">
+                    <g id="icon-heure" transform="translate(441.447368, 22.400000)">
+                        <path d="M12.3216283,24.3153 C5.58774671,24.3153 0.109457237,18.864 0.109457237,12.1644 C0.109457237,5.4648 5.58774671,0.0144 12.3216283,0.0144 C19.0555099,0.0144 24.5337993,5.4648 24.5337993,12.1644 C24.5337993,18.864 19.0555099,24.3153 12.3216283,24.3153 L12.3216283,24.3153 Z M12.3216283,1.8144 C6.58552632,1.8144 1.91866776,6.4575 1.91866776,12.1644 C1.91866776,17.8713 6.58552632,22.5153 12.3216283,22.5153 C18.0577303,22.5153 22.7245888,17.8713 22.7245888,12.1644 C22.7245888,6.4575 18.0577303,1.8144 12.3216283,1.8144 L12.3216283,1.8144 Z" id="Fill-1"></path>
+                        <path d="M16.4439145,17.1666 C16.2123355,17.1666 15.9807566,17.0784 15.8043586,16.9029 L11.417023,12.537 L11.417023,5.1336 C11.417023,4.6359 11.8213816,4.2336 12.3216283,4.2336 C12.821875,4.2336 13.2262336,4.6359 13.2262336,5.1336 L13.2262336,11.7918 L17.0834704,15.6303 C17.4362664,15.9813 17.4362664,16.5519 17.0834704,16.9029 C16.9070724,17.0784 16.6754934,17.1657 16.4439145,17.1666" id="Fill-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

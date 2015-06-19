@@ -96,7 +96,7 @@ body.home {
 }
 
 .search-form {
-  display: -webkit-box; 
+  display: -webkit-flex; 
   display: flex;
   justify-content: center;
    -webkit-justify-content: center; /* Safari 6.1+ */
@@ -110,7 +110,7 @@ body.home {
 
 .search-fieldset {
   // height: 80px;
-  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   width: calc( 80% - 10px );
   background: rgba(255,255,255,.95);
@@ -147,16 +147,16 @@ body.home {
   }
   
   &.search-place { 
-    background-image: url(ico-lieu.png); 
+    background-image: url(ico-lieu.svg); 
   }
   &.search-date { 
-    background-image: url(ico-date.png);
+    background-image: url(ico-date.svg);
   }
   &.search-hour { 
-    background-image: url(ico-heure.png);
+    background-image: url(ico-heure.svg);
   }
   &.search-size { 
-    background-image: url(ico-superficie.png);
+    background-image: url(ico-superficie.svg);
   }
 
   &::-webkit-input-placeholder {
@@ -229,6 +229,7 @@ body.home {
 	background-position: center center;
 	background-repeat: no-repeat;
 	transition: all .4s $transition;
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 

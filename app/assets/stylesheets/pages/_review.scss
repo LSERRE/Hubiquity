@@ -44,3 +44,156 @@ article {
 		}
 	}
 }
+
+.single-review {
+
+	img { width: 100%; }
+
+	h3 {
+		font-size: em(24px);
+		color: #4C4C4C;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: em(12px);
+		color: #535353;
+	}
+
+	.single-block { padding-top: 50px; display: inline-block; }
+		
+	.image-container {
+		position: relative;
+		margin: 10px 0;
+
+		h4 {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			font-size: em(16px);
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+
+	.pictures {
+	}
+
+	.ratings {
+		.block-rating {
+			background: rgba(215, 215, 215, .2);
+			display: block;
+			padding: 20px;
+			height: 100px;
+			width: 339px;
+			display: inline-block;
+			margin: 10px 20px 10px 0;
+			position: relative;
+
+			&:nth-child(even) { margin-right: 0; }
+
+			.stars {
+				&.rating-1 {
+					li:nth-child(1) {
+						float: left;
+						background: url(Star_Full.svg) no-repeat;
+						display: block;
+						height: 30px;
+						width: 30px;
+						background-size: 30px;
+						margin-top: 10px;
+					}
+				}
+
+				&.rating-2 {
+					li:nth-child(1), li:nth-child(2) {
+						float: left;
+						background: url(Star_Full.svg) no-repeat;
+						display: block;
+						height: 30px;
+						width: 30px;
+						background-size: 30px;
+						margin-top: 10px;
+					}
+				}
+
+				&.rating-5 {
+					li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+						float: left;
+						background: url(Star_Full.svg) no-repeat;
+						display: block;
+						height: 30px;
+						width: 30px;
+						background-size: 30px;
+						margin-top: 10px;
+					}
+				}
+
+				&.rating-5 {
+					li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+						float: left;
+						background: url(Star_Full.svg) no-repeat;
+						display: block;
+						height: 30px;
+						width: 30px;
+						background-size: 30px;
+						margin-top: 10px;
+					}
+				}
+
+				&.rating-5 {
+					li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5) {
+						float: left;
+						background: url(Star_Full.svg) no-repeat;
+						display: block;
+						height: 30px;
+						width: 30px;
+						background-size: 30px;
+						margin-top: 10px;
+					}
+				}
+
+			}
+
+			.who {
+				position: absolute;
+				bottom: 25px;
+				left: 70px;
+			}
+
+		}
+	}
+
+	.issuess {
+		.issue {
+			width: 48%;
+			float: left;
+			position: relative;
+
+			.image-container {
+				height: 360px;
+				overflow: hidden;
+			}
+
+			&:nth-child(odd) { margin-right: 4%; }
+
+			.who {
+				position: absolute;
+				bottom: -25px;
+				left: 70px;
+			}
+
+		}
+	}
+
+	.questions {
+		width: 100%;
+
+		.item {
+			height: 200px;
+			width: 48%;
+			float: left;
+		}
+	}
+
+}
