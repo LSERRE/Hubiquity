@@ -22,15 +22,9 @@ class DashboardController < ApplicationController
 		@user_reviews = []
 		@reviews = Review.all
 		@reviews.each_with_index do |review, index|
-			puts review.visiter.requester_id
-			puts current_user.id
-			puts review
 			if review.visiter.requester_id == current_user.id
 				@user_reviews[index] = review
 			end
 		end
-
-		render "dashboard/index"
-
 	end
 end

@@ -1,5 +1,12 @@
 class ReviewController < ApplicationController
-	def index
+	def index		
+		@user_reviews = []
+		@reviews = Review.all
+		@reviews.each_with_index do |review, index|
+			if review.visiter.requester_id == current_user.id
+				@user_reviews[index] = review
+			end
+		end
 	end
 
 	def new

@@ -1,2 +1,14 @@
-<h1>Review#index</h1>
-<p>Find me in app/views/review/index.html.erb</p>
+<div class="wrapppper">
+	<% @user_reviews.each do |review| %>
+		<article>
+			<%= image_tag(review.picture1, :class => "review-back") %>
+			<p class="earnings">You earned : <span>35$</span></p>
+			<p class="adress"><%= review.visiter.visit.adress %>, <%= review.visiter.visit.zipcode %>, <%= review.visiter.visit.city %></p>
+			
+			<div class="who">
+				<span class="polymask"><%= image_tag(review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+				By <%= review.visiter.visiter.name %>
+			</div>
+		</article>
+	<% end %>
+</div>

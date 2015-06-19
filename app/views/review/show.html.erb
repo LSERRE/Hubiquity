@@ -1,4 +1,252 @@
-<h1>Show</h1>
+<%= render 'layouts/sidebar' %>
+<div class="wrapppper row col-sm-10">
+	<h2 class="page-title">My reviews</h2>
+	<div class="single-review">
+		<div class="pictures single-block">
+			<div class="hexagon"><span>1</span></div><h2>Pictures</h2>
+			<% if @review.picture1.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture1, :class => "") %>
+					<h4><%= @review.picture1_name %></h4>
+				</div>
+			<% end %>
+			<% if @review.picture1.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture2, :class => "") %>
+					<h4><%= @review.picture2_name %></h4>
+				</div>
+			<% end %>
+			<% if @review.picture2.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture3, :class => "") %>
+					<h4><%= @review.picture3_name %></h4>
+				</div>
+			<% end %>
+			<% if @review.picture3.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture4, :class => "") %>
+					<h4><%= @review.picture4_name %></h4>
+				</div>
+			<% end %>
+			<% if @review.picture4.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture5, :class => "") %>
+					<h4><%= @review.picture5_name %></h4>
+				</div>
+			<% end %>
+			<% if @review.picture5.present? %>
+				<div class="image-container">
+					<%= image_tag(@review.picture6, :class => "") %>
+					<h4><%= @review.picture6_name %></h4>
+				</div>
+			<% end %>
+		</div>
 
-<%= debug ( @review ) %>
-<%= debug ( @visit ) %>
+		<div class="ratings single-block">
+			<div class="hexagon"><span>2</span></div><h2>Meeting expectations</h2>
+
+			<ul class="ratings">
+				<li class="block-rating">
+					<h3>Wholesomness</h3>
+					<ul class="stars rating-<%= @review.wholesomness_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.wholesomness_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Neighberhood</h3>
+					<ul class="stars rating-<%= @review.neighberhood_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @neighberhood_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Brooker</h3>
+					<ul class="stars rating-<%= @review.brooker_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.brooker_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Furniture</h3>
+					<ul class="stars rating-<%= @review.furniture_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.furniture_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Bathrooms</h3>
+					<ul class="stars rating-<%= @review.bathrooms_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.bathrooms_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Light</h3>
+					<ul class="stars rating-<%= @review.light_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.light_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Noise pollution</h3>
+					<ul class="stars rating-<%= @review.noise_pollution_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.noise_pollution_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Electricity</h3>
+					<ul class="stars rating-<%= @review.electricity_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.electicity_comment %> "</p>
+					</div>
+				</li>
+				<li class="block-rating">
+					<h3>Pipework</h3>
+					<ul class="stars rating-<%= @review.pipework_rating %>">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p>"<%= @review.pipework_comment %> "</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="issuess single-block">
+			<div class="hexagon"><span>3</span></div><h2>Possibles issues</h2>
+			
+			<div class="issues">
+				<div class="issue">
+					<div class="image-container">
+						<%= image_tag(@review.issue1_picture, :class => "") %>
+						<h4><%= @review.issue1_title %></h4>
+					</div>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p><%= @review.issue1_comment %></p>
+					</div>
+				</div>
+				<div class="issue">
+					<div class="image-container">
+						<%= image_tag(@review.issue2_picture, :class => "") %>
+						<h4><%= @review.issue2_title %></h4>
+					</div>
+					<div class="who">
+						<span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+						<p><%= @review.issue2_comment %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="questions single-block">
+			<div class="hexagon"><span>4</span></div><h2>Questions</h2>
+
+			<ul class="questions-answers">
+				<li class="item">
+					<h5 class="question"><%= @visit.question1 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer1 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question2 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer2 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question3 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer3 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question4 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer4 %></h5>
+				</li>
+			</ul>
+		</div>
+
+		<div class="conclusion single-block">
+			<div class="hexagon"><span>5</span></div><h2>Conclusion</h2>
+
+			<p class="conclusion">"<%= @review.conclusion %>"</p>
+
+			<h6>Final rating:</h6>
+
+			<ul class="stars rating-<%= @review.final_rating %>">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
