@@ -27,4 +27,6 @@ class Review < ActiveRecord::Base
 
   		validates_attachment_content_type :issue1_picture, :content_type => /\Aimage\/.*\Z/
   		validates_attachment_content_type :issue2_picture, :content_type => /\Aimage\/.*\Z/
+
+      belongs_to :visiter, :foreign_key => 'visiter_id', :class_name => "Visiter"
 end
