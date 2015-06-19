@@ -10,14 +10,6 @@ class DashboardController < ApplicationController
 			pending_visiters = Visiter.where( visit_id: visit.id, confirmed: "pending" )
 			@visiters[index][1] = pending_visiters
 		end
-
-		@notifications = Notification.where( receiver_id: current_user.id ).order(created_at: :desc)
-		@notifications_unread = Notification.where( receiver_id: current_user.id , read: false)
-
-		@notifications_unread.each do |notification|
-			notification.read = true
-			notification.save
-		end
 		
 		@user_reviews = []
 		@reviews = Review.all
@@ -25,6 +17,16 @@ class DashboardController < ApplicationController
 			if review.visiter.requester_id == current_user.id
 				@user_reviews[index] = review
 			end
+		end
+
+		render 'dashboard/index'
+
+		@notifications = Notification.where( receiver_id: current_user.id ).order(created_at: :desc)
+		@notifications_unread = Notification.where( receiver_id: current_user.id , read: false)
+
+		@notifications_unread.each do |notification|
+			notification.read = true
+			notification.save
 		end
 	end
 end
