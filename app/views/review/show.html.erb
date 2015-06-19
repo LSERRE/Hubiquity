@@ -1,5 +1,5 @@
 <%= render 'layouts/sidebar' %>
-<div class="reportss wrapppper row col-sm-10">
+<div class="wrapppper row col-sm-10">
 	<h2 class="page-title">My reviews</h2>
 	<div class="single-review">
 		<div class="hexagon"><span>1</span></div><h2>Pictures</h2>
@@ -39,7 +39,9 @@
 				<h4><%= @review.picture6.name %></h4>
 			</div>
 		<% end %>
+
 		<div class="hexagon"><span>2</span></div><h2>Ratings</h2>
+
 			<ul class="ratings">
 				<li class="block-rating">
 					<h3>Wholesomness</h3>
@@ -158,6 +160,72 @@
 					</div>
 					<p>"<%= @review.pipework_comment %> "</p>
 				</li>
+			</ul>
+
+			<div class="hexagon"><span>3</span></div><h2>Possibles issues</h2>
+			
+			<div class="issues">
+				<div class="issue">
+					<div class="image-container">
+						<%= image_tag(@review.issue1_picture, :class => "") %>
+						<h4><%= @review.issue1_title %></h4>
+					</div>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					<p><%= @review.issue1_comment %></p>
+					</div>
+				</div>
+				<div class="issue">
+					<div class="image-container">
+						<%= image_tag(@review.issue2_picture, :class => "") %>
+						<h4><%= @review.issue2_title %></h4>
+					</div>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					<p><%= @review.issue2_comment %></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="hexagon"><span>4</span></div><h2>Questions</h2>
+
+			<ul class="questions-answers">
+				<li class="item">
+					<h5 class="question"><%= @visit.question1 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer1 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question2 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer2 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question3 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer3 %></h5>
+				</li>
+				<li class="item">
+					<h5 class="question"><%= @visit.question4 %></h5>
+					<div class="who"><span class="polymask"><%= image_tag(@review.visiter.visiter.avatar.url(:thumb), :class => "content avatar") %></span>
+					</div>
+					<h5 class="answer"><%= @review.answer4 %></h5>
+				</li>
+			</ul>
+
+			<div class="hexagon"><span>5</span></div><h2>Conclusion</h2>
+
+			<p class="conclusion">"<%= @review.conclusion %>"</p>
+
+			<h6>Final rating:</h6>
+
+			<ul class="stars rating-<%= @review.final_rating %>">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
 			</ul>
 		</div>
 	</div>
